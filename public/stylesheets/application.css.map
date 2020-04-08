@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,KAAM,CACJ,gBAAgB,CAAE,OAAO,CAAG,mBAAkB,CAC5C,MAAM,CAAE,GAAG",
+"sources": ["sass/application.scss"],
+"names": [],
+"file": "application.css"
+}

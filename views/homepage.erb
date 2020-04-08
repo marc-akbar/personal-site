@@ -1,27 +1,32 @@
-<ul id="slide-out" class="sidenav">
-  <li><div class="user-view">
-    <div class="background">
-      <img src="images/office.jpg">
-    </div>
-    <a href="#user"><img class="circle" src="images/yuna.jpg"></a>
-    <a href="#name"><span class="white-text name">John Doe</span></a>
-    <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
-  </div></li>
-  <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-  <li><a href="#!">Second Link</a></li>
-  <li><div class="divider"></div></li>
-  <li><a class="subheader">Subheader</a></li>
-  <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
-</ul>
-<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+<div id="menu">
+  <ul id="slide-out" class="sidenav section table-of-contents">
+    <li><a href="#home" class="sidenav-close">Home</a></li>
+    <li><a href="#work" class="sidenav-close">Work</a></li>
+    <li><a href="#contact" class="sidenav-close">Contact</a></li>
+  </ul>
+</div>
 
-<div class="row">
-  <div class="col s12 m3 3">
-    <%= link_to 'Home', '/' %>
-  </div>
-  <div class="col s12 m9 l9">
-    <p>Some text</p>
-    <p>Some text</p>
-    <p>Some text</p>
+<div id="content">
+  <a href="#" data-target="slide-out" class="sidenav-trigger hide-on-large-only pulse"><i class="material-icons">menu</i></a>
+  <div class="row">
+    <div id="menu" class="col hide-on-med-and-down m3 l2">
+      <ul class="section table-of-contents">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="col s12 m9 l10">
+      <div id="home" class="section scrollspy">
+        <p class="flow-text">Content </p>
+      </div>
+      <div id="work" class="section scrollspy">
+        <p class="flow-text">Content </p>
+      </div>
+      <div id="contact" class="section scrollspy">
+        <p class="flow-text">Content </p>
+      </div>
+    </div>
   </div>
 </div>

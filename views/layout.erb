@@ -9,12 +9,10 @@
     <!-- Animejs -->
     <script type="text/javascript" src="//cdn.bootcss.com/animejs/3.1.0/anime.min.js"></script>
     <!-- Jquery -->
-    <link href="<%= url('/stylesheets/application.css') %>" rel="stylesheet" type="text/css" />
+    <link href="<%= url('/stylesheets/application.css') %>" rel="stylesheet" />
   </head>
   <body>
-    <div class="container">
-      <%= yield %>
-    </div>
+    <%= yield %>
     <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="/javascript/materialize.min.js"></script>
     <script src="/javascript/application.js"></script>
