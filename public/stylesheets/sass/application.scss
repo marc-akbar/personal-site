@@ -58,3 +58,23 @@ nav {
   font-family: 'Satisfy', cursive;
   font-size: 5em;
 }
+
+.landing-social {
+
+  & ul > li {
+    display: inline-block;
+
+    & a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+
+      & img {
+      height: 32px;
+      }
+    }
+  }
+}
