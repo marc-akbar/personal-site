@@ -1,32 +1,38 @@
-<div id="menu">
-  <ul id="slide-out" class="sidenav section table-of-contents">
-    <li><a href="#home" class="sidenav-close">Home</a></li>
-    <li><a href="#work" class="sidenav-close">Work</a></li>
-    <li><a href="#contact" class="sidenav-close">Contact</a></li>
-  </ul>
-</div>
+<nav class="transparent">
+  <div class="nav-wrapper">
+    <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<ul id="mobile-nav" class="sidenav section table-of-contents">
+  <li><a href="#home" class="sidenav-close">Home</a></li>
+  <li><a href="#work" class="sidenav-close">Work</a></li>
+  <li><a href="#contact" class="sidenav-close">Contact</a></li>
+</ul>
 
 <div id="content">
-  <a href="#" data-target="slide-out" class="sidenav-trigger hide-on-large-only pulse"><i class="material-icons">menu</i></a>
   <div class="row">
-    <div id="menu" class="col hide-on-med-and-down m3 l2">
-      <ul class="section table-of-contents">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+    <div id="home" class="section scrollspy parallax-container first-parallax">
+      <p class='center-text'>
+        Hi, I'm Marc.
+      </p>
+      <p class='center-text'>
+        I'm a web developer based in Boulder, CO.
+      </p>
     </div>
-
-    <div class="col s12 m9 l10">
-      <div id="home" class="section scrollspy">
-        <p class="flow-text">Content </p>
+    <div id="work" class="section scrollspy white">
+      <div class="row container">
+        <h2 class="header">Parallax</h2>
+        <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
       </div>
-      <div id="work" class="section scrollspy">
-        <p class="flow-text">Content </p>
-      </div>
-      <div id="contact" class="section scrollspy">
-        <p class="flow-text">Content </p>
-      </div>
+    </div>
+    <div id="contact" class="section scrollspy">
+      <p class='center-text'>Content </p>
     </div>
   </div>
 </div>

@@ -1,8 +1,24 @@
-#menu {
-  background-color: #e8f7e6;  & ul.section > li {
-    margin: 6em;
-    & a {
+// body {
+//   background-image: url('../images/rightcubes.png');
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-attachment: fixed;
+//
+//   -webkit-background-size: cover;
+//   -moz-background-size: cover;
+//   -o-background-size: cover;
+//   background-size: cover;
+// }
 
-    }
-  }
+.nav {
+  position: absolute;
+  z-index: 999;
+}
+
+.first-parallax {
+  background-color: #c2eaed;
+}
+
+.center-text {
+  text-align: center;
 }
