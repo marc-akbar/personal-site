@@ -11,5 +11,9 @@ configure :development do
 end
 
 get '/' do
-  erb :homepage
+  erb :landing
+end
+
+get '/work' do
+  erb :work
 end
