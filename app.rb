@@ -14,6 +14,10 @@ get '/' do
   erb :landing
 end
 
+get '/about' do
+  erb :about
+end
+
 get '/work' do
   erb :work
 end

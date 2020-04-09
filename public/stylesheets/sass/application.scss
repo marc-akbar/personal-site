@@ -54,27 +54,51 @@ nav {
   transform: translateY(-50%);
 }
 
-.landing-title {
-  font-family: 'Satisfy', cursive;
-  font-size: 5em;
+.bottom {
+  position: absolute;
+  bottom: 40px;
 }
 
-.landing-social {
+.landing-title {
+  font-family: 'Satisfy', cursive, sans-serif;
+  font-size: 5em;
+  margin-bottom: 60px;
+}
 
-  & ul > li {
-    display: inline-block;
+.landing-content {
+  margin-bottom: 40px;
+}
 
-    & a {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 30px;
+.landing-links > ul > li {
+  display: inline-block;
+  font-family: 'Baloo Tammudu 2', cursive, sans-serif;
+  font-size: 24px;
 
-      & img {
-      height: 32px;
-      }
+  & a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 40px;
+  }
+}
+
+.landing-social > ul > li {
+  display: inline-block;
+
+  & a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin-left: 20px;
+  margin-right: 20px;
+
+    & img {
+    height: 32px;
+    }
+    & img:last-child {
+      height: 35px;
     }
   }
 }
