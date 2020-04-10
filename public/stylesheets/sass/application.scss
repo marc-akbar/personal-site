@@ -62,6 +62,7 @@ nav {
 .landing-title {
   font-family: 'Satisfy', cursive, sans-serif;
   font-size: 5em;
+  color: #00b05b;
   margin-bottom: 60px;
 }
 
@@ -72,27 +73,34 @@ nav {
 .landing-links > ul > li {
   display: inline-block;
   font-family: 'Baloo Tammudu 2', cursive, sans-serif;
+  font-weight: 600;
   font-size: 24px;
+  
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 40px;
 
   & a {
   display: block;
   text-align: center;
   text-decoration: none;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 40px;
+  color: inherit;
+  }
+
+  & a:hover {
+  color: #00b05b;
   }
 }
 
 .landing-social > ul > li {
   display: inline-block;
+  margin-left: 20px;
+  margin-right: 20px;
 
   & a {
   display: block;
   text-align: center;
   text-decoration: none;
-  margin-left: 20px;
-  margin-right: 20px;
 
     & img {
     height: 32px;
