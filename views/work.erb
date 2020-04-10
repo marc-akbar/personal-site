@@ -1,34 +1,11 @@
-<nav class="transparent z-depth-0">
-  <div class="nav-wrapper">
-    <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    <ul class="right hide-on-med-and-down">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-</nav>
+<%= erb :navigation %>
 
-<ul id="mobile-nav" class="sidenav section table-of-contents">
-  <li><a href="#home" class="sidenav-close">Home</a></li>
-  <li><a href="#work" class="sidenav-close">Work</a></li>
-  <li><a href="#contact" class="sidenav-close">Contact</a></li>
-</ul>
-
-<div id="content">
-  <div class="row">
-    <div id="home" class="section scrollspy parallax-container first-parallax">
-      <p>Content </p>
-    </div>
-    <div id="work" class="section scrollspy white">
-      <div class="row container">
-        <h2 class="header">Parallax</h2>
-        <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+<div class="container">
+  <div id="content">
+    <div class="row">
+      <div id="home" class="center-horiz">
+        <h1 class="title">Work.</h1>
       </div>
-    </div>
-    <div id="contact" class="section scrollspy">
-      <p>Content </p>
     </div>
   </div>
 </div>
-<%= erb :footer %>

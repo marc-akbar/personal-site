@@ -10,15 +10,6 @@
 //   background-size: cover;
 // }
 
-nav {
-  position: absolute;
-  z-index: 999;
-}
-
-.first-parallax {
-  background-color: #c2eaed;
-}
-
 .background {
   position: absolute;
   top: 0;
@@ -59,9 +50,10 @@ nav {
   bottom: 40px;
 }
 
-.landing-title {
+.title {
+  margin-top: 2.8rem;
   font-family: 'Satisfy', cursive, sans-serif;
-  font-size: 5em;
+  font-size: 9em;
   color: #00b05b;
   margin-bottom: 60px;
 }
@@ -75,20 +67,20 @@ nav {
   font-family: 'Baloo Tammudu 2', cursive, sans-serif;
   font-weight: 600;
   font-size: 24px;
-  
+
   margin-left: 20px;
   margin-right: 20px;
   margin-bottom: 40px;
 
   & a {
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  color: inherit;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
   }
 
   & a:hover {
-  color: #00b05b;
+    color: #00b05b;
   }
 }
 
@@ -98,15 +90,61 @@ nav {
   margin-right: 20px;
 
   & a {
-  display: block;
-  text-align: center;
-  text-decoration: none;
+    display: block;
+    text-align: center;
+    text-decoration: none;
 
     & img {
-    height: 32px;
+      height: 32px;
     }
-    & img:last-child {
-      height: 35px;
+  }
+}
+
+.nav-wrapper {
+  & a {
+    color: rgba(0,0,0,0.87);
+  }
+
+  & ul > li {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+
+    & a {
+      color: rgba(0,0,0,0.87);
+      font-family: 'Baloo Tammudu 2', cursive, sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+      padding-left: 40px;
+      padding-right: 40px;
+
+      & i {
+        font-size: 45px;
+      }
+    }
+
+    & a:hover {
+      background-color: inherit;
+      color: #00b05b;
+    }
+  }
+}
+
+.sidenav {
+  padding-top: 20px;
+
+  li {
+    padding-top: 15px;
+
+    & a {
+      color: rgba(0,0,0,0.87);
+      font-family: 'Baloo Tammudu 2', cursive, sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    & a:hover {
+      color: #00b05b;
     }
   }
 }
