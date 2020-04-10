@@ -10,13 +10,7 @@
 //   background-size: cover;
 // }
 
-.background {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
+body {
   background-color: #f5f5f0;
 }
 
@@ -46,6 +40,10 @@
 }
 
 .bottom {
+  bottom: 40px;
+}
+
+.absolute-bottom {
   position: absolute;
   bottom: 40px;
 }
@@ -58,11 +56,11 @@
   margin-bottom: 60px;
 }
 
-.landing-content {
+.home-content {
   margin-bottom: 40px;
 }
 
-.landing-links > ul > li {
+.home-links > ul > li {
   display: inline-block;
   font-family: 'Baloo Tammudu 2', cursive, sans-serif;
   font-weight: 600;
@@ -84,7 +82,7 @@
   }
 }
 
-.landing-social > ul > li {
+.home-social > ul > li {
   display: inline-block;
   margin-left: 20px;
   margin-right: 20px;

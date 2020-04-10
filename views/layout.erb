@@ -14,10 +14,7 @@
     <link href="<%= url('/stylesheets/application.css') %>" rel="stylesheet" />
   </head>
   <body>
-    <div class="background">
-      <%= yield %>
-      <%= erb :footer %>
-    </div>
+    <%= yield %>
     <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="/javascript/materialize.min.js"></script>
     <script src="/javascript/application.js"></script>

@@ -1,14 +1,18 @@
 <div class="container">
   <div class="full-width center-horiz center-vert">
     <h1 class="title">Hello.</h1>
-    <div class="landing-content">
+    <div class="home-content">
       <p class="flow-text">I'm Marc, a developer and climber based in Boulder CO.</p>
     </div>
-    <div class="landing-links">
+    <div class="home-links">
       <ul>
         <li><%= link_to "ABOUT", "/about" %></li>
         <li><%= link_to "WORK", "/work" %></li>
       </ul>
     </div>
   </div>
+</div>
+
+<div class="full-width center-horiz absolute-bottom">
+  <%= erb :footer %>
 </div>

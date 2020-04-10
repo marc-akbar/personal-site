@@ -11,7 +11,7 @@ configure :development do
 end
 
 get '/' do
-  erb :landing
+  erb :home
 end
 
 get '/about' do
