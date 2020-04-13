@@ -122,21 +122,21 @@ nav {
   line-height: 0;
 }
 
-.white-star-image {
+div[class*="white-star-image"] {
   content: url("../images/white_star.png");
   position: absolute;
   height: 10px;
   z-index: 0;
 }
 
-.gold-star-image {
+div[class*="gold-star-image"] {
   content: url("../images/gold_star.png");
   position: absolute;
   height: 15px;
   z-index: 0;
 }
 
-.teal-star-image {
+div[class*="teal-star-image"] {
   content: url("../images/teal_star.png");
   position: absolute;
   height: 20px;
@@ -194,4 +194,53 @@ nav {
       height: 32px;
     }
   }
+}
+
+
+@keyframes particleAnimation
+{
+  from {
+    left: -100px;
+  }
+  to {
+    left: calc( 100% + 100px );
+  }
+}
+
+.p {
+  position:fixed;
+  left:0px;
+  top: 10vw;
+  width:1px;
+  height:1px;
+  background-color:white;
+  position:fixed;
+  animation-name: particleAnimation;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.p::before {
+  position:absolute;
+  display:block;
+  content:"";
+  width:100px;
+  right:1px;
+  top:0px;
+  height:1px;
+  background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(255,255,255,0.4) 100%);
+}
+
+.p-1 {
+  animation-duration:10s;
+}
+
+.p-2 {
+  animation-duration:5s;
+  top:40%;
+}
+
+.p-3 {
+  animation-duration:15s;
+  top:60%;
 }

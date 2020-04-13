@@ -22,6 +22,23 @@ $(document).ready(function() {
     }
   };
 
+  // document.querySelectorAll('div[class*="white-star-image"]').forEach(move);
+  //
+  // function move(value) {
+  //   anime({
+  //     targets: value,
+  //     easing: 'linear',
+  //     loop: true,
+  //     duration: 10000,
+  //     translateX: function(el) {
+  //       return width - ($(el).position().left);
+  //     },
+  //     translateY: function(el) {
+  //       return height - ($(el).position().top);
+  //     }
+  //   });
+  // }
+
   anime({
     targets: '.white-star-image',
     easing: 'linear',
@@ -38,7 +55,7 @@ $(document).ready(function() {
     loop: true,
     rotate: {
       value: 360,
-      duration: 5000,
+      duration: 6000,
     }
   });
 
@@ -48,7 +65,7 @@ $(document).ready(function() {
     loop: true,
     rotate: {
       value: 360,
-      duration: 7000,
+      duration: 9000,
     }
   });
 });
