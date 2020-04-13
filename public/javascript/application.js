@@ -2,6 +2,17 @@ $(document).ready(function() {
   $('.sidenav').sidenav();
   $('.parallax').parallax();
 
+  const svgPath = document.querySelectorAll('.path');
+  const svgText = anime({
+    targets: svgPath,
+    loop: true,
+    direction: 'alternate',
+    strokeDashoffset: [anime.setDashoffset, 0],
+    easing: 'easeInOutSine',
+    duration: 700,
+    delay: (el, i) => { return i * 500 }
+  });
+
   var width = $(".scene").width();
   var height = $(".scene").height();
   var stars = ['white-star-image', 'gold-star-image', 'teal-star-image'];
@@ -45,7 +56,7 @@ $(document).ready(function() {
     loop: true,
     rotate: {
       value: 360,
-      duration: 3000,
+      duration: 5000,
     }
   });
 
