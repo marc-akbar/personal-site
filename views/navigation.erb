@@ -1,5 +1,5 @@
-<div class="container">
-  <nav class="transparent z-depth-0">
+<nav class="z-depth-0">
+  <div class="container">
     <div class="nav-wrapper">
       <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="left hide-on-med-and-down">
@@ -10,11 +10,12 @@
         <li><%= link_to "WORK", '/work' %></li>
       </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <ul id="mobile-nav" class="sidenav">
-    <li><%= link_to "HOME", "/" %></li>
-    <li><%= link_to "ABOUT", '/about' %></li>
-    <li><%= link_to "WORK", '/work' %></li>
-  </ul>
-</div>
+
+<ul id="mobile-nav" class="sidenav">
+  <li><%= link_to "HOME", "/" %></li>
+  <li><%= link_to "ABOUT", '/about' %></li>
+  <li><%= link_to "WORK", '/work' %></li>
+</ul>

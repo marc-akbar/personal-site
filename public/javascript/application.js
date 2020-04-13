@@ -2,24 +2,75 @@ $(document).ready(function() {
   $('.sidenav').sidenav();
   $('.parallax').parallax();
 
-  // get the width and height of the window
-  var width = $("h1.title").width();
-  var height = $("h1.title").height();
-  // add 100 divs to the page
-  for (var i = 0; i < 30; i++) {
-    // the left position of the div should be at most the width of the
-    // window minus the width of the div, so the div doesn't spill out
-    // of the right side of the window.
-    var left = Math.floor(Math.random() * (width-10));
-    // the top position of the div should be at most the height of the
-    // window minus the width of the div, so the div doesn't spill out
-    // of the bottom of the window.
-    var top = Math.floor(Math.random() * (height-10));
-    // create a new div, append it to the body and set the top and
-    // left positions in the CSS
-    $("<div class='star-image'></div>").appendTo("h1.title").css({
-      left: left,
-      top: top
-    });
+  var width = $(".scene").width();
+  var height = $(".scene").height();
+  var stars = ['white-star-image', 'gold-star-image', 'teal-star-image']
+  stars.forEach(populateStars);
+
+  function populateStars(value) {
+    for (var i = 0; i < 15; i++) {
+      // Pad the left and right by 30px
+      var left = Math.floor(30 + (Math.random() * (width-60)));
+      // Pad the top by 90px and bottom by 60px
+      var top = Math.floor(90 + (Math.random() * (height-150)));
+      $(`<div class='${value}'></div>`).appendTo(".scene").css({
+        left: left,
+        top: top
+      });
+    }
   }
+
+  anime({
+    targets: '.white-star-image',
+    easing: 'linear',
+    rotate: {
+      value: 360,
+      duration: 3000,
+      loop: true,
+    },
+    translateX: {
+      value: 1000,
+      duration: 100000
+    },
+    translatey: {
+      value: -1000,
+      duration: 100000
+    }
+  });
+
+  anime({
+    targets: '.gold-star-image',
+    easing: 'linear',
+    rotate: {
+      value: 360,
+      duration: 4000,
+      loop: true,
+    },
+    translateX: {
+      value: 1000,
+      duration: 100000
+    },
+    translatey: {
+      value: -1000,
+      duration: 100000
+    }
+  });
+
+  anime({
+    targets: '.teal-star-image',
+    easing: 'linear',
+    rotate: {
+      value: 360,
+      duration: 5000,
+      loop: true,
+    },
+    translateX: {
+      value: 1000,
+      duration: 100000
+    },
+    translatey: {
+      value: -1000,
+      duration: 100000
+    }
+  });
 });
