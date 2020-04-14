@@ -4,15 +4,13 @@ $(document).ready(function() {
   $('.parallax').parallax();
 
   // Title drawing animation
-  const svgPath = document.querySelectorAll('path');
+  var svgPath = document.querySelectorAll('.path');
   anime({
     targets: svgPath,
-    loop: true,
-    direction: 'alternate',
     strokeDashoffset: [anime.setDashoffset, 0],
-    easing: 'easeInOutSine',
-    duration: 1000,
-    delay: (el, i) => { return i * 500 }
+    easing: 'easeInSine',
+    duration: 800,
+    delay: (el, i) => { return i * 400 }
   });
 
   // Scramble text
