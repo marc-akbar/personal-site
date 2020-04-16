@@ -1,7 +1,7 @@
 $(document).ready(function() {
   // Materialize initializations
   $('.sidenav').sidenav();
-  $('.parallax').parallax();
+  $('.materialboxed').materialbox();
 
   // Title drawing animation
   var svgPath = document.querySelectorAll('.path');

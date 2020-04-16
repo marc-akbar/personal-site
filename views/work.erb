@@ -14,14 +14,14 @@
   <div class="work-content">
     <div id="earlybird" class="row">
       <div class="col l7">
-        <img src="images/eb-image.png">
+        <img class= "materialboxed" src="images/eb-image.png">
       </div>
       <div class="col l4 push-l1">
         <div class="eb-text">
           <h4 class="shaded-teal">EarlyBird</h4>
           <h6 class="custom-teal">Rails | ActiveAdmin | Materialize</h6>
           <p>
-            A conference management tool for <%= link_to "Viget", '//www.viget.com' %>.
+            A conference management tool for <%= link_to "Viget", '//www.viget.com', { target: "_blank" } %>.
             I collaborated with other developers, designers and UX researchers to
             redesign the user dashboard / conference request flow and upgrade the
             app from Rails 4 to 6.
@@ -34,19 +34,20 @@
         <h4 class="shaded-teal">Trail Buddy</h4>
         <h6 class="custom-teal">GraphQL | Machine Learning</h6>
         <p>
-          A proof-of-concept tool that predicts trail conditions based off
-          previous weather and soil data. This was built in 48 hours during
-          a company hackathon at <%= link_to "Viget", '//www.viget.com' %>. We
-          used machine learning and 5 external APIs.
+          A <%= link_to "proof-of-concept tool", "https://www.viget.com/articles/trailbuddy-using-ai-to-create-a-predictive-trail-conditions-app/", { target: "_blank" } %>
+          that predicts trail conditions based previous weather and soil data.
+          This was built in 48 hours during a company hackathon at
+          <%= link_to "Viget", '//www.viget.com', { target: "_blank" } %>. We used machine learning
+          and 5 external APIs.
         </p>
       </div>
       <div class="col s12 m5 l5 push-m1 push-l1">
-        <img class="trail-buddy-image"src="images/mountain_range.png">
+        <img class="materialboxed" src="images/mountain_range.png">
       </div>
     </div>
     <div id="finance-tracker" class="row">
       <div class="col s12 m5 l5">
-        <img class="ft-image"src="images/mountain_range.png">
+        <img class="ft-image" src="images/mountain_range.png">
       </div>
       <div class="col s12 m6 l6 push-m1 push-l1">
         <h4 class="shaded-teal">Finance Tracker</h4>
@@ -67,20 +68,34 @@
         </p>
       </div>
       <div class="col s12 m5 l5 push-m1 push-l1">
-        <img class="personal-site-gimp-image"src="images/mountain_range.png">
+        <img class="materialboxed" src="images/mountain_range.png">
       </div>
     </div>
     <div id="haxxor-news" class="row">
       <div class="col s12 m5 l5">
-        <img class="haxxor-image"src="images/mountain_range.png">
+        <img class="materialboxed" src="images/mountain_range.png">
       </div>
       <div class="col s12 m6 l6 push-m1 push-l1">
+        <h4 class="shaded-teal">Slack App</h4>
+        <h6 class="custom-teal">Bolt | Slack API</h6>
+        <p>
+          A simple solution to a nagging problem. This slack app pinged employees
+          to remove their conference rooms when someone announced they were
+          working from home in Slack.
+        </p>
+      </div>
+    </div>
+    <div id="personal-site" class="row">
+      <div class="col s12 m6 l6">
         <h4 class="shaded-teal">Haxxor News</h4>
         <h6 class="custom-teal">Rails</h6>
         <p>
           A Hacker News clone built with custom authentication pagination,
           threaded commenting, and voting.
         </p>
+      </div>
+      <div class="col s12 m5 l5 push-m1 push-l1">
+        <img class="materialboxed" src="images/mountain_range.png">
       </div>
     </div>
   </div>

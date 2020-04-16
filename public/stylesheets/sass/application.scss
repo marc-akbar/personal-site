@@ -260,12 +260,12 @@ nav {
 }
 
 .work-content {
-  padding-top: 5rem;
-  padding-bottom: 6rem;
+  padding-top: 7rem;
+  padding-bottom: 3rem;
 
   & .row {
-    margin-top: 5rem;
-    margin-bottom: 10rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
   & h6 {
@@ -278,7 +278,7 @@ nav {
   }
 
   & img {
-    width: 100%;
+    max-width: 100%;
   }
 }
 
