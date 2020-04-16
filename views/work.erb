@@ -11,105 +11,127 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="work-content">
-    <div id="earlybird" class="row">
-      <div class="col l7">
-        <img class= "materialboxed" src="images/eb-image.png">
-      </div>
-      <div class="col l4 push-l1">
-        <div class="eb-text">
-          <h4 class="shaded-teal">EarlyBird</h4>
-          <h6 class="custom-teal">Rails | ActiveAdmin | Materialize</h6>
-          <p>
-            A conference management tool for <%= link_to "Viget", '//www.viget.com', { target: "_blank" } %>.
-            I collaborated with other developers, designers and UX researchers to
-            redesign the user dashboard / conference request flow and upgrade the
-            app from Rails 4 to 6.
-          </p>
+<div class="work-content">
+  <section id="earlybird">
+    <div class="container">
+      <div class="row">
+        <div class="col l7">
+          <img class= "materialboxed" src="images/eb-image.png">
+        </div>
+        <div class="col l4 push-l1">
+          <div class="eb-text">
+            <h4 class="shaded-teal">EarlyBird</h4>
+            <h6 class="custom-teal">Rails | ActiveAdmin | Materialize</h6>
+            <p>
+              A conference management tool for <%= link_to "Viget", '//www.viget.com', { target: "_blank" } %>.
+              I collaborated with other developers, designers and UX researchers to
+              redesign the user dashboard / conference request flow and upgrade the
+              app from Rails 4 to 6.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-    <div id="trail-buddy" class="row">
-      <div class="col l4">
-        <div class="tb-text">
-          <h4 class="shaded-teal">Trail Buddy</h4>
-          <h6 class="custom-teal">GraphQL | Machine Learning</h6>
-          <p>
-            A <%= link_to "proof-of-concept tool", "https://www.viget.com/articles/trailbuddy-using-ai-to-create-a-predictive-trail-conditions-app/", { target: "_blank" } %>
-            that predicts trail conditions based previous weather and soil data.
-            This was built in 48 hours during a company hackathon at
-            <%= link_to "Viget", '//www.viget.com', { target: "_blank" } %>. We used machine learning
-            and 5 external APIs.
-          </p>
+  </section>
+  <section id="trailbuddy">
+    <div class="container">
+      <div class="row">
+        <div class="col l4">
+          <div class="tb-text">
+            <h4 class="shaded-teal">Trail Buddy</h4>
+            <h6 class="custom-teal">GraphQL | Machine Learning</h6>
+            <p>
+              A <%= link_to "proof-of-concept tool", "https://www.viget.com/articles/trailbuddy-using-ai-to-create-a-predictive-trail-conditions-app/", { target: "_blank" } %>
+              that predicts trail conditions based previous weather and soil data.
+              This was built in 48 hours during a company hackathon at
+              <%= link_to "Viget", '//www.viget.com', { target: "_blank" } %>. We used machine learning
+              and 5 external APIs.
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="col l7 push-l1">
-        <img class="materialboxed" src="images/tb-graphiql-image.png">
-      </div>
-    </div>
-    <div id="finance-tracker" class="row">
-      <div class="col l7">
-        <img class="ft-image" src="images/mountain_range.png">
-      </div>
-      <div class="col l4 push-l1">
-        <div class="ft-text">
-          <h4 class="shaded-teal">Finance Tracker</h4>
-          <h6 class="custom-teal">Rails | Bootstrap</h6>
-          <p>
-            A Robinhood clone without monetary transactions. My first project
-            using an external API and data visualization.
-          </p>
+        <div class="col l7 push-l1">
+          <img class="materialboxed" src="images/tb-graphiql-image.png">
         </div>
       </div>
     </div>
-    <div id="personal-site" class="row">
-      <div class="col l4">
-        <div class="personal-text">
-          <h4 class="shaded-teal">Personal Website</h4>
-          <h6 class="custom-teal">Sinatra | Materialize | Animejs | GIMP</h6>
-          <p>
-            A test in design. This site was an exploration into a lightweight
-            web framework called Sinatra and web animations.
-          </p>
+  </section>
+  <section id="finance">
+    <div class="container">
+      <div class="row">
+        <div class="col l7">
+          <img class="ft-image" src="images/mountain_range.png">
         </div>
-      </div>
-      <div class="col l7 push-l1">
-        <img class="materialboxed" src="images/mountain_range.png">
-      </div>
-    </div>
-    <div id="haxxor-news" class="row">
-      <div class="col l7">
-        <img class="materialboxed" src="images/mountain_range.png">
-      </div>
-      <div class="col l4 push-l1">
-        <div class="slack-text">
-          <h4 class="shaded-teal">Slack App</h4>
-          <h6 class="custom-teal">Bolt | Slack API</h6>
-          <p>
-            A simple solution to a nagging problem. This slack app pinged employees
-            to remove their conference rooms when someone announced they were
-            working from home in Slack.
-          </p>
+        <div class="col l4 push-l1">
+          <div class="ft-text">
+            <h4 class="shaded-teal">Finance Tracker</h4>
+            <h6 class="custom-teal">Rails | Bootstrap</h6>
+            <p>
+              A Robinhood clone without monetary transactions. My first project
+              using an external API and data visualization.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-    <div id="personal-site" class="row">
-      <div class="col l4">
-        <div class="haxxor-text">
-          <h4 class="shaded-teal">Haxxor News</h4>
-          <h6 class="custom-teal">Rails</h6>
-          <p>
-            A Hacker News clone built with custom authentication pagination,
-            threaded commenting, and voting.
-          </p>
+  </section>
+  <section id="personal">
+    <div class="container">
+      <div class="row">
+        <div class="col l4">
+          <div class="personal-text">
+            <h4 class="shaded-teal">Personal Website</h4>
+            <h6 class="custom-teal">Sinatra | Materialize | Animejs | GIMP</h6>
+            <p>
+              A test in design. This site was an exploration into a lightweight
+              web framework, web animations, and design tools.
+            </p>
+          </div>
+        </div>
+        <div class="col l7 push-l1">
+          <img class="materialboxed" src="images/gimp-mountains.png">
         </div>
       </div>
-      <div class="col l7 push-l1">
-        <img class="materialboxed" src="images/mountain_range.png">
+    </div>
+  </section>
+  <section id="slack">
+    <div class="container">
+      <div class="row">
+        <div class="col l7">
+          <img class="materialboxed" src="images/mountain_range.png">
+        </div>
+        <div class="col l4 push-l1">
+          <div class="slack-text">
+            <h4 class="shaded-teal">Slack App</h4>
+            <h6 class="custom-teal">Bolt | Slack API</h6>
+            <p>
+              A simple solution to a nagging problem. This slack app pinged employees
+              to remove their conference rooms when someone announced they were
+              working from home in Slack.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
+  <section id="haxxor">
+    <div class="container">
+      <div class="row">
+        <div class="col l4">
+          <div class="haxxor-text">
+            <h4 class="shaded-teal">Haxxor News</h4>
+            <h6 class="custom-teal">Rails</h6>
+            <p>
+              A Hacker News clone built with custom authentication pagination,
+              threaded commenting, and voting.
+            </p>
+          </div>
+        </div>
+        <div class="col l7 push-l1">
+          <img class="materialboxed" src="images/mountain_range.png">
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
 
 

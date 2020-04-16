@@ -259,10 +259,18 @@ nav {
   top:40%;
 }
 
+#earlybird { background-color: none; }
+#trailbuddy { background-color: none; }
+#finance { background-color: none; }
+#personal { background-color: none; }
+#slack { background-color: none; }
+#haxxor { background-color: none; }
+
 .work-content {
   padding-top: 7rem;
 
   & .row {
+    margin: 0;
     padding-top: 5rem;
     padding-bottom: 8rem;
   }
@@ -287,4 +295,8 @@ nav {
 
 .tb-text {
   padding-top: 2vw;
+}
+
+.personal-text {
+  padding-top: 5vw;
 }
