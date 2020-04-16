@@ -12,6 +12,17 @@
 .shaded-teal  { color: #175E5A; }
 .dark-teal    { color: #124d49; }
 
+@media only screen and (max-width: 1200px) {
+  .container {
+    width: 90%;
+  }
+}
+
+.container {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
 body {
   background-color: #f5f5f0;
   overflow-x: hidden;
@@ -157,7 +168,7 @@ nav {
   margin-top: 0;
   padding-top: 2.8rem;
   font-family: 'Satisfy', cursive, sans-serif;
-  font-size: 9em;
+  font-size: 10rem;
   color: #AB9120;
   padding-bottom: 9rem;
   z-index: 1;
@@ -248,44 +259,29 @@ nav {
   top:40%;
 }
 
-#earlybird {
-
-}
-
-#trailbuddy {
-
-}
-
-#finance-tracker {
-
-}
-
-#personal-site {
-
-}
-
-#haxxor-news {
-
-}
-
 .work-content {
-  padding-top: 8em;
-  padding-bottom: 6em;
+  padding-top: 5rem;
+  padding-bottom: 6rem;
 
   & .row {
-    margin-top: 5em;
-    margin-bottom: 10em;
+    margin-top: 5rem;
+    margin-bottom: 10rem;
   }
 
-  & h4 {
+  & h6 {
     padding-bottom: 1rem;
+    letter-spacing: 0.0625rem;
   }
 
   & p {
-    font-size: 1.25em;
+    font-size: 1.1em;
   }
 
   & img {
     width: 100%;
   }
+}
+
+.eb-text {
+  padding-top: 4vw;
 }
