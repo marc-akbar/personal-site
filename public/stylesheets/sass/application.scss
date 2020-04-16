@@ -161,6 +161,11 @@ nav {
       height: 32px;
     }
   }
+
+  & a:hover > img {
+    filter: hue-rotate(70deg);
+    -webkit-filter: hue-rotate(70deg);
+  }
 }
 
 .title {
@@ -294,9 +299,13 @@ nav {
 }
 
 .tb-text {
-  padding-top: 2vw;
+  padding-top: 6vw;
 }
 
 .personal-text {
   padding-top: 5vw;
+}
+
+.ft-text {
+  padding-top: 6vw;
 }
