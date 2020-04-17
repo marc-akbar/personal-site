@@ -11,17 +11,17 @@
   </div>
 </div>
 
-<div class="work-content">
+<div id="work-content">
   <section id="earlybird">
     <div class="container">
       <div class="row">
-        <div class="col l7">
-          <img class= "materialboxed" src="images/eb-image.png">
+        <div id="eb-image" class="col l7">
+          <img src="images/eb-image.png">
         </div>
-        <div class="col l4 push-l1">
+        <div id="eb-description" class="col l4 push-l1">
           <div class="eb-text">
-            <h4 class="shaded-teal">EarlyBird</h4>
-            <h6 class="custom-teal">Rails | ActiveAdmin | Materialize</h6>
+            <h4 class="dark-teal">EarlyBird</h4>
+            <h6 class="shaded-teal">Rails | ActiveAdmin | Materialize</h6>
             <p>
               A conference management tool for <%= link_to "Viget", '//www.viget.com', { target: "_blank" } %>.
               I collaborated with other developers, designers and UX researchers to
@@ -36,23 +36,23 @@
   <section id="trailbuddy">
     <div class="container">
       <div class="row">
-        <div class="col l4">
+        <div id="tb-description" class="col l4">
           <div class="tb-text">
-            <h4 class="shaded-teal">Trail Buddy</h4>
-            <h6 class="custom-teal">GraphQL | Machine Learning</h6>
+            <h4 class="dark-teal">Trail Buddy</h4>
+            <h6 class="shaded-teal">GraphQL | Machine Learning</h6>
             <p>
-              A proof-of-concept that predicts trail conditions based
+              A proof-of-concept app that predicts trail conditions based
               previous weather and soil data. This was built in 48 hours
-              during a company hackathon at
-              <%= link_to "Viget", '//www.viget.com', { target: "_blank" } %>. We used machine learning
-              and 5 external APIs.
+              during a company hackathon at <%= link_to "Viget", '//www.viget.com', { target: "_blank" } %>.
+              We used machine learning and 5 external APIs to create a GraphQL endpoint
+              for the front end.
             </p>
-            <%= link_to "VIEW WEBSITE", "https://heytrailbuddy.com/", { target: '_blank', class: 'btn-large' } %>
-            <%= link_to "VIEW ARTICLE", "https://www.viget.com/articles/trailbuddy-using-ai-to-create-a-predictive-trail-conditions-app/", { target: '_blank', class: 'btn-large' } %>
+            <%= link_to "WEBSITE", "https://heytrailbuddy.com/", { target: '_blank', class: 'btn' } %>
+            <%= link_to "ARTICLE", "https://www.viget.com/articles/trailbuddy-using-ai-to-create-a-predictive-trail-conditions-app/", { target: '_blank', class: 'btn' } %>
           </div>
         </div>
-        <div class="col l7 push-l1">
-          <img class="materialboxed" src="images/tb-image.png">
+        <div id="tb-image" class="col l7 push-l1">
+          <img src="images/tb-image.png">
         </div>
       </div>
     </div>
@@ -60,19 +60,19 @@
   <section id="finance">
     <div class="container">
       <div class="row">
-        <div class="col l7">
-          <img class="materialboxed" src="images/ft-image.png">
+        <div id="ft-image" class="col l7">
+          <img src="images/ft-image.png">
         </div>
-        <div class="col l4 push-l1">
+        <div id="ft-description" class="col l4 push-l1">
           <div class="ft-text">
             <h4 class="dark-teal">Finance Tracker</h4>
-            <h6 class="shaded-teal">Rails | Bootstrap</h6>
+            <h6 class="dark-teal">Rails | Bootstrap</h6>
             <p">
-              A Robinhood clone without monetary transactions. My first project
-              using an external API and data visualization.
+              A Robinhood clone minus the monetary transactions. My first project
+              using an external API and data visualization tools.
             </p>
-            <%= link_to "VIEW ON GITHUB", "https://github.com/marc-akbar/finance-tracker", { target: '_blank', class: 'btn-large' } %>
-            <%= link_to "VIEW WEBSITE", "https://marc-finance-tracker.herokuapp.com/users/sign_in", { target: '_blank', class: 'btn-large' } %>
+            <%= link_to "GITHUB", "https://github.com/marc-akbar/finance-tracker", { target: '_blank', class: 'btn' } %>
+            <%= link_to "WEBSITE", "https://marc-finance-tracker.herokuapp.com/users/sign_in", { target: '_blank', class: 'btn' } %>
           </div>
         </div>
       </div>
@@ -81,49 +81,29 @@
   <section id="personal">
     <div class="container">
       <div class="row">
-        <div class="col l4">
+        <div id="personal-description" class="col l4">
           <div class="personal-text">
             <h4 class="gold">Personal Website</h4>
             <h6 class="shaded-gold">Sinatra | Materialize | Animejs | GIMP</h6>
             <p class="light-gold">
               A test in design. This site was an exploration into a lightweight
-              web framework, web animations, and design tools.
+              web framework, animations, and design tools.
             </p>
-            <%= link_to "VIEW ON GITHUB", "#", { target: '_blank', class: 'btn-large' } %>
-
+            <%= link_to "GITHUB", "https://github.com/marc-akbar/personal-site", { target: '_blank', class: 'btn' } %>
           </div>
         </div>
-        <div class="col l7 push-l1">
-          <img class="materialboxed" src="images/gimp-mountains.png">
+        <div id="personal-image" class="col l7 push-l1">
+          <img src="images/gimp-mountains.png">
         </div>
       </div>
     </div>
   </section>
-  <section id="slack-haxxor">
+  <section id="say-hi">
     <div class="container">
-      <div class="row">
-        <div class="col l5">
-          <div class="slack-text">
-            <h4 class="shaded-teal">Slack App</h4>
-            <h6 class="custom-teal">Bolt | Slack API</h6>
-            <p>
-              A simple solution to a nagging problem. This slack app pinged employees
-              to remove their conference rooms when someone announced they were
-              working from home in Slack.
-            </p>
-          </div>
-        </div>
-        <div class="col l5 push-l2">
-          <div class="haxxor-text">
-            <h4 class="shaded-teal">Haxxor News</h4>
-            <h6 class="custom-teal">Rails</h6>
-            <p>
-              A Hacker News clone built with custom authentication pagination,
-              threaded commenting, and voting.
-            </p>
-            <%= link_to "VIEW WEBSITE", "https://marc-haxxor-news.herokuapp.com/", { target: '_blank', class: 'btn-large' } %>
-          </div>
-        </div>
+      <div class="say-hi-text">
+        <h4 class="shaded-teal">Say hi.</h4>
+        <p>I don't bite and am currently available for work. Feel free to reach out.</p>
+        <a href="mailto:marc.akbar@gmail.com" class="btn-large"><i class="material-icons left">mail</i>MESSAGE ME</a>
       </div>
     </div>
   </section>

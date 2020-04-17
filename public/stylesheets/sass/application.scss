@@ -12,6 +12,29 @@
   }
 }
 
+@media screen and (max-width: 992px) {
+  #work-content {
+    & div[class*="-text"] {
+      padding-top: 0;
+      padding-bottom: 4rem;
+    }
+  }
+
+  #earlybird > .container > .row {
+    display: flex;
+    flex-flow: column;
+    & #eb-description { order: 1; }
+    & #eb-image       { order: 2; }
+  }
+
+  #finance > .container > .row {
+    display: flex;
+    flex-flow: column;
+    & #ft-description { order: 1; }
+    & #ft-image       { order: 2; }
+  }
+}
+
 .container {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -177,12 +200,12 @@ nav {
   padding-top: 90px;
   line-height: 0;
 
-  background: radial-gradient(ellipse at bottom, #3e4d4d, #293333);
-  background: -webkit-radial-gradient(ellipse at bottom, #3e4d4d, #293333);
-  background: -moz-radial-gradient(ellipse at bottom, #3e4d4d, #293333);
-  background: -ms-radial-gradient(ellipse at bottom, #3e4d4d, #293333);
-  background: -o-radial-gradient(ellipse at bottom, #3e4d4d, #293333);
-  background-color: #293333;
+  background: -webkit-radial-gradient(bottom, #3e4d4d 0%, #293333 50%); // Chrome10+, Safari5.1+
+  background: -webkit-gradient(radial, bottom, color-stop(0%, #3e4d4d), color-stop(50%, #293333));  // Chrome, Safari4+
+  background: -moz-radial-gradient(bottom, #3e4d4d 0%, #293333 75%);  // Firefox3.6+
+  background: -ms-radial-gradient(bottom, #3e4d4d 0%, #293333 75%); // IE10+
+  background: -o-radial-gradient(bottom, #3e4d4d 0%, #293333 75%);  // Opera11.10+
+  background-color: #293333;  // old browsers
 }
 
 .white-star-image {
@@ -264,10 +287,8 @@ nav {
 #personal { background-color: #175E5A; }
 #slack-haxxor { background-color: none; }
 
-.work-content {
-  padding-top: 7rem;
-
-  & .row {
+#work-content {
+  & section {
     margin: 0;
     padding-top: 8rem;
     padding-bottom: 8rem;
@@ -283,7 +304,10 @@ nav {
   }
 
   & p {
-    font-size: 1.1em;
+    font-size: 1.1rem;
+    & a {
+      color: #18ABA2;
+    }
   }
 
   & img {
@@ -295,14 +319,49 @@ nav {
   padding-top: 4vw;
 }
 
+$tb-btn-color: #ff4237;
 .tb-text {
   padding-top: 6vw;
+
+  & .btn {
+    background-color: $tb-btn-color;
+  }
+  & .btn:hover {
+    background-color: lighten($tb-btn-color, 10%);
+  }
 }
 
-.personal-text {
-  padding-top: 5vw;
-}
-
+$ft-btn-color: #5cb85c;
 .ft-text {
   padding-top: 6vw;
+
+  & .btn {
+    background-color: $ft-btn-color;
+  }
+  & .btn:hover {
+    background-color: lighten($ft-btn-color, 10%);
+  }
+}
+
+$personal-btn-color: #124d49;
+.personal-text {
+  padding-top: 5vw;
+
+  & .btn {
+    background-color: $personal-btn-color;
+  }
+  & .btn:hover {
+    background-color: lighten($personal-btn-color, 10%);
+  }
+}
+
+.say-hi-text {
+  text-align: center;
+
+  & h4 {
+    padding-bottom: 1rem;
+  }
+  & p {
+    padding-bottom: 2rem;
+  }
 }
