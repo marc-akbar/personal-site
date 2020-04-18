@@ -133,7 +133,10 @@ nav {
   bottom: 40px;
 }
 
-.home-title { margin-bottom: 100px; }
+.home-title {
+  margin-bottom: 100px;
+  & svg { max-width: 90%; }
+}
 .home-content { margin-bottom: 40px; }
 
 .home-links > ul > li {
