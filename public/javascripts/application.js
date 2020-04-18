@@ -40,11 +40,10 @@ $(document).ready(function() {
   stars.forEach(populateRightStars);
 
   function populateLeftStars(value) {
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < (width/100); i++) {
       // Pad the left by 10px
       var left = Math.floor(Math.random() * (rightBound - 10)) + 10;
-      // Pad the top by 90px and bottom by 150px
-      var top = Math.floor(Math.random() * ((height) - 240)) + 90;
+      var top = Math.floor(Math.random() * ((height) - (height * 0.4))) + (height * 0.15);
       $(`<div class='${value}'></div>`).appendTo(".scene").css({
         left: left,
         top: top
@@ -53,11 +52,10 @@ $(document).ready(function() {
   };
 
   function populateMiddleStars(value) {
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < (width/100); i++) {
       // Pad the left and right by 10px
       var left = Math.floor(Math.random() * (width - 25)) + 10;
-      // Pad the top by 300px and bottom by 50px
-      var top = Math.floor(Math.random() * (height - 350)) + 300;
+      var top = Math.floor(Math.random() * (height - (height * 0.59))) + (height * 0.5);
       $(`<div class='${value}'></div>`).appendTo(".scene").css({
         left: left,
         top: top
@@ -66,10 +64,10 @@ $(document).ready(function() {
   };
 
   function populateRightStars(value) {
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < (width/100); i++) {
       // Pad the right by 10px
       var left = Math.floor(Math.random() * (width - leftBound - 25)) + leftBound - 25;
-      var top = Math.floor(Math.random() * (height - 240)) + 90;
+      var top = Math.floor(Math.random() * (height - (height * 0.4))) + (height * 0.15);
       $(`<div class='${value}'></div>`).appendTo(".scene").css({
         left: left,
         top: top

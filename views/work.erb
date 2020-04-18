@@ -1,116 +1,118 @@
-<%= erb :navigation %>
+<div class="site-wrapper">
+  <%= erb :navigation %>
 
-<div class="scene">
-  <div class="container">
-    <div class="center-horiz">
-      <h1 class="title">Work</h1>
+  <div class="scene">
+    <div class="container">
+      <div class="center-horiz">
+        <h1 class="title">Work</h1>
+      </div>
+      <img class="mountain-image" src="images/mountain_range.png" alt="mountain range graphic">
+      <div class="particle particle-1"></div>
+      <div class="particle particle-2"></div>
     </div>
-    <img class="mountain-image" src="images/mountain_range.png" alt="mountain range graphic">
-    <div class="particle particle-1"></div>
-    <div class="particle particle-2"></div>
   </div>
-</div>
 
-<div id="work-content">
-  <section id="earlybird">
-    <div class="container">
-      <div class="row">
-        <div id="eb-image" class="col l7">
-          <img src="images/eb-image.png" alt="early bird dashboard and request">
-        </div>
-        <div id="eb-description" class="col l4 push-l1">
-          <div class="eb-text">
-            <h4 class="dark-teal">EarlyBird</h4>
-            <h6 class="shaded-teal">Rails | ActiveAdmin | Materialize</h6>
-            <p>
-              A conference management tool for <%= link_to "Viget", '//www.viget.com', { target: "_blank" } %>.
-              I collaborated with other developers, designers and UX researchers to
-              redesign the user dashboard / conference request flow and upgrade the
-              app from Rails 4 to 6.
-            </p>
+  <div id="work-content">
+    <section id="earlybird">
+      <div class="container">
+        <div class="row">
+          <div id="eb-image" class="col l7">
+            <img src="images/eb-image.png" alt="early bird dashboard and request">
+          </div>
+          <div id="eb-description" class="col l4 push-l1">
+            <div class="eb-text">
+              <h4 class="dark-teal">EarlyBird</h4>
+              <h6 class="shaded-teal">Rails | ActiveAdmin | Materialize</h6>
+              <p>
+                A conference management tool for <%= link_to "Viget", '//www.viget.com', { target: "_blank" } %>.
+                I collaborated with other developers, designers and UX researchers to
+                redesign the user dashboard / conference request flow and upgrade the
+                app from Rails 4 to 6.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section id="trailbuddy">
-    <div class="container">
-      <div class="row">
-        <div id="tb-description" class="col l4">
-          <div class="tb-text">
-            <h4 class="dark-teal">Trail Buddy</h4>
-            <h6 class="shaded-teal">GraphQL | Machine Learning</h6>
-            <p>
-              A proof-of-concept app that predicts trail conditions based
-              previous weather and soil data. This was built in 48 hours
-              during a company hackathon at <%= link_to "Viget", '//www.viget.com', { target: "_blank" } %>.
-              We used machine learning and 5 external APIs to create a GraphQL endpoint
-              for the front end.
-            </p>
-            <%= link_to "WEBSITE", "https://heytrailbuddy.com/", { target: '_blank', class: 'btn' } %>
-            <%= link_to "ARTICLE", "https://www.viget.com/articles/trailbuddy-using-ai-to-create-a-predictive-trail-conditions-app/", { target: '_blank', class: 'btn' } %>
+    </section>
+    <section id="trailbuddy">
+      <div class="container">
+        <div class="row">
+          <div id="tb-description" class="col l4">
+            <div class="tb-text">
+              <h4 class="dark-teal">Trail Buddy</h4>
+              <h6 class="shaded-teal">GraphQL | Machine Learning</h6>
+              <p>
+                A proof-of-concept app that predicts trail conditions based
+                previous weather and soil data. This was built in 48 hours
+                during a company hackathon at <%= link_to "Viget", '//www.viget.com', { target: "_blank" } %>.
+                We used machine learning and 5 external APIs to create a GraphQL endpoint
+                for the front end.
+              </p>
+              <%= link_to "WEBSITE", "https://heytrailbuddy.com/", { target: '_blank', class: 'btn' } %>
+              <%= link_to "ARTICLE", "https://www.viget.com/articles/trailbuddy-using-ai-to-create-a-predictive-trail-conditions-app/", { target: '_blank', class: 'btn' } %>
+            </div>
           </div>
-        </div>
-        <div id="tb-image" class="col l7 push-l1">
-          <img src="images/tb-image.png" alt="trailbuddy homepage and graphql">
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="finance">
-    <div class="container">
-      <div class="row">
-        <div id="ft-image" class="col l7">
-          <img src="images/ft-image.png" alt="finance tracker screenshot">
-        </div>
-        <div id="ft-description" class="col l4 push-l1">
-          <div class="ft-text">
-            <h4 class="dark-teal">Finance Tracker</h4>
-            <h6 class="dark-teal">Rails | Bootstrap</h6>
-            <p>
-              A Robinhood clone minus the monetary transactions. My first project
-              using an external API and data visualization tools.
-            </p>
-            <%= link_to "GITHUB", "https://github.com/marc-akbar/finance-tracker", { target: '_blank', class: 'btn' } %>
-            <%= link_to "WEBSITE", "https://marc-finance-tracker.herokuapp.com/users/sign_in", { target: '_blank', class: 'btn' } %>
+          <div id="tb-image" class="col l7 push-l1">
+            <img src="images/tb-image.png" alt="trailbuddy homepage and graphql">
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section id="personal">
-    <div class="container">
-      <div class="row">
-        <div id="personal-description" class="col l4">
-          <div class="personal-text">
-            <h4 class="gold">Personal Website</h4>
-            <h6 class="shaded-gold">Sinatra | Materialize | Animejs | GIMP</h6>
-            <p class="light-gold">
-              A test in design. This site was an exploration into a lightweight
-              web framework, animations, and design tools.
-            </p>
-            <%= link_to "GITHUB", "https://github.com/marc-akbar/personal-site", { target: '_blank', class: 'btn' } %>
+    </section>
+    <section id="finance">
+      <div class="container">
+        <div class="row">
+          <div id="ft-image" class="col l7">
+            <img src="images/ft-image.png" alt="finance tracker screenshot">
+          </div>
+          <div id="ft-description" class="col l4 push-l1">
+            <div class="ft-text">
+              <h4 class="dark-teal">Finance Tracker</h4>
+              <h6 class="dark-teal">Rails | Bootstrap</h6>
+              <p>
+                A Robinhood clone minus the monetary transactions. My first project
+                using an external API and data visualization tools.
+              </p>
+              <%= link_to "GITHUB", "https://github.com/marc-akbar/finance-tracker", { target: '_blank', class: 'btn' } %>
+              <%= link_to "WEBSITE", "https://marc-finance-tracker.herokuapp.com/users/sign_in", { target: '_blank', class: 'btn' } %>
+            </div>
           </div>
         </div>
-        <div id="personal-image" class="col l7 push-l1">
-          <img src="images/gimp-mountains.png" alt="mountain range gimp mockup">
+      </div>
+    </section>
+    <section id="personal">
+      <div class="container">
+        <div class="row">
+          <div id="personal-description" class="col l4">
+            <div class="personal-text">
+              <h4 class="gold">Personal Website</h4>
+              <h6 class="shaded-gold">Sinatra | Materialize | Animejs | GIMP</h6>
+              <p class="light-gold">
+                A test in design. This site was an exploration into a lightweight
+                web framework, animations, and design tools.
+              </p>
+              <%= link_to "GITHUB", "https://github.com/marc-akbar/personal-site", { target: '_blank', class: 'btn' } %>
+            </div>
+          </div>
+          <div id="personal-image" class="col l7 push-l1">
+            <img src="images/gimp-mountains.png" alt="mountain range gimp mockup">
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section id="say-hi">
-    <div class="container">
-      <div class="say-hi-text">
-        <h4 class="shaded-teal">Say hi.</h4>
-        <p>I don't bite and am currently available for freelance or full-time work. Feel free to reach out.</p>
-        <a href="mailto:marc.akbar@gmail.com" class="btn-large"><i class="material-icons left">mail</i>MESSAGE ME</a>
+    </section>
+    <section id="say-hi">
+      <div class="container">
+        <div class="say-hi-text">
+          <h4 class="shaded-teal">Say hi.</h4>
+          <p>I don't bite and am currently available for freelance or full-time work. Feel free to reach out.</p>
+          <a href="mailto:marc.akbar@gmail.com" class="btn-large"><i class="material-icons left">mail</i>MESSAGE ME</a>
+        </div>
       </div>
-    </div>
-  </section>
-</div>
+    </section>
+  </div>
 
 
 
-<div class="full-width center-horiz bottom">
-  <%= erb :footer %>
+  <div class="full-width center-horiz bottom">
+    <%= erb :footer %>
+  </div>
 </div>
