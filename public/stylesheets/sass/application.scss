@@ -5,6 +5,7 @@ $dark-gold:   #5E4F0D;
 $custom-teal: #18ABA2;
 $shaded-teal: #175E5A;
 $dark-teal:   #124d49;
+$transition-effects: color 1s ease, background-color 1s ease;
 
 @media screen and (max-width: 1200px) {
   .container { width: 90%; }
@@ -44,12 +45,22 @@ $dark-teal:   #124d49;
   .title { font-size: 9rem !important; }
 }
 
+.loading {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: $light-gold;
+  z-index: 99;
+}
+
 body {
-  background-color: $light-gold;
   & .site-wrapper {
     position: relative;
     overflow-x: hidden;
   }
+  background-color: $light-gold;
 }
 
 p {

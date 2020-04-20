@@ -1,4 +1,7 @@
 $(document).ready(function() {
+  // Remove blank page when page loads
+  $(".loading").hide();
+
   // Materialize initializations
   $('.sidenav').sidenav();
   $('.materialboxed').materialbox();
@@ -115,3 +118,6 @@ $(document).ready(function() {
     easing: 'linear'
   });
 });
+
+// localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'light' : 'dark');
+// localStorage.getItem('mode') === 'dark' ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark')
