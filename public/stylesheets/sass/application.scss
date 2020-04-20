@@ -33,7 +33,7 @@ $dark-teal:   #124d49;
   }
 
   #about-content {
-    & .photo-wrapper { padding-bottom: 4rem;}
+    & #about-photo { padding-bottom: 5rem;}
     & .photo-background { background-color: inherit !important; }
     & .text-background { background-color: inherit !important; }
   }
@@ -157,27 +157,6 @@ nav {
   color: #F5F5F0;
 }
 
-// .home-content { margin-bottom: 40px; }
-// .home-links > ul > li {
-//   display: inline-block;
-//   font-family: 'Baloo Tammudu 2', cursive, sans-serif;
-//   font-weight: 600;
-//   font-size: 24px;
-//
-//   margin-left: 20px;
-//   margin-right: 20px;
-//   margin-bottom: 40px;
-//
-//   & a {
-//     display: block;
-//     text-align: center;
-//     text-decoration: none;
-//     color: inherit;
-//   }
-//
-//   & a:hover { color: $custom-teal; }
-// }
-
 .title {
   position: relative;
   margin: 0;
@@ -274,23 +253,18 @@ nav {
   top: 65%;
 }
 
-#earlybird    { background-color: none; }
-#trailbuddy   { background-color: #eae6cb; }
-#finance      { background-color: #8396ff; }
-#personal     { background-color: $shaded-teal; }
-#slack-haxxor { background-color: none; }
-
-$tb-btn-color: #ff4237;
-$ft-btn-color: #5cb85c;
-
 #work-content {
   & section {
     margin: 0;
     padding-top: 8rem;
     padding-bottom: 8rem;
   }
+  & .row {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
   & img { max-width: 100%; }
-  & h4 > a { color: inherit; }
+  & h4 { font-family: 'Baloo Tammudu 2', cursive, sans-serif; }
   & h6 {
     padding-bottom: 1rem;
     letter-spacing: 0.0625rem;
@@ -302,6 +276,27 @@ $ft-btn-color: #5cb85c;
     }
   }
 }
+
+#what-ive-been-working-on {
+  & h2 {
+    font-family: 'Satisfy', cursive, sans-serif;
+    color: $shaded-teal;
+    margin: 0;
+    padding-bottom: 2rem;
+  }
+  & p {
+    font-size: 1.5rem !important;
+  }
+}
+
+#earlybird    { background-color: #e2c557; }
+#trailbuddy   { background-color: #eae6cb; }
+#finance      { background-color: #8396ff; }
+#personal     { background-color: $shaded-teal; }
+#slack-haxxor { background-color: none; }
+
+$tb-btn-color: #ff4237;
+$ft-btn-color: #5cb85c;
 
 .eb-text {
   padding-top: 4vw;
@@ -343,23 +338,23 @@ $ft-btn-color: #5cb85c;
   margin: 0;
   padding-top: 8rem;
 
-  .photo-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    background-color: none;
-  }
-
-  .text-background {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 50%;
-    height: 100%;
-    background-color: none;
-  }
+  // .photo-background {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 50%;
+  //   height: 100%;
+  //   background-color: none;
+  // }
+  //
+  // .text-background {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 50%;
+  //   width: 50%;
+  //   height: 100%;
+  //   background-color: none;
+  // }
 
   & img { width: 100%; }
   & h5 { padding-bottom: 2rem; }
@@ -370,19 +365,20 @@ $ft-btn-color: #5cb85c;
     }
   }
 
+  & .fl-indent { padding-left: 100px; }
+  & .ny-indent { padding-left: 140px; }
+  & .co-indent { padding-left: 190px }
+  & .about-photo-wrapper { padding-bottom: 2rem; }
+  & .location-text { margin: 0; }
   & .cta {
     padding-top: 1em;
     padding-bottom: 1em;
   }
-  & .location-text { margin: 0; }
-  & .fl-indent { padding-left: 110px; }
-  & .ny-indent { padding-left: 160px; }
-  & .co-indent { padding-left: 210px }
 }
 
 .say-hi-text {
   margin: 0;
-  padding-top: 8rem;
+  padding-top: 5rem;
   padding-bottom: 8rem;
   text-align: center;
 

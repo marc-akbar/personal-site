@@ -11,13 +11,9 @@ configure :development do
 end
 
 get '/' do
-  erb :home
+  erb :work
 end
 
 get '/about' do
   erb :about
-end
-
-get '/work' do
-  erb :work
 end
