@@ -18,7 +18,7 @@ $(document).ready(function() {
     for (var i = 0; i < (width/100); i++) {
       // Pad the left by 10px
       var left = Math.floor(Math.random() * (rightBound - 10)) + 10;
-      var top = Math.floor(Math.random() * ((height) - (height * 0.4))) + (height * 0.15);
+      var top = Math.floor(Math.random() * ((height) - (height * 0.3))) + (height * 0.15);
       $(`<div class='${value}'></div>`).appendTo(".scene").css({
         left: left,
         top: top
@@ -42,7 +42,7 @@ $(document).ready(function() {
     for (var i = 0; i < (width/100); i++) {
       // Pad the right by 10px
       var left = Math.floor(Math.random() * (width - leftBound - 25)) + leftBound - 25;
-      var top = Math.floor(Math.random() * (height - (height * 0.4))) + (height * 0.15);
+      var top = Math.floor(Math.random() * (height - (height * 0.3))) + (height * 0.15);
       $(`<div class='${value}'></div>`).appendTo(".scene").css({
         left: left,
         top: top
@@ -50,7 +50,7 @@ $(document).ready(function() {
     }
   };
 
-  if (window.location.pathname === "/work") {
+  if (window.location.pathname === "/") {
     // Title drawing animation
     var svgPath = document.querySelectorAll('.path');
     anime({
