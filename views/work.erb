@@ -1,21 +1,23 @@
 <div class="site-wrapper">
   <%= erb :navigation %>
 
-  <div class="scene">
-    <div class="container">
-      <div class="center-align work-heading">
-        <div class="work-title">
-          <%= erb :title_animation %>
-        </div>
-        <div class="work-text">
-          <p class="flow-text">
-            I'm Marc, a web-based developer.
-          </p>
-        </div>
-      </div>
-      <img class="mountain-image" src="images/mountain_range.png" alt="mountain range graphic">
+  <div id="greeting-scene">
+    <div class="scene">
       <div class="particle particle-1"></div>
       <div class="particle particle-2"></div>
+      <div class="container">
+        <div class="center-align greeting-heading">
+          <div class="greeting-title">
+            <%= erb :title_animation %>
+          </div>
+          <div class="greeting-text">
+            <p class="flow-text">
+              I'm Marc, a web-based developer.
+            </p>
+          </div>
+        </div>
+        <img class="mountain-image" src="images/mountain_range.png" alt="mountain range graphic">
+      </div>
     </div>
   </div>
 
@@ -28,8 +30,8 @@
           </div>
           <div id="eb-description" class="col l4 push-l1">
             <div class="eb-text">
-              <h4 class="dark-teal">EarlyBird</h4>
-              <h6 class="shaded-teal">Rails | ActiveAdmin | Materialize</h6>
+              <h4>EarlyBird</h4>
+              <h6>Rails | ActiveAdmin | Materialize</h6>
               <p>
                 A conference management tool for <%= link_to "Viget", '//www.viget.com', { target: "_blank" } %>.
                 I collaborated with other developers, designers and UX researchers to
@@ -46,8 +48,8 @@
         <div class="row">
           <div id="tb-description" class="col l4">
             <div class="tb-text">
-              <h4 class="dark-teal">Trail Buddy</h4>
-              <h6 class="shaded-teal">GraphQL | Machine Learning</h6>
+              <h4>Trail Buddy</h4>
+              <h6>GraphQL | Machine Learning</h6>
               <p>
                 A proof-of-concept app that predicts trail conditions based
                 previous weather and soil data. This was built in 48 hours
@@ -73,8 +75,8 @@
           </div>
           <div id="ft-description" class="col l4 push-l1">
             <div class="ft-text">
-              <h4 class="dark-teal">Finance Tracker</h4>
-              <h6 class="dark-teal">Rails | Bootstrap</h6>
+              <h4>Finance Tracker</h4>
+              <h6>Rails | Bootstrap</h6>
               <p>
                 A Robinhood clone minus the monetary transactions. My first project
                 using an external API and data visualization tools.
@@ -91,9 +93,9 @@
         <div class="row">
           <div id="personal-description" class="col l4">
             <div class="personal-text">
-              <h4 class="gold">Personal Website</h4>
-              <h6 class="shaded-gold">Sinatra | Materialize | Animejs | GIMP</h6>
-              <p class="light-gold">
+              <h4>Personal Website</h4>
+              <h6>Sinatra | Materialize | Animejs | GIMP</h6>
+              <p>
                 A test in design. This site was an exploration into a lightweight
                 web framework, animations, and design tools.
               </p>

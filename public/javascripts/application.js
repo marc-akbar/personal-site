@@ -61,22 +61,26 @@ $(document).ready(function() {
   });
 
   // Ease in text and scene
+  var greetingScene = document.querySelector("#greeting-scene");
+  var greetingText = greetingScene.querySelector('.greeting-text');
+  var greetingMountain = greetingScene.querySelector('.mountain-image');
+  var greetingStars = greetingScene.querySelectorAll('div[class*="-star-"]');
   anime({
-    targets: '.work-text',
+    targets: greetingText,
     opacity: '100%',
     easing: 'easeInSine',
     delay: 2000
   });
 
   anime({
-    targets: ['.mountain-image', 'nav'],
+    targets: [greetingMountain, 'nav'],
     opacity: '100%',
     easing: 'easeInSine',
     delay: 3000
   });
 
   anime({
-    targets: ['.white-star-image', '.gold-star-image', '.teal-star-image'],
+    targets: greetingStars,
     opacity: '100%',
     easing: 'easeInSine',
     delay: 3500
