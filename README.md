@@ -6,3 +6,17 @@
 </h1>
 
 Personal site made in Sinatra using Materialize, Animejs and graphics in GIMP.
+
+Clone using:
+`git clone git@github.com:marc-akbar/personal-site.git`
+
+Ensure ruby `2.7.0` is installed:
+RVM: `rvm install ruby-2.7.0`
+ASDF: `asdf install ruby 2.7.0`
+
+Ensure dependencies are installed:
+`gem install sinatra`
+`npm install animejs --save`
+
+Run local server using rack:
+`rackup`
