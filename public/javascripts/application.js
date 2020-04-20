@@ -50,60 +50,68 @@ $(document).ready(function() {
     }
   };
 
-  // Title drawing animation
-  var svgPath = document.querySelectorAll('.path');
-  anime({
-    targets: svgPath,
-    strokeDashoffset: [anime.setDashoffset, 0],
-    easing: 'easeInSine',
-    duration: 600,
-    delay: (el, i) => { return i * 400 }
-  });
+  if (window.location.pathname === "/work") {
+    // Title drawing animation
+    var svgPath = document.querySelectorAll('.path');
+    anime({
+      targets: svgPath,
+      strokeDashoffset: [anime.setDashoffset, 0],
+      easing: 'easeInSine',
+      duration: 600,
+      delay: (el, i) => { return i * 400 }
+    });
 
-  // Ease in text and scene
-  var greetingScene = document.querySelector("#greeting-scene");
-  var greetingText = greetingScene.querySelector('.greeting-text');
-  var greetingMountain = greetingScene.querySelector('.mountain-image');
-  var greetingStars = greetingScene.querySelectorAll('div[class*="-star-"]');
-  anime({
-    targets: greetingText,
-    opacity: '100%',
-    easing: 'easeInSine',
-    delay: 2000
-  });
+    // Ease in greeting text and scene
+    var greetingScene = document.querySelector("#greeting-scene");
+    var greetingText = greetingScene.querySelector('.greeting-text');
+    var greetingMountain = greetingScene.querySelector('.mountain-image');
+    var greetingStars = greetingScene.querySelectorAll('div[class*="-star-"]');
+    anime({
+      targets: greetingText,
+      opacity: '100%',
+      easing: 'easeInSine',
+      delay: 2000
+    });
 
-  anime({
-    targets: [greetingMountain, 'nav'],
-    opacity: '100%',
-    easing: 'easeInSine',
-    delay: 3000
-  });
+    anime({
+      targets: [greetingMountain, 'nav'],
+      opacity: '100%',
+      easing: 'easeInSine',
+      delay: 3000
+    });
 
-  anime({
-    targets: greetingStars,
-    opacity: '100%',
-    easing: 'easeInSine',
-    delay: 3500
-  });
+    anime({
+      targets: greetingStars,
+      opacity: '100%',
+      easing: 'easeInSine',
+      delay: 3500
+    });
 
-  // Star rotation
+  } else {
+
+    // Star rotation and easing outside greetin scene
+    var starImages = document.querySelectorAll('div[class*="-star-"]')
+    anime({
+      targets: starImages,
+      opacity: '100%',
+      easing: 'easeInSine',
+      duration: 1000
+    });
+  };
+
   anime({
     targets: '.gold-star-image',
-    easing: 'linear',
     loop: true,
-    rotate: {
-      value: 360,
-      duration: 4000,
-    }
+    rotate: 360,
+    duration: 4000,
+    easing: 'linear'
   });
 
   anime({
     targets: '.teal-star-image',
-    easing: 'linear',
     loop: true,
-    rotate: {
-      value: 360,
-      duration: 9000,
-    }
+    rotate: 360,
+    duration: 9000,
+    easing: 'linear'
   });
 });
