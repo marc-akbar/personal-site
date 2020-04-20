@@ -108,6 +108,14 @@ nav {
 .shaded-teal  { color: #175E5A; }
 .dark-teal    { color: #124d49; }
 
+$light-gold:  #f5f5f0;
+$gold:        #AB9120;
+$shaded-gold: #91812C;
+$dark-gold:   #5E4F0D;
+$custom-teal: #18ABA2;
+$shaded-teal: #175E5A;
+$dark-teal:   #124d49;
+
 .container {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -122,8 +130,6 @@ nav {
   margin-right: -50vw;
   max-width: 100%;
 }
-
-.center-horiz { text-align: center; }
 
 .center-vert-home {
   position: absolute;
@@ -141,31 +147,43 @@ nav {
   bottom: 40px;
 }
 
-.home-title {
-  margin-bottom: 100px;
+.work-heading {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 5vw;
+}
+
+.work-title {
+  margin-bottom: 2vw;
   & svg { max-width: 90%; }
 }
 
-.home-content { margin-bottom: 40px; }
-.home-links > ul > li {
-  display: inline-block;
+.work-text > p {
   font-family: 'Baloo Tammudu 2', cursive, sans-serif;
-  font-weight: 600;
-  font-size: 24px;
-
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 40px;
-
-  & a {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    color: inherit;
-  }
-
-  & a:hover { color: #18ABA2; }
+  font-size: 3rem;
+  color: #F5F5F0;
 }
+
+// .home-content { margin-bottom: 40px; }
+// .home-links > ul > li {
+//   display: inline-block;
+//   font-family: 'Baloo Tammudu 2', cursive, sans-serif;
+//   font-weight: 600;
+//   font-size: 24px;
+//
+//   margin-left: 20px;
+//   margin-right: 20px;
+//   margin-bottom: 40px;
+//
+//   & a {
+//     display: block;
+//     text-align: center;
+//     text-decoration: none;
+//     color: inherit;
+//   }
+//
+//   & a:hover { color: #18ABA2; }
+// }
 
 .title {
   position: relative;
@@ -180,7 +198,6 @@ nav {
 
 .scene {
   padding-top: 90px;
-  line-height: 0;
 
   background: -webkit-radial-gradient(bottom, #3e4d4d 0%, #293333 50%); // Chrome10+, Safari5.1+
   background: -webkit-gradient(radial, bottom, color-stop(0%, #3e4d4d), color-stop(50%, #293333));  // Chrome, Safari4+
@@ -315,12 +332,6 @@ $personal-btn-color: #124d49;
   & .btn:hover { background-color: lighten($personal-btn-color, 10%); }
 }
 
-.say-hi-text {
-  text-align: center;
-  & h4 { padding-bottom: 1rem; }
-  & p { padding-bottom: 2rem; }
-}
-
 #about-content {
   position: relative;
   margin: 0;
@@ -364,6 +375,24 @@ $personal-btn-color: #124d49;
   & .fl-indent { padding-left: 110px; }
   & .ny-indent { padding-left: 160px; }
   & .co-indent { padding-left: 210px }
+}
+
+.say-hi-text {
+  margin: 0;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  text-align: center;
+
+  & h4 {
+    font-size: 6rem;
+    font-family: 'Satisfy', cursive, sans-serif;
+    color:
+    padding-bottom: 1rem;
+  }
+  & p {
+    font-size: 1.1rem;
+    padding-bottom: 2rem;
+  }
 }
 
 .social {

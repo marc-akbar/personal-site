@@ -3,8 +3,15 @@
 
   <div class="scene">
     <div class="container">
-      <div class="center-horiz">
-        <h1 class="title">Work</h1>
+      <div class="center-align work-heading">
+        <div class="work-title">
+          <%= erb :title_animation %>
+        </div>
+        <div class="work-text">
+          <p class="flow-text">
+            I'm Marc, a web-based developer.
+          </p>
+        </div>
       </div>
       <img class="mountain-image" src="images/mountain_range.png" alt="mountain range graphic">
       <div class="particle particle-1"></div>
@@ -99,20 +106,11 @@
         </div>
       </div>
     </section>
-    <section id="say-hi">
-      <div class="container">
-        <div class="say-hi-text">
-          <h4 class="shaded-teal">Say hi.</h4>
-          <p>I don't bite and am currently available for freelance or full-time work. Feel free to reach out.</p>
-          <a href="mailto:marc.akbar@gmail.com" class="btn-large"><i class="material-icons left">mail</i>MESSAGE ME</a>
-        </div>
-      </div>
-    </section>
   </div>
 
 
 
-  <div class="full-width center-horiz bottom">
+  <div class="full-width center-align bottom">
     <%= erb :footer %>
   </div>
 </div>

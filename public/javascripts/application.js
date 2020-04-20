@@ -3,31 +3,6 @@ $(document).ready(function() {
   $('.sidenav').sidenav();
   $('.materialboxed').materialbox();
 
-  // Title drawing animation
-  var svgPath = document.querySelectorAll('.path');
-  anime({
-    targets: svgPath,
-    strokeDashoffset: [anime.setDashoffset, 0],
-    easing: 'easeInSine',
-    duration: 600,
-    delay: (el, i) => { return i * 400 }
-  });
-
-  // Home page text animation
-  anime({
-    targets: '.home-text',
-    opacity: '100%',
-    easing: 'easeInSine',
-    delay: 2000
-  });
-
-  anime({
-    targets: ['.home-links', '.home-footer'],
-    opacity: '100%',
-    easing: 'easeInSine',
-    delay: 2500
-  });
-
   // Star population
   var width = $(".scene").width();
   var height = $(".scene").height();
@@ -75,6 +50,39 @@ $(document).ready(function() {
     }
   };
 
+  // Title drawing animation
+  var svgPath = document.querySelectorAll('.path');
+  anime({
+    targets: svgPath,
+    strokeDashoffset: [anime.setDashoffset, 0],
+    easing: 'easeInSine',
+    duration: 600,
+    delay: (el, i) => { return i * 400 }
+  });
+
+  // Ease in text and scene
+  anime({
+    targets: '.work-text',
+    opacity: '100%',
+    easing: 'easeInSine',
+    delay: 2000
+  });
+
+  anime({
+    targets: ['.mountain-image', 'nav'],
+    opacity: '100%',
+    easing: 'easeInSine',
+    delay: 3000
+  });
+
+  anime({
+    targets: ['.white-star-image', '.gold-star-image', '.teal-star-image'],
+    opacity: '100%',
+    easing: 'easeInSine',
+    delay: 3500
+  });
+
+  // Star rotation
   anime({
     targets: '.gold-star-image',
     easing: 'linear',
