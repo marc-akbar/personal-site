@@ -138,17 +138,17 @@ nav {
 .greeting-heading {
   position: relative;
   z-index: 1;
-  margin-bottom: 9vw;
+  margin-bottom: 5vw;
 }
 
 .greeting-title {
-  margin-bottom: 5vw;
+  margin-bottom: 3vw;
   & svg { max-width: 90%; }
 }
 
 .greeting-text > p {
   font-family: 'Baloo Tammudu 2', cursive, sans-serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #F5F5F0;
 }
 
@@ -245,7 +245,7 @@ nav {
 
 .particle-2 {
   animation-duration:23s;
-  top: 60%;
+  top: 65%;
 }
 
 #work-content {
