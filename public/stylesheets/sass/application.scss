@@ -57,6 +57,25 @@ $transition-effects: color 1s ease, background-color 1s ease;
   .title { font-size: 9rem !important; }
 }
 
+@media screen and (max-width: 350px) {
+  .title { font-size: 35vw !important; }
+  #work-content {
+    & img {
+      min-width: inherit !important;
+      width: 100% !important;
+    }
+  }
+  #about-content {
+    & .about-photo-wrapper > img {
+      min-width: inherit !important;
+      width: 90% !important;
+    }
+    & .fl-indent { padding-left: 62px !important; }
+    & .ny-indent { padding-left: 62px !important; }
+    & .co-indent { padding-left: 62px !important; }
+  }
+}
+
 .loading {
   position: absolute;
   height: 100%;
@@ -258,11 +277,14 @@ nav {
     margin-top: 0;
     margin-bottom: 0;
   }
-  & img { max-width: 100%; }
   & h4 { font-family: 'Baloo Tammudu 2', cursive, sans-serif; }
   & h6 {
     padding-bottom: 1rem;
     letter-spacing: 0.0625rem;
+  }
+  & img {
+    min-width: 313px;
+    width: 100%;
   }
   & p {
     font-size: 1.1rem;
@@ -351,9 +373,12 @@ $ft-btn-color: #5cb85c;
   & .co-indent { padding-left: 190px }
   & .location-text { margin: 0; }
   & .about-photo-wrapper {
-    padding-top: 2vw;
+    // padding-top: 2vw;
     padding-bottom: 2rem;
-    & img { width: 60%; }
+    & img {
+      min-width: 313px;
+      width: 55%;
+    }
   }
 }
 
@@ -380,6 +405,7 @@ $ft-btn-color: #5cb85c;
 
 .social {
   padding: 1rem;
+  text-align: center;
 
   & ul > li {
     position: relative;
