@@ -1,3 +1,4 @@
+$night-back:  #293333;
 $light-gold:  #f5f5f0;
 $gold:        #AB9120;
 $shaded-gold: #91812C;
@@ -33,10 +34,21 @@ $transition-effects: color 1s ease, background-color 1s ease;
     & #ft-image       { order: 2; }
   }
 
-  #about-content {
-    & #about-photo { padding-bottom: 5rem;}
-    & .photo-background { background-color: inherit !important; }
-    & .text-background { background-color: inherit !important; }
+  #about-content  {
+    padding-top: 5rem !important;
+    & .row {
+      display: flex;
+      flex-flow: column;
+      & #about-description {
+        order: 1;
+      }
+      & #about-photo {
+        order: 2;
+        padding-top: 3rem;
+      }
+      & .photo-background { background-color: inherit !important; }
+      & .text-background { background-color: inherit !important; }
+    }
   }
 }
 
@@ -123,40 +135,14 @@ nav {
   transition: all 0.5s ease-in-out;
 }
 
-.full-width {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  max-width: 100%;
-}
-
-.center-vert-home {
-  position: absolute;
-  top: 40%;
-  left: 0;
-  right: 0;
-  margin: auto;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.absolute-bottom {
-  position: absolute;
-  bottom: 40px;
-}
-
 .greeting-heading {
   position: relative;
   z-index: 1;
-  margin-bottom: 5vw;
+  margin-bottom: 9vw;
 }
 
 .greeting-title {
-  margin-bottom: 2vw;
+  margin-bottom: 5vw;
   & svg { max-width: 90%; }
 }
 
@@ -170,7 +156,7 @@ nav {
   position: relative;
   margin: 0;
   padding-top: 2.8rem;
-  padding-bottom: 2rem;
+  padding-bottom: 5vw;
   font-family: 'Satisfy', cursive, sans-serif;
   font-size: 10rem;
   color: $gold;
@@ -181,12 +167,12 @@ nav {
   position: relative;
   padding-top: 90px;
 
-  background: -webkit-radial-gradient(bottom, #3e4d4d 0%, #293333 50%); // Chrome10+, Safari5.1+
-  background: -webkit-gradient(radial, bottom, color-stop(0%, #3e4d4d), color-stop(50%, #293333));  // Chrome, Safari4+
-  background: -moz-radial-gradient(bottom, #3e4d4d 0%, #293333 75%);  // Firefox3.6+
-  background: -ms-radial-gradient(bottom, #3e4d4d 0%, #293333 75%); // IE10+
-  background: -o-radial-gradient(bottom, #3e4d4d 0%, #293333 75%);  // Opera11.10+
-  background-color: #293333;  // old browsers
+  background: -webkit-radial-gradient(bottom, #3e4d4d 0%, $night-back 50%); // Chrome10+, Safari5.1+
+  background: -webkit-gradient(radial, bottom, color-stop(0%, #3e4d4d), color-stop(50%, $night-back));  // Chrome, Safari4+
+  background: -moz-radial-gradient(bottom, #3e4d4d 0%, $night-back 75%);  // Firefox3.6+
+  background: -ms-radial-gradient(bottom, #3e4d4d 0%, $night-back 75%); // IE10+
+  background: -o-radial-gradient(bottom, #3e4d4d 0%, $night-back 75%);  // Opera11.10+
+  background-color: $night-back;  // old browsers
 }
 
 .white-star-image {
@@ -254,12 +240,12 @@ nav {
 
 .particle-1 {
   animation-duration:13s;
-  top: 25%;
+  top: 30%;
 }
 
 .particle-2 {
   animation-duration:23s;
-  top: 65%;
+  top: 60%;
 }
 
 #work-content {
@@ -347,59 +333,48 @@ $ft-btn-color: #5cb85c;
   margin: 0;
   padding-top: 8rem;
 
-  // .photo-background {
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   width: 50%;
-  //   height: 100%;
-  //   background-color: none;
-  // }
-  //
-  // .text-background {
-  //   position: absolute;
-  //   top: 0;
-  //   left: 50%;
-  //   width: 50%;
-  //   height: 100%;
-  //   background-color: none;
-  // }
-
-  & img { width: 100%; }
-  & h5 { padding-bottom: 2rem; }
+  & h5 {
+    font-family: 'Baloo Tammudu 2', cursive, sans-serif;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    color: $shaded-teal;
+    padding-bottom: 2rem;
+  }
   & p {
     font-size: 1.25rem;
     & a {
       color: $custom-teal;
     }
   }
-
   & .fl-indent { padding-left: 100px; }
   & .ny-indent { padding-left: 140px; }
   & .co-indent { padding-left: 190px }
-  & .about-photo-wrapper { padding-bottom: 2rem; }
   & .location-text { margin: 0; }
-  & .cta {
-    padding-top: 1em;
-    padding-bottom: 1em;
+  & .about-photo-wrapper {
+    padding-top: 2vw;
+    padding-bottom: 2rem;
+    & img { width: 60%; }
   }
 }
 
-.say-hi-text {
-  margin: 0;
-  padding-top: 5rem;
-  padding-bottom: 8rem;
-  text-align: center;
+#say-hi {
 
-  & h4 {
-    font-size: 6rem;
-    font-family: 'Satisfy', cursive, sans-serif;
-    color: $gold;
-    padding-bottom: 1rem;
-  }
-  & p {
-    font-size: 1.75rem;
-    padding-bottom: 2rem;
+  & .say-hi-text {
+    margin: 0;
+    padding-top: 5rem;
+    padding-bottom: 8rem;
+    text-align: center;
+
+    & h4 {
+      font-size: 6rem;
+      font-family: 'Satisfy', cursive, sans-serif;
+      color: $gold;
+      padding-bottom: 1rem;
+    }
+    & p {
+      font-size: 1.75rem;
+      padding-bottom: 2rem;
+    }
   }
 }
 
