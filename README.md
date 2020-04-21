@@ -15,7 +15,7 @@ RVM: `rvm install ruby-2.7.0`
 ASDF: `asdf install ruby 2.7.0`
 
 Ensure dependencies are installed:
-`gem install sinatra`
+`bundle install`
 `npm install animejs --save`
 
 Run local server using rack:
