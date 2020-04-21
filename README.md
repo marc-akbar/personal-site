@@ -4,19 +4,23 @@
 <h1 align="center">
   <a href="http://marcakbar-personal.herokuapp.com">marcakbar.herokuapp.com</a>
 </h1>
-
+<br/>
 Personal site made in Sinatra using Materialize, Animejs and graphics in GIMP.
 
-Clone using:
-`git clone git@github.com:marc-akbar/personal-site.git`
+##### Clone using:
 
-Ensure ruby `2.7.0` is installed:
-RVM: `rvm install ruby-2.7.0`
-ASDF: `asdf install ruby 2.7.0`
+`$ git clone git@github.com:marc-akbar/personal-site.git`
 
-Ensure dependencies are installed:
-`bundle install`
-`npm install animejs --save`
+##### Ensure ruby `2.7.0` is installed:
+- rvm: `$ rvm install ruby-2.7.0`
+- asdf: `$ asdf install ruby 2.7.0`
 
-Run local server using rack:
-`rackup`
+##### Ensure dependencies are installed:
+
+`$ bundle install`
+
+`$ npm install animejs --save`
+
+##### Run local server using rack:
+
+`$ rackup`
