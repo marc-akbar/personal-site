@@ -1,6 +1,6 @@
 $(document).ready(function() {
   // Remove blank page when page loads
-  $(".loading").hide();
+  $("#loading").remove();
 
   // Materialize initializations
   $('.sidenav').sidenav();

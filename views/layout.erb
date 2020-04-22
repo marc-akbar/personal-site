@@ -15,7 +15,7 @@
     <link href="<%= url('/stylesheets/application.css') %>" rel="stylesheet" />
   </head>
   <body>
-    <div class="loading"></div>
+    <%= erb :preloader %>
     <%= yield %>
     <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="/javascripts/materialize.min.js"></script>
