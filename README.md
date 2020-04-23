@@ -2,10 +2,10 @@
   <img alt="Mountain Logo" src="public/images/mountain_range.png" width="200" />
 </p>
 <h1 align="center">
-  <a href="http://marcakbar-personal.herokuapp.com">marcakbar.herokuapp.com</a>
+  <a href="https://marcakbar.dev">marcakbar.dev</a>
 </h1>
 <br/>
-Personal site made in Sinatra using Materialize, Animejs and graphics in GIMP.
+Personal site made in Sinatra using Materialize, Animejs and graphics in GIMP. Deployed to Heroku and managed using Cloudfare.
 
 ##### Clone using:
 
