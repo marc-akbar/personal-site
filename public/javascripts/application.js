@@ -7,8 +7,8 @@ $(document).ready(function() {
   $('.materialboxed').materialbox();
 
   // Star population
-  var width = $(".scene").width();
-  var height = $(".scene").height();
+  var width = $("#scene").width();
+  var height = $("#scene").height();
   var rightBound = width * 0.37  // right boundary for left star population
   var leftBound = width * 0.63 // left boundary for right star population
   var stars = ['white-star-image', 'gold-star-image', 'teal-star-image'];
@@ -22,7 +22,7 @@ $(document).ready(function() {
       // Pad the left by 10px
       var left = Math.floor(Math.random() * (rightBound - 10)) + 10;
       var top = Math.floor(Math.random() * ((height) - (height * 0.3))) + (height * 0.15);
-      $(`<div class='${value}'></div>`).appendTo(".scene").css({
+      $(`<div class='${value}'></div>`).appendTo("#scene.night").css({
         left: left,
         top: top
       });
@@ -34,7 +34,7 @@ $(document).ready(function() {
       // Pad the left and right by 10px
       var left = Math.floor(Math.random() * (width - 25)) + 10;
       var top = Math.floor(Math.random() * (height - (height * 0.59))) + (height * 0.5);
-      $(`<div class='${value}'></div>`).appendTo(".scene").css({
+      $(`<div class='${value}'></div>`).appendTo("#scene.night").css({
         left: left,
         top: top
       });
@@ -46,12 +46,31 @@ $(document).ready(function() {
       // Pad the right by 10px
       var left = Math.floor(Math.random() * (width - leftBound - 25)) + leftBound - 25;
       var top = Math.floor(Math.random() * (height - (height * 0.3))) + (height * 0.15);
-      $(`<div class='${value}'></div>`).appendTo(".scene").css({
+      $(`<div class='${value}'></div>`).appendTo("#scene.night").css({
         left: left,
         top: top
       });
     }
   };
+
+  // Populate and ease in clouds
+  $(`<div class='left-cloud'></div>`).appendTo("#scene.day");
+  $(`<div class='right-cloud'></div>`).appendTo("#scene.day");
+  $(`<div class='bottom-cloud'></div>`).appendTo("#scene.day");
+
+  var cloudImages = document.querySelectorAll('div[class*="-cloud"]')
+  anime({
+    targets: cloudImages,
+    translateY: ['100%', '0%'],
+    easing: 'easeOutSine',
+    duration: 1500
+  });
+  anime({
+    targets: cloudImages,
+    opacity: '100%',
+    easing: 'easeInQuad',
+    duration: 1000
+  });
 
   if (window.location.pathname === "/") {
     // Title drawing animation
@@ -92,7 +111,7 @@ $(document).ready(function() {
 
   } else {
 
-    // Star rotation and easing outside greetin scene
+    // Star rotation and easing outside greeting scene
     var starImages = document.querySelectorAll('div[class*="-star-"]')
     anime({
       targets: starImages,
