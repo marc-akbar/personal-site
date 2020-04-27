@@ -6,6 +6,15 @@ $(document).ready(function() {
   $('.sidenav').sidenav();
   $('.materialboxed').materialbox();
 
+  // Toggle icon on day/night click
+  $('.time-toggle').on('click',function(){
+		if ($(this).text() == 'brightness_2'){
+				$(this).text('wb_sunny');
+		} else {
+				$(this).text('brightness_2');
+		}
+	});
+
   // Star population
   var width = $("#scene").width();
   var height = $("#scene").height();
