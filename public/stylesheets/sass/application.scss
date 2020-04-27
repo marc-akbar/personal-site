@@ -9,7 +9,7 @@ $custom-teal:       #18ABA2;
 $shaded-teal:       #175E5A;
 $dark-teal:         #124d49;
 
-$transition-effects: color 1s ease, background-color 1s ease;
+$transition-effects: color .5s ease, background-color .5s ease;
 $loading-delay: 1s;
 
 @media screen and (max-width: 1200px) {
@@ -290,8 +290,8 @@ nav {
 
 .greeting-heading {
   position: relative;
-  z-index: 1;
-  margin-bottom: 5vw;
+  z-index: 2;
+  margin-bottom: 2vw;
 }
 
 .greeting-title {
@@ -302,7 +302,8 @@ nav {
 .greeting-text > p {
   font-family: 'Baloo Tammudu 2', cursive, sans-serif;
   font-size: 2.5rem;
-  color: #F5F5F0;
+  &.night { color: $light-gold; }
+  &.day { color: $night-background; }
 }
 
 .title {
