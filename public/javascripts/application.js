@@ -6,13 +6,22 @@ $(document).ready(function() {
   $('.sidenav').sidenav();
   $('.materialboxed').materialbox();
 
-  // Toggle icon on day/night click
+  // Toggle day/night
   $('.time-toggle').on('click',function(){
-		if ($(this).text() == 'brightness_2'){
-				$(this).text('wb_sunny');
-		} else {
-				$(this).text('brightness_2');
-		}
+		$(this).text() === 'brightness_2' ? $(this).text('wb_sunny') : $(this).text('brightness_2');
+
+    localStorage.setItem('mode', (localStorage.getItem('mode') || 'night') === 'night' ? 'day' : 'night');
+    if (localStorage.getItem('mode') === 'day') {
+      var el = document.querySelectorAll('.day')
+      el.forEach(function(value) {value.classList.add('night')})
+      el.forEach(function(value) {value.classList.remove('day')})
+    } else {
+      var el = document.querySelectorAll('.night')
+      el.forEach(function(value) {value.classList.add('day')})
+      el.forEach(function(value) {value.classList.remove('night')})
+    };
+
+    console.log(localStorage.getItem('mode'));
 	});
 
   // Star population
@@ -146,6 +155,3 @@ $(document).ready(function() {
     easing: 'linear'
   });
 });
-
-// localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'light' : 'dark');
-// localStorage.getItem('mode') === 'dark' ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark')
