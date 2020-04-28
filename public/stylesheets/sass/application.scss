@@ -17,7 +17,7 @@ $loading-delay: 1s;
 
 @media screen and (max-width: 1200px) {
   .container { width: 90%; }
-  .left-cloud, .right-cloud, .bottom-cloud { width: 27%; }
+  .left-cloud, .right-cloud, .sun-cloud { width: 27%; }
 }
 
 @media screen and (max-width: 992px) {
@@ -323,6 +323,28 @@ nav {
   padding-top: 90px;
   transition: $transition-effects;
 
+  & .left-cloud {
+    content: url("../images/scenes/sun-cloud.png");
+    position: absolute;
+    left: 12%;
+    top: 22%;
+    z-index: 1;
+  }
+  & .right-cloud {
+    content: url("../images/scenes/cloud.png");
+    position: absolute;
+    left: 65%;
+    top: 17%;
+    z-index: 1;
+  }
+  & .sun-cloud {
+    content: url("../images/scenes/cloud.png");
+    position: absolute;
+    left: 30%;
+    top: 55%;
+    z-index: 1;
+  }
+
   &.night {
     // background: -webkit-radial-gradient(bottom, #3e4d4d 0%, $night-scene-background 50%); // Chrome10+, Safari5.1+
     // background: -webkit-gradient(radial, bottom, color-stop(0%, #3e4d4d), color-stop(50%, $night-scene-background));  // Chrome, Safari4+
@@ -346,28 +368,6 @@ nav {
   max-width: 100%;
   bottom: 0;
   z-index: 2;
-}
-
-.left-cloud {
-  content: url("../images/scenes/sun-cloud.png");
-  position: absolute;
-  left: 12%;
-  top: 22%;
-  z-index: 1;
-}
-.right-cloud {
-  content: url("../images/scenes/cloud.png");
-  position: absolute;
-  left: 65%;
-  top: 17%;
-  z-index: 1;
-}
-.bottom-cloud {
-  content: url("../images/scenes/cloud.png");
-  position: absolute;
-  left: 30%;
-  top: 55%;
-  z-index: 1;
 }
 
 .white-star-image {
@@ -646,11 +646,36 @@ $ft-btn-color: #5cb85c;
 }
 
 #say-hi {
+  position: relative;
+  & .left-cloud {
+    content: url("../images/scenes/cloud.png");
+    position: absolute;
+    left: 10%;
+    top: 42%;
+    z-index: 1;
+  }
+  & .right-cloud {
+    content: url("../images/scenes/cloud.png");
+    position: absolute;
+    left: 70%;
+    top: 12%;
+    z-index: 1;
+  }
+  & .sun-cloud {
+    content: url("../images/scenes/sun-cloud.png");
+    position: absolute;
+    left: 57%;
+    top: 62%;
+    z-index: 1;
+  }
+
   & .say-hi-text {
+    position: relative;
     margin: 0;
     padding-top: 5rem;
     padding-bottom: 8rem;
     text-align: center;
+    z-index: 2;
     & h4 {
       font-size: 6rem;
       font-family: 'Satisfy', cursive, sans-serif;

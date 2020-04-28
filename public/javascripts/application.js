@@ -9,7 +9,11 @@ $(document).ready(function() {
     // Populate and ease in clouds
     $(`<div class='left-cloud'></div>`).appendTo("#scene.day");
     $(`<div class='right-cloud'></div>`).appendTo("#scene.day");
-    $(`<div class='bottom-cloud'></div>`).appendTo("#scene.day");
+    $(`<div class='sun-cloud'></div>`).appendTo("#scene.day");
+
+    $(`<div class='left-cloud'></div>`).appendTo("#say-hi");
+    $(`<div class='right-cloud'></div>`).appendTo("#say-hi");
+    $(`<div class='sun-cloud'></div>`).appendTo("#say-hi");
 
     var cloudImages = document.querySelectorAll('div[class*="-cloud"]')
     anime({
@@ -152,13 +156,13 @@ $(document).ready(function() {
       var el = document.querySelectorAll('.day')
       el.forEach(function(value) {value.classList.add('night')})
       el.forEach(function(value) {value.classList.remove('day')})
-      $('div[class*="-cloud"]').hide();
+      $('div[class*="-cloud"]').remove();
       runStars();
     } else {
       var el = document.querySelectorAll('.night')
       el.forEach(function(value) {value.classList.add('day')})
       el.forEach(function(value) {value.classList.remove('night')})
-      $('div[class*="-star-"]').hide();
+      $('div[class*="-star-"]').remove();
       runClouds();
     };
 	});
