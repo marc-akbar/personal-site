@@ -1,15 +1,17 @@
-<nav class="transparent z-depth-0">
+<nav class="transparent z-depth-0 night">
+  <!-- Mobile -->
+  <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+  <a href="#" data-target="mobile-nav" class="time-trigger right hide-on-large-only"><i class="time-toggle medium material-icons">wb_sunny</i></a>
+
   <div class="container">
-    <div class="nav-wrapper night">
-      <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <a href="#" data-target="mobile-nav" class="right hide-on-large-only"><i class="time-toggle medium material-icons">brightness_2</i></a>
+    <div class="nav-wrapper">
       <ul class="left hide-on-med-and-down">
         <li><a href="#"><i class="time-toggle medium material-icons">wb_sunny</i></a></li>
       </ul>
       <ul class="right hide-on-med-and-down">
         <li><%= link_to "HOME", "/" %></li>
         <li><%= link_to "ABOUT", '/about' %></li>
-        <li><%= link_to "WORK", '/#what-ive-been-working-on' %></li>
+        <li><%= link_to "WORK", '/#work' %></li>
       </ul>
     </div>
   </div>
@@ -18,5 +20,5 @@
 <ul id="mobile-nav" class="sidenav night">
   <li><%= link_to "HOME", "/" %></li>
   <li><%= link_to "ABOUT", '/about' %></li>
-  <li><%= link_to "WORK", '/#what-ive-been-working-on', { class: "sidenav-close" } %></li>
+  <li><%= link_to "WORK", '/#work', { class: "sidenav-close" } %></li>
 </ul>

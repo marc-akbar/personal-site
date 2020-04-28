@@ -22,20 +22,20 @@
   </div>
 
   <div id="work-content">
-    <section id="what-ive-been-working-on" class="center-align">
+    <section id="work" class="center-align night">
       <div class="container">
         <h2>What I've been working on.</h2>
         <p>Here's some of my recent work. To see more visit me on <%= link_to "Github", 'https://github.com/marc-akbar', { target: "_blank" } %>.</p>
       </div>
     </section>
-    <section id="earlybird">
+    <section id="earlybird" class="night">
       <div class="container">
         <div class="row">
           <div id="eb-image" class="col l7">
             <img src="images/eb-image.png" alt="early bird dashboard and request">
           </div>
           <div id="eb-description" class="col l4 push-l1">
-            <div class="eb-text">
+            <div class="eb-text night">
               <h4>EarlyBird</h4>
               <h6>Rails | ActiveAdmin | Materialize</h6>
               <p>
@@ -44,16 +44,17 @@
                 redesign the user dashboard / conference request flow and upgrade the
                 app from Rails 4 to 6.
               </p>
+              <%= link_to "READ MORE", "https://www.viget.com/articles/vigets-on-the-move-how-we-plan-travel/", { target: '_blank', class: 'btn' } %>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section id="trailbuddy">
+    <section id="trailbuddy" class="night">
       <div class="container">
         <div class="row">
           <div id="tb-description" class="col l4">
-            <div class="tb-text">
+            <div class="tb-text night">
               <h4>Trail Buddy</h4>
               <h6>GraphQL | Machine Learning</h6>
               <p>
@@ -64,7 +65,7 @@
                 for the front end.
               </p>
               <%= link_to "WEBSITE", "https://heytrailbuddy.com/", { target: '_blank', class: 'btn' } %>
-              <%= link_to "ARTICLE", "https://www.viget.com/articles/trailbuddy-using-ai-to-create-a-predictive-trail-conditions-app/", { target: '_blank', class: 'btn' } %>
+              <%= link_to "READ MORE", "https://www.viget.com/articles/trailbuddy-using-ai-to-create-a-predictive-trail-conditions-app/", { target: '_blank', class: 'btn' } %>
             </div>
           </div>
           <div id="tb-image" class="col l7 push-l1">
@@ -73,14 +74,14 @@
         </div>
       </div>
     </section>
-    <section id="finance">
+    <section id="finance" class="night">
       <div class="container">
         <div class="row">
           <div id="ft-image" class="col l7">
             <img src="images/ft-image.png" alt="finance tracker screenshot">
           </div>
           <div id="ft-description" class="col l4 push-l1">
-            <div class="ft-text">
+            <div class="ft-text night">
               <h4>Finance Tracker</h4>
               <h6>Rails | Bootstrap</h6>
               <p>
@@ -94,12 +95,12 @@
         </div>
       </div>
     </section>
-    <section id="personal">
+    <section id="personal" class="night">
       <div class="container">
         <div class="row">
           <div id="personal-description" class="col l4">
-            <div class="personal-text">
-              <h4>Personal Website</h4>
+            <div class="personal-text night">
+              <h4>marcakbar.dev</h4>
               <h6>Sinatra | Materialize | Animejs | GIMP</h6>
               <p>
                 A test in design. This site was an exploration into a lightweight
@@ -120,6 +121,8 @@
 
   <div class="center-align bottom">
     <%= erb :footer %>
-    <%= erb :social %>
+    <div class="social-scene night">
+      <%= erb :social %>
+    </div>
   </div>
 </div>
