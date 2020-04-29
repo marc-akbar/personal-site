@@ -4,6 +4,11 @@
 }
 
 @media screen and (max-width: 992px) {
+  nav > .container > .time-toggle {
+    left: auto;
+    right: 49px;
+  }
+
   #work-content {
     & div[class*="-text"] {
       padding-top: 0;
@@ -45,7 +50,6 @@
 @media screen and (max-width: 600px) {
   .home-title { margin-bottom: 0 !important; }
   .title { font-size: 9rem !important; }
-  .tt-mobile { top: 0 !important; }
 }
 
 @media screen and (max-width: 350px) {
@@ -57,7 +61,7 @@
       width: 100% !important;
     }
   }
-  
+
   #about-content {
     & .about-photo-wrapper > img {
       min-width: inherit !important;
