@@ -83,7 +83,7 @@ $tb-btn-color: #ff4237;
 $ft-btn-color: #5cb85c;
 
 .eb-text {
-  padding-top: 4vw;
+  padding-top: 2vw;
 
   &.night {
     & h4  { color: $light-gold; }
@@ -105,7 +105,7 @@ $ft-btn-color: #5cb85c;
 }
 
 .tb-text {
-  padding-top: 6vw;
+  padding-top: 5vw;
 
   &.night {
     & h4  { color: $light-gold; }
@@ -127,7 +127,7 @@ $ft-btn-color: #5cb85c;
 }
 
 .ft-text {
-  padding-top: 6vw;
+  padding-top: 5vw;
 
   &.night {
     & h4  { color: $light-gold; }
@@ -149,7 +149,7 @@ $ft-btn-color: #5cb85c;
 }
 
 .personal-text {
-  padding-top: 5vw;
+  padding-top: 3vw;
 
   &.night {
     & h4  { color: $light-gold; }
@@ -161,7 +161,7 @@ $ft-btn-color: #5cb85c;
       color: $dark-teal;
     }
   }
-  
+
   &.day {
     & h4 { color: $gold; }
     & h6 { color: $shaded-gold; }
