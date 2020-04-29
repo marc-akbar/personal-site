@@ -31,22 +31,24 @@ $(document).ready(function() {
   };
 
   function runStars() {
-    // Star population
+    // Star population in scene
     var width = $("#scene").width();
-    var height = $("#scene").height();
+    var sceneHeight = $("#scene").height();
     var rightBound = width * 0.37  // right boundary for left star population
     var leftBound = width * 0.63 // left boundary for right star population
+    var footerHeight = $("#say-hi").height();
     var stars = ['white-star-image', 'gold-star-image', 'teal-star-image'];
 
     stars.forEach(populateLeftStars);
     stars.forEach(populateMiddleStars);
     stars.forEach(populateRightStars);
+    stars.forEach(populateFooterStars);
 
     function populateLeftStars(value) {
       for (var i = 0; i < (width/100); i++) {
         // Pad the left by 10px
         var left = Math.floor(Math.random() * (rightBound - 10)) + 10;
-        var top = Math.floor(Math.random() * ((height) - (height * 0.3))) + (height * 0.15);
+        var top = Math.floor(Math.random() * ((sceneHeight) - (sceneHeight * 0.3))) + (sceneHeight * 0.15);
         $(`<div class='${value}'></div>`).appendTo("#scene.night").css({
           left: left,
           top: top
@@ -57,7 +59,7 @@ $(document).ready(function() {
       for (var i = 0; i < (width/100); i++) {
         // Pad the left and right by 10px
         var left = Math.floor(Math.random() * (width - 25)) + 10;
-        var top = Math.floor(Math.random() * (height - (height * 0.59))) + (height * 0.5);
+        var top = Math.floor(Math.random() * (sceneHeight - (sceneHeight * 0.59))) + (sceneHeight * 0.5);
         $(`<div class='${value}'></div>`).appendTo("#scene.night").css({
           left: left,
           top: top
@@ -68,8 +70,19 @@ $(document).ready(function() {
       for (var i = 0; i < (width/100); i++) {
         // Pad the right by 10px
         var left = Math.floor(Math.random() * (width - leftBound - 25)) + leftBound - 25;
-        var top = Math.floor(Math.random() * (height - (height * 0.3))) + (height * 0.15);
+        var top = Math.floor(Math.random() * (sceneHeight - (sceneHeight * 0.3))) + (sceneHeight * 0.15);
         $(`<div class='${value}'></div>`).appendTo("#scene.night").css({
+          left: left,
+          top: top
+        });
+      }
+    };
+    function populateFooterStars(value) {
+      for (var i = 0; i < (width/100); i++) {
+        // Pad the left and right by 10px
+        var left = Math.floor(Math.random() * (width - 25)) + 10;
+        var top = Math.floor(Math.random() * (footerHeight - 25)) + 25;
+        $(`<div class='${value}'></div>`).appendTo("#say-hi").css({
           left: left,
           top: top
         });
@@ -131,6 +144,16 @@ $(document).ready(function() {
       delay: 3500
     });
 
+    // Ease in footer stars
+    var footer = document.querySelector("#say-hi");
+    var starImages = footer.querySelectorAll('div[class*="-star-"]')
+    anime({
+      targets: starImages,
+      opacity: '100%',
+      easing: 'easeInSine',
+      duration: 1000
+    });
+
   } else {
     // Star rotation and easing outside greeting scene
     var starImages = document.querySelectorAll('div[class*="-star-"]')
@@ -144,11 +167,11 @@ $(document).ready(function() {
 
   // Toggle day/night
   $('.time-toggle').on('click',function(){
-		if ($(this).text() === 'brightness_2') {
-      $(this).text('wb_sunny');
+		if ($(this).find('i').text() === 'brightness_2') {
+      $(this).find('i').text('wb_sunny');
       localStorage.setItem('mode', 'day')
     } else {
-      $(this).text('brightness_2');
+      $(this).find('i').text('brightness_2');
       localStorage.setItem('mode', 'night')
     };
 

@@ -17,7 +17,7 @@ $loading-delay: 1s;
 
 @media screen and (max-width: 1200px) {
   .container { width: 90%; }
-  .left-cloud, .right-cloud, .sun-cloud { width: 27%; }
+  .left-cloud, .right-cloud, .sun-cloud { width: 35%; }
 }
 
 @media screen and (max-width: 992px) {
@@ -231,7 +231,7 @@ nav {
   top: 0;
   z-index: 1;
 
-  & .time-trigger {
+  & .time-toggle {
     margin: 0 18px 0 18px !important;
   }
   & .nav-wrapper > ul > li {
@@ -324,24 +324,24 @@ nav {
   transition: $transition-effects;
 
   & .left-cloud {
-    content: url("../images/scenes/sun-cloud.png");
+    content: url("../images/scenes/cloud.png");
     position: absolute;
-    left: 12%;
-    top: 22%;
+    left: 5%;
+    top: 30%;
     z-index: 1;
   }
   & .right-cloud {
     content: url("../images/scenes/cloud.png");
     position: absolute;
-    left: 65%;
-    top: 17%;
+    left: 25%;
+    top: 52%;
     z-index: 1;
   }
   & .sun-cloud {
-    content: url("../images/scenes/cloud.png");
+    content: url("../images/scenes/sun-cloud.png");
     position: absolute;
-    left: 30%;
-    top: 55%;
+    left: 65%;
+    top: 17%;
     z-index: 1;
   }
 
