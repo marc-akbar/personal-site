@@ -45,15 +45,24 @@
       font-size: 1.75rem;
       padding-bottom: 2rem;
     }
+
+    & .btn {
+      font-weight: bold;
+      color: #293333;
+    }
   }
 
   &.night {
     background-color: $night-scene-background;
-    & p   { color: $light-gold; }
+    & p { color: $light-gold; }
+    & .say-hi-text > .btn { background-color: $dark-btn-color; }
+    & .say-hi-text > .btn:hover { background-color: lighten($dark-btn-color, 5%); }
   }
 
   &.day {
     background-color: $day-scene-background;
-    & p   { color: inherit; }
+    & p { color: inherit; }
+    & .say-hi-text > .btn { background-color: $light-btn-color; }
+    & .say-hi-text > .btn:hover { background-color: lighten($light-btn-color, 10%); }
   }
 }
