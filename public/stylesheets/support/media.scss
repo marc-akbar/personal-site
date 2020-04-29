@@ -1,13 +1,22 @@
 @media screen and (max-width: 1200px) {
-  .container { width: 90%; }
+  .container { width: 85%; }
   .left-cloud, .right-cloud, .sun-cloud { width: 35%; }
 }
 
 @media screen and (max-width: 992px) {
-  nav > .container > .time-toggle {
-    top: 24px;
-    right: 30px;
-    left: auto;
+  nav {
+    position: fixed !important;
+
+    & .time-toggle {
+      position: absolute;
+      top: 28px !important;
+      right: 35px !important;
+      left: auto !important;
+
+      & .toggle {
+        transform: scale(0.5);
+      }
+    }
   }
 
   #work-content {

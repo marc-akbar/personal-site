@@ -1,24 +1,14 @@
 nav {
   position: absolute;
-  height: 90px;
-  top: 0;
   z-index: 1;
 
   & .time-toggle {
     position: fixed;
     top: 43px;
-    left: 50px;
-    z-index: 5;
-  }
-
-  & .toggle {
-    opacity: 0.5;
-    &:hover { opacity: 1; }
+    left: 45px;
   }
 
   & .nav-wrapper > ul > li {
-    margin-left: 10px;
-    margin-right: 10px;
     margin-top: 15px;
     margin-bottom: 15px;
 
@@ -26,8 +16,6 @@ nav {
       font-family: 'Baloo Tammudu 2', cursive, sans-serif;
       font-weight: 600;
       font-size: 20px;
-      margin-top: 0;
-      margin-bottom: 0;
       padding-left: 40px;
       padding-right: 40px;
       & i { font-size: 50px; }
@@ -40,11 +28,13 @@ nav {
   }
 
   &.night {
+    background-color: $night-scene-background;
     & .nav-wrapper > a { color: $light-gold; }
     & ul > li > a { color: $light-gold; }
   }
 
   &.day {
+    background-color: $day-scene-background;
     & a { color: $night-scene-background; }
     & .nav-wrapper > a { color: $night-scene-background; }
     & ul > li > a { color: $night-scene-background; }
@@ -67,5 +57,8 @@ nav {
   &.night {
     background-color: $night-scene-background;
     & li > a { color: $light-gold; }
+  }
+  &.day {
+    background-color: $day-scene-background;
   }
 }

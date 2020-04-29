@@ -2,10 +2,10 @@
   <!-- Mobile -->
   <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
+  <div class="time-toggle">
+    <%= erb :switch %>
+  </div>
   <div class="container">
-    <div class="time-toggle">
-      <%= erb :switch %>
-    </div>
     <div class="nav-wrapper">
       <ul class="right hide-on-med-and-down">
         <li><%= link_to "HOME", "/" %></li>

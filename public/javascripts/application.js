@@ -3,14 +3,85 @@ $(document).ready(function() {
   $("#loading").remove();
   // Materialize initializations
   $('.sidenav').sidenav();
-  $('.materialboxed').materialbox();
+  // Change nav color on mobile
+  $(window).width() <= 992 ? $('nav').removeClass('transparent') : $('nav').addClass('transparent');
+  // Set initial time of day and run animation
+  localStorage.setItem('mode', 'night')
+  runStars();
+
+  if (window.location.pathname === "/") {
+    // Title drawing animation
+    var svgPath = document.querySelectorAll('.path');
+    anime({
+      targets: svgPath,
+      strokeDashoffset: [anime.setDashoffset, 0],
+      easing: 'easeInSine',
+      duration: 600,
+      delay: (el, i) => { return i * 400 }
+    });
+
+    // Ease in greeting text, scene and nav
+    var greetingScene = document.querySelector("#greeting-scene");
+    var greetingText = greetingScene.querySelector('.greeting-text');
+    var greetingMountain = greetingScene.querySelector('.mountain-image');
+    var greetingStars = greetingScene.querySelectorAll('div[class*="-star-"]');
+
+    anime({
+      targets: greetingText,
+      opacity: '100%',
+      easing: 'easeInSine',
+      delay: 2000
+    });
+    anime({
+      targets: [greetingMountain, '.nav-wrapper', '.sidenav-trigger'],
+      opacity: '100%',
+      easing: 'easeInSine',
+      delay: 3000
+    });
+    anime({
+      targets: greetingStars,
+      opacity: '100%',
+      easing: 'easeInSine',
+      delay: 3500
+    });
+
+    // Ease in footer stars
+    var footer = document.querySelector("#say-hi");
+    var starImages = footer.querySelectorAll('div[class*="-star-"]')
+    anime({
+      targets: starImages,
+      opacity: '100%',
+      easing: 'easeInSine',
+      duration: 1000
+    });
+  } else { easeInAllStars() };
+
+  // Toggle day/night
+  $('#dn').on('change',function(){
+		$(this).is(':checked') ? localStorage.setItem('mode', 'day') : localStorage.setItem('mode', 'night');
+
+    if (localStorage.getItem('mode') === 'day') {
+      var el = document.querySelectorAll('.day')
+      el.forEach(function(value) {value.classList.add('night')})
+      el.forEach(function(value) {value.classList.remove('day')})
+      $('div[class*="-cloud"]').remove();
+      runStars();
+      easeInAllStars();
+    } else {
+      var el = document.querySelectorAll('.night')
+      el.forEach(function(value) {value.classList.add('day')})
+      el.forEach(function(value) {value.classList.remove('night')})
+      $('div[class*="-star-"]').remove();
+      runClouds();
+      easeInAllStars();
+    };
+	});
 
   function runClouds() {
     // Populate and ease in clouds
     $(`<div class='left-cloud'></div>`).appendTo("#scene.day");
     $(`<div class='right-cloud'></div>`).appendTo("#scene.day");
     $(`<div class='sun-cloud'></div>`).appendTo("#scene.day");
-
     $(`<div class='left-cloud'></div>`).appendTo("#say-hi");
     $(`<div class='right-cloud'></div>`).appendTo("#say-hi");
     $(`<div class='sun-cloud'></div>`).appendTo("#say-hi");
@@ -105,57 +176,7 @@ $(document).ready(function() {
     });
   };
 
-  runStars();
-  localStorage.setItem('mode', 'night')
-
-  if (window.location.pathname === "/") {
-    // Title drawing animation
-    var svgPath = document.querySelectorAll('.path');
-    anime({
-      targets: svgPath,
-      strokeDashoffset: [anime.setDashoffset, 0],
-      easing: 'easeInSine',
-      duration: 600,
-      delay: (el, i) => { return i * 400 }
-    });
-
-    // Ease in greeting text, scene and nav
-    var greetingScene = document.querySelector("#greeting-scene");
-    var greetingText = greetingScene.querySelector('.greeting-text');
-    var greetingMountain = greetingScene.querySelector('.mountain-image');
-    var greetingStars = greetingScene.querySelectorAll('div[class*="-star-"]');
-
-    anime({
-      targets: greetingText,
-      opacity: '100%',
-      easing: 'easeInSine',
-      delay: 2000
-    });
-    anime({
-      targets: [greetingMountain, '.nav-wrapper', '.sidenav-trigger'],
-      opacity: '100%',
-      easing: 'easeInSine',
-      delay: 3000
-    });
-    anime({
-      targets: greetingStars,
-      opacity: '100%',
-      easing: 'easeInSine',
-      delay: 3500
-    });
-
-    // Ease in footer stars
-    var footer = document.querySelector("#say-hi");
-    var starImages = footer.querySelectorAll('div[class*="-star-"]')
-    anime({
-      targets: starImages,
-      opacity: '100%',
-      easing: 'easeInSine',
-      duration: 1000
-    });
-
-  } else {
-    // Star rotation and easing outside greeting scene
+  function easeInAllStars() {
     var starImages = document.querySelectorAll('div[class*="-star-"]')
     anime({
       targets: starImages,
@@ -164,27 +185,4 @@ $(document).ready(function() {
       duration: 1000
     });
   };
-
-  // Toggle day/night
-  $('#dn').on('change',function(){
-		if ($(this).is(':checked')) {
-      localStorage.setItem('mode', 'day');
-    } else {
-      localStorage.setItem('mode', 'night');
-    };
-
-    if (localStorage.getItem('mode') === 'day') {
-      var el = document.querySelectorAll('.day')
-      el.forEach(function(value) {value.classList.add('night')})
-      el.forEach(function(value) {value.classList.remove('day')})
-      $('div[class*="-cloud"]').remove();
-      runStars();
-    } else {
-      var el = document.querySelectorAll('.night')
-      el.forEach(function(value) {value.classList.add('day')})
-      el.forEach(function(value) {value.classList.remove('night')})
-      $('div[class*="-star-"]').remove();
-      runClouds();
-    };
-	});
 });
