@@ -62,6 +62,7 @@ $loading-delay: 1s;
 @media screen and (max-width: 600px) {
   .home-title { margin-bottom: 0 !important; }
   .title { font-size: 9rem !important; }
+  .tt-mobile { top: 0 !important; }
 }
 
 @media screen and (max-width: 350px) {
@@ -231,8 +232,17 @@ nav {
   top: 0;
   z-index: 1;
 
-  & .time-toggle {
+  & .tt-mobile {
+    position: fixed;
+    top: 4px;
+    right: 0;
     margin: 0 18px 0 18px !important;
+  }
+  & .tt-desktop {
+    position: fixed;
+    left: 15px;
+    padding: 0 !important;
+    z-index: 10;
   }
   & .nav-wrapper > ul > li {
     margin-left: 10px;
@@ -328,21 +338,21 @@ nav {
     position: absolute;
     left: 5%;
     top: 30%;
-    z-index: 1;
+    z-index: 0;
   }
   & .right-cloud {
     content: url("../images/scenes/cloud.png");
     position: absolute;
     left: 25%;
     top: 52%;
-    z-index: 1;
+    z-index: 0;
   }
   & .sun-cloud {
     content: url("../images/scenes/sun-cloud.png");
     position: absolute;
     left: 65%;
     top: 17%;
-    z-index: 1;
+    z-index: 0;
   }
 
   &.night {
@@ -652,21 +662,21 @@ $ft-btn-color: #5cb85c;
     position: absolute;
     left: 10%;
     top: 42%;
-    z-index: 1;
+    z-index: 0;
   }
   & .right-cloud {
     content: url("../images/scenes/cloud.png");
     position: absolute;
     left: 70%;
     top: 12%;
-    z-index: 1;
+    z-index: 0;
   }
   & .sun-cloud {
     content: url("../images/scenes/sun-cloud.png");
     position: absolute;
     left: 57%;
     top: 62%;
-    z-index: 1;
+    z-index: 0;
   }
 
   & .say-hi-text {
