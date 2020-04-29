@@ -89,9 +89,9 @@ $ft-btn-color: #5cb85c;
     & h4  { color: $light-gold; }
     & h6  { color: #BFEDEA; }
     & p   { color: $light-gold; }
-    & .btn:hover { background-color: lighten(#DDBCEA, 10%); }
+    & .btn:hover { background-color: lighten($dark-btn-color, 5%); }
     & .btn {
-      background-color: #DDBCEA;
+      background-color: $dark-btn-color;
       color: $dark-teal;
     }
   }
@@ -111,9 +111,9 @@ $ft-btn-color: #5cb85c;
     & h4  { color: $light-gold; }
     & h6  { color: #BFEDEA; }
     & p   { color: $light-gold; }
-    & .btn:hover { background-color: lighten(#DDBCEA, 10%); }
+    & .btn:hover { background-color: lighten($dark-btn-color, 5%); }
     & .btn {
-      background-color: #DDBCEA;
+      background-color: $dark-btn-color;
       color: $dark-teal;
     }
   }
@@ -133,9 +133,9 @@ $ft-btn-color: #5cb85c;
     & h4  { color: $light-gold; }
     & h6  { color: #BFEDEA; }
     & p   { color: $light-gold; }
-    & .btn:hover { background-color: lighten(#DDBCEA, 10%); }
+    & .btn:hover { background-color: lighten($dark-btn-color, 5%); }
     & .btn {
-      background-color: #DDBCEA;
+      background-color: $dark-btn-color;
       color: $dark-teal;
     }
   }
@@ -155,9 +155,9 @@ $ft-btn-color: #5cb85c;
     & h4  { color: $light-gold; }
     & h6  { color: #BFEDEA; }
     & p   { color: $light-gold; }
-    & .btn:hover { background-color: lighten(#DDBCEA, 10%); }
+    & .btn:hover { background-color: lighten($dark-btn-color, 5%); }
     & .btn {
-      background-color: #DDBCEA;
+      background-color: $dark-btn-color;
       color: $dark-teal;
     }
   }
