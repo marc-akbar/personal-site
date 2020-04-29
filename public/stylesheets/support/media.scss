@@ -1,0 +1,70 @@
+@media screen and (max-width: 1200px) {
+  .container { width: 90%; }
+  .left-cloud, .right-cloud, .sun-cloud { width: 35%; }
+}
+
+@media screen and (max-width: 992px) {
+  #work-content {
+    & div[class*="-text"] {
+      padding-top: 0;
+      padding-bottom: 4rem;
+    }
+  }
+
+  #earlybird > .container > .row {
+    display: flex;
+    flex-flow: column;
+    & #eb-description { order: 1; }
+    & #eb-image       { order: 2; }
+  }
+
+  #finance > .container > .row {
+    display: flex;
+    flex-flow: column;
+    & #ft-description { order: 1; }
+    & #ft-image       { order: 2; }
+  }
+
+  #about-content  {
+    & .row {
+      display: flex;
+      flex-flow: column;
+      & #about-text {
+        order: 1;
+      }
+      & #about-photo {
+        order: 2;
+        padding-top: 3rem;
+      }
+      & .photo-background { background-color: inherit !important; }
+      & .text-background { background-color: inherit !important; }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .home-title { margin-bottom: 0 !important; }
+  .title { font-size: 9rem !important; }
+  .tt-mobile { top: 0 !important; }
+}
+
+@media screen and (max-width: 350px) {
+  .title { font-size: 35vw !important; }
+
+  #work-content {
+    & img {
+      min-width: inherit !important;
+      width: 100% !important;
+    }
+  }
+  
+  #about-content {
+    & .about-photo-wrapper > img {
+      min-width: inherit !important;
+      width: 90% !important;
+    }
+    & .fl-indent { padding-left: 62px !important; }
+    & .ny-indent { padding-left: 62px !important; }
+    & .co-indent { padding-left: 62px !important; }
+  }
+}

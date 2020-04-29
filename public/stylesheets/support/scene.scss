@@ -1,0 +1,42 @@
+#scene {
+  position: relative;
+  padding-top: 90px;
+  z-index: 0;
+
+  & .left-cloud {
+    content: url("../images/scenes/cloud.png");
+    position: absolute;
+    left: 5%;
+    top: 30%;
+    z-index: 1;
+  }
+
+  & .right-cloud {
+    content: url("../images/scenes/cloud.png");
+    position: absolute;
+    left: 25%;
+    top: 52%;
+    z-index: 1;
+  }
+
+  & .sun-cloud {
+    content: url("../images/scenes/sun-cloud.png");
+    position: absolute;
+    left: 65%;
+    top: 17%;
+    z-index: 1;
+  }
+
+  &.night {
+    // background: -webkit-radial-gradient(bottom, #3e4d4d 0%, $night-scene-background 50%); // Chrome10+, Safari5.1+
+    // background: -webkit-gradient(radial, bottom, color-stop(0%, #3e4d4d), color-stop(50%, $night-scene-background));  // Chrome, Safari4+
+    // background: -moz-radial-gradient(bottom, #3e4d4d 0%, $night-scene-background 75%);  // Firefox3.6+
+    // background: -ms-radial-gradient(bottom, #3e4d4d 0%, $night-scene-background 75%); // IE10+
+    // background: -o-radial-gradient(bottom, #3e4d4d 0%, $night-scene-background 75%);  // Opera11.10+
+    background-color: $night-scene-background;  // old browsers
+  }
+
+  &.day {
+    background: $day-scene-background;
+  }
+}
