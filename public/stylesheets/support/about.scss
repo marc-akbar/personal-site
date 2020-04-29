@@ -1,0 +1,46 @@
+#about-content {
+  position: relative;
+  margin: 0;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  & h5 {
+    font-family: 'Baloo Tammudu 2', cursive, sans-serif;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+  }
+
+  & p {
+    font-size: 1.25rem;
+
+    & a {
+      color: $custom-teal;
+    }
+  }
+
+  & .fl-indent { padding-left: 100px; }
+  & .ny-indent { padding-left: 140px; }
+  & .co-indent { padding-left: 190px }
+  & .location-text { margin: 0; }
+  & .about-photo-wrapper {
+    padding-bottom: 2rem;
+
+    & img {
+      min-width: 313px;
+      width: 55%;
+    }
+  }
+
+  & #about-text {
+    &.night {
+      & h5  { color: $shaded-gold; }
+      & p   { color: $light-gold; }
+    }
+    
+    &.day {
+      & h5  { color: $shaded-teal; }
+      & p   { color: inherit; }
+    }
+  }
+}

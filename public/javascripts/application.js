@@ -119,7 +119,7 @@ $(document).ready(function() {
       delay: (el, i) => { return i * 400 }
     });
 
-    // Ease in greeting text and scene
+    // Ease in greeting text, scene and nav
     var greetingScene = document.querySelector("#greeting-scene");
     var greetingText = greetingScene.querySelector('.greeting-text');
     var greetingMountain = greetingScene.querySelector('.mountain-image');
@@ -132,7 +132,7 @@ $(document).ready(function() {
       delay: 2000
     });
     anime({
-      targets: [greetingMountain, 'nav'],
+      targets: [greetingMountain, '.nav-wrapper', '.sidenav-trigger'],
       opacity: '100%',
       easing: 'easeInSine',
       delay: 3000

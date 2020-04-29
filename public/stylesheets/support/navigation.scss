@@ -1,0 +1,74 @@
+nav {
+  position: absolute;
+  height: 90px;
+  top: 0;
+  z-index: 1;
+
+  & .tt-mobile {
+    position: fixed;
+    top: 4px;
+    right: 0;
+    margin: 0 18px 0 18px !important;
+    z-index: 10;
+  }
+
+  & .tt-desktop {
+    position: fixed;
+    left: 24px;
+    padding: 0 !important;
+    z-index: 10;
+  }
+
+  & .nav-wrapper > ul > li {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    & a {
+      font-family: 'Baloo Tammudu 2', cursive, sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-left: 40px;
+      padding-right: 40px;
+      & i { font-size: 50px; }
+    }
+
+    & a:hover {
+      background-color: inherit !important;
+      color: $custom-teal !important;
+    }
+  }
+
+  &.night {
+    & .nav-wrapper > a { color: $light-gold; }
+    & ul > li > a { color: $light-gold; }
+  }
+
+  &.day {
+    & a { color: $night-scene-background; }
+    & .nav-wrapper > a { color: $night-scene-background; }
+    & ul > li > a { color: $night-scene-background; }
+  }
+}
+
+.sidenav {
+  padding-top: 20px;
+
+  li {
+    padding-top: 15px;
+
+    & a {
+      font-family: 'Baloo Tammudu 2', cursive, sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+    }
+  }
+
+  &.night {
+    background-color: $night-scene-background;
+    & li > a { color: $light-gold; }
+  }
+}
