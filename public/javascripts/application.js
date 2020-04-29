@@ -166,13 +166,11 @@ $(document).ready(function() {
   };
 
   // Toggle day/night
-  $('.time-toggle').on('click',function(){
-		if ($(this).find('i').text() === 'brightness_2') {
-      $(this).find('i').text('wb_sunny');
-      localStorage.setItem('mode', 'day')
+  $('#dn').on('change',function(){
+		if ($(this).is(':checked')) {
+      localStorage.setItem('mode', 'day');
     } else {
-      $(this).find('i').text('brightness_2');
-      localStorage.setItem('mode', 'night')
+      localStorage.setItem('mode', 'night');
     };
 
     if (localStorage.getItem('mode') === 'day') {
