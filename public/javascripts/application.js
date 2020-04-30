@@ -1,35 +1,33 @@
 $(document).ready(function() {
-  // Remove loading page when page loads
+  // Remove loading
   $("#loading").remove();
   // Materialize initializations
   $('.sidenav').sidenav();
   // Set initial time to day
   localStorage.setItem('mode', localStorage.getItem('mode') || 'day')
-
   // Load appropriate scene
-  if (localStorage.getItem('mode') === 'night') {
+  pathcheck: if (localStorage.getItem('mode') === 'night') {
     $('#dn').prop('checked', true);
     swapToNight();
-
+    populateStars();
+    // Run greeting if index path
     if (window.location.pathname === "/") {
-      // var tl = gsap.timeline();
-      titleAnimation();
-    } else {
-      populateStars();
-      easeInStars();
-      rotateStars();
+      greetingAnimation();
+      break pathcheck;
     };
+    easeInStars();
+    rotateStars();
   } else {
     $('#dn').prop('checked', false);
     swapToDay();
-
+    populateClouds();
+    // Run greeting if index path
     if (window.location.pathname === "/") {
-      titleAnimation();
-    } else {
-      populateClouds();
-      easeInClouds();
-      raiseClouds();
+      greetingAnimation();
+      break pathcheck;
     };
+    easeInClouds();
+    raiseClouds();
   };
 
   // Toggle day/night on switch
@@ -48,6 +46,26 @@ $(document).ready(function() {
      };
 	});
 
+  function greetingAnimation() {
+    var tl = gsap.timeline();
+    tl.from('#greeting-scene .greeting-text', { opacity: 0, ease: 'power2.in', duration: 1, delay: 2 })
+      .from(['#greeting-scene .mountain-image', '.nav-wrapper'], { opacity: 0, ease: 'power2.in', duration: 1 })
+      .addLabel('runScene', "-=0.5");
+
+    if (localStorage.getItem('mode') === "night") {
+      tl.from(['.white-star-image', '.gold-star-image', '.teal-star-image'], { opacity: 0, ease: 'power3.in', duration: 1 }, 'runScene')
+        .from('.gold-star-image', { repeat: -1, rotation: -360, duration: 5}, 'runScene')
+        .from('.teal-star-image', { repeat: -1, rotation: -360, duration: 10, ease: 'none' }, 'runScene');
+    } else {
+      var lrClouds = $('div[class*="t-cloud"]');
+      var sunClouds = $('.sun-cloud');
+
+      tl.from(['.left-cloud', '.right-cloud', '.sun-cloud'], { opacity: 0, ease: 'power3.in', duration: 1 }, 'runScene')
+        .from(lrClouds, { y: (lrClouds.height() * 1.5), ease: 'power2.out', duration: 2 }, 'runScene')
+        .from(sunClouds, { y: (sunClouds.height() * 1.5), ease: 'power2.out', duration: 2 }, 'runScene');
+    };
+  };
+
   function swapToNight() {
     var el = document.querySelectorAll('.day')
     el.forEach(function(value) {value.classList.add('night')})
@@ -60,18 +78,6 @@ $(document).ready(function() {
     el.forEach(function(value) {value.classList.add('day')})
     el.forEach(function(value) {value.classList.remove('night')})
     $('div[class*="-star"]').remove();
-  };
-
-  function titleAnimation() {
-    // Title drawing animation
-    // var svgPath = document.querySelectorAll('.path');
-    // anime({
-    //   targets: svgPath,
-    //   strokeDashoffset: [anime.setDashoffset, 0],
-    //   easing: 'easeInSine',
-    //   duration: 600,
-    //   delay: function(el, i) { return i * 400 }
-    // });
   };
 
   function populateClouds() {
@@ -95,7 +101,6 @@ $(document).ready(function() {
   function raiseClouds() {
     var lrClouds = $('div[class*="t-cloud"]');
     var sunClouds = $('.sun-cloud');
-
     gsap.from(lrClouds, {
       y: (lrClouds.height() * 1.5),
       ease: 'power2.out',
