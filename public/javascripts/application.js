@@ -5,24 +5,47 @@ $(document).ready(function() {
   $('.sidenav').sidenav();
   // Set initial time to day
   localStorage.setItem('mode', localStorage.getItem('mode') || 'day')
+
   // Load appropriate scene
   if (localStorage.getItem('mode') === 'night') {
     $('#dn').prop('checked', true);
     swapToNight();
+
+    if (window.location.pathname === "/") {
+      // var tl = gsap.timeline();
+      titleAnimation();
+    } else {
+      populateStars();
+      easeInStars();
+      rotateStars();
+    };
   } else {
     $('#dn').prop('checked', false);
     swapToDay();
-  };
 
-  if (window.location.pathname === "/") {
-    titleAnimation();
-    easeInGreeting();
-  } else { easeInStars(); };
+    if (window.location.pathname === "/") {
+      titleAnimation();
+    } else {
+      populateClouds();
+      easeInClouds();
+      raiseClouds();
+    };
+  };
 
   // Toggle day/night on switch
   $('#dn').on('change',function(){
 		$(this).is(':checked') ? localStorage.setItem('mode', 'night') : localStorage.setItem('mode', 'day');
-    localStorage.getItem('mode') === 'night' ? swapToNight() : swapToDay();
+    if (localStorage.getItem('mode') === 'night') {
+       swapToNight();
+       populateStars();
+       easeInStars();
+       rotateStars();
+     } else {
+       swapToDay();
+       populateClouds();
+       easeInClouds();
+       raiseClouds();
+     };
 	});
 
   function swapToNight() {
@@ -30,8 +53,6 @@ $(document).ready(function() {
     el.forEach(function(value) {value.classList.add('night')})
     el.forEach(function(value) {value.classList.remove('day')})
     $('div[class*="-cloud"]').remove();
-    populateStars();
-    easeInStars();
   };
 
   function swapToDay() {
@@ -39,69 +60,18 @@ $(document).ready(function() {
     el.forEach(function(value) {value.classList.add('day')})
     el.forEach(function(value) {value.classList.remove('night')})
     $('div[class*="-star"]').remove();
-    populateClouds();
-    easeInClouds();
   };
 
   function titleAnimation() {
     // Title drawing animation
-    var svgPath = document.querySelectorAll('.path');
-    anime({
-      targets: svgPath,
-      strokeDashoffset: [anime.setDashoffset, 0],
-      easing: 'easeInSine',
-      duration: 600,
-      delay: function(el, i) { return i * 400 }
-    });
-  };
-
-  function easeInGreeting() {
-    // Ease in greeting text, scene and nav
-    var greetingScene = document.querySelector("#greeting-scene");
-    var greetingText = greetingScene.querySelector('.greeting-text');
-    var greetingMountain = greetingScene.querySelector('.mountain-image');
-
-    if (greetingScene.querySelectorAll('div[class*="-cloud"]').length === 0) {
-      var greetingGraphics = greetingScene.querySelectorAll('div[class*="-star"]');
-    } else {
-      var greetingGraphics = greetingScene.querySelectorAll('div[class*="-cloud"]');
-      anime({
-        targets: greetingGraphics,
-        translateY: ['100%', '0%'],
-        easing: 'easeOutSine',
-        duration: 1500,
-        delay: 3500
-      });
-    };
-
-    anime({
-      targets: greetingText,
-      opacity: '100%',
-      easing: 'easeInSine',
-      delay: 2000
-    });
-    anime({
-      targets: [greetingMountain, '.nav-wrapper', '.sidenav-trigger'],
-      opacity: '100%',
-      easing: 'easeInSine',
-      delay: 3000
-    });
-    anime({
-      targets: greetingGraphics,
-      opacity: '100%',
-      easing: 'easeInSine',
-      delay: 3500
-    });
-
-    // Ease in footer stars
-    var footer = document.querySelector("#say-hi");
-    var starImages = footer.querySelectorAll('div[class*="-star"]')
-    anime({
-      targets: starImages,
-      opacity: '100%',
-      easing: 'easeInSine',
-      duration: 1000
-    });
+    // var svgPath = document.querySelectorAll('.path');
+    // anime({
+    //   targets: svgPath,
+    //   strokeDashoffset: [anime.setDashoffset, 0],
+    //   easing: 'easeInSine',
+    //   duration: 600,
+    //   delay: function(el, i) { return i * 400 }
+    // });
   };
 
   function populateClouds() {
@@ -115,18 +85,26 @@ $(document).ready(function() {
   };
 
   function easeInClouds() {
-    var cloudImages = document.querySelectorAll('div[class*="-cloud"]');
-    anime({
-      targets: cloudImages,
-      opacity: '100%',
-      easing: 'easeInQuad',
-      duration: 1000
+    gsap.from(['.left-cloud', '.right-cloud', '.sun-cloud'], {
+      opacity: 0,
+      ease: 'power3.in',
+      duration: 1
     });
-    anime({
-      targets: cloudImages,
-      translateY: ['100%', '0%'],
-      easing: 'easeOutSine',
-      duration: 1500
+  };
+
+  function raiseClouds() {
+    var lrClouds = $('div[class*="t-cloud"]');
+    var sunClouds = $('.sun-cloud');
+
+    gsap.from(lrClouds, {
+      y: (lrClouds.height() * 1.5),
+      ease: 'power2.out',
+      duration: 2
+    });
+    gsap.from(sunClouds, {
+      y: (sunClouds.height() * 1.5),
+      ease: 'power2.out',
+      duration: 2
     });
   };
 
@@ -188,30 +166,32 @@ $(document).ready(function() {
         });
       }
     };
-
-    anime({
-      targets: '.gold-star-image',
-      loop: true,
-      rotate: 360,
-      duration: 4000,
-      easing: 'linear'
-    });
-    anime({
-      targets: '.teal-star-image',
-      loop: true,
-      rotate: 360,
-      duration: 9000,
-      easing: 'linear'
-    });
   };
 
   function easeInStars() {
-    var starImages = document.querySelectorAll('div[class*="-star"]');
-    anime({
-      targets: starImages,
-      opacity: '100%',
-      easing: 'easeInSine',
-      duration: 1000
+    gsap.from(['.white-star-image', '.gold-star-image', '.teal-star-image'], {
+      opacity: 0,
+      ease: 'power3.in',
+      duration: 1
+    })
+  };
+
+  function rotateStars() {
+    gsap.from('.gold-star-image', {
+      repeat: -1,
+      rotation: -360,
+      duration: 5,
+      ease: 'none'
     });
+    gsap.from('.teal-star-image', {
+      repeat: -1,
+      rotation: -360,
+      duration: 10,
+      ease: 'none'
+    });
+  };
+
+  function percentToPixel(_elem, _perc){
+    return (_elem.parent().outerWidth()/100)* parseFloat(_perc);
   };
 });
