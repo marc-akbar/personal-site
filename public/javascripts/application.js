@@ -48,20 +48,20 @@ $(document).ready(function() {
 
   function greetingAnimation() {
     var tl = gsap.timeline();
+    var lCloud = $('.left-cloud');
+    var sunClouds = $('.sun-cloud');
+
     tl.from('#greeting-scene .greeting-text', { opacity: 0, ease: 'power2.in', duration: 1, delay: 2 })
-      .from(['#greeting-scene .mountain-image', '.nav-wrapper'], { opacity: 0, ease: 'power2.in', duration: 1 })
-      .addLabel('runScene', "-=0.5");
+      .from(['#greeting-scene .mountain-image', '.nav-wrapper'], { opacity: 0, ease: 'none', duration: 1 })
+      .addLabel('runScene', "-=1");
 
     if (localStorage.getItem('mode') === "night") {
       tl.from(['.white-star-image', '.gold-star-image', '.teal-star-image'], { opacity: 0, ease: 'power3.in', duration: 1 }, 'runScene')
-        .from('.gold-star-image', { repeat: -1, rotation: -360, duration: 5}, 'runScene')
-        .from('.teal-star-image', { repeat: -1, rotation: -360, duration: 10, ease: 'none' }, 'runScene');
+        .from('.gold-star-image', { repeat: -1, rotation: -360, duration: 5 }, 'runScene')
+        .from('.teal-star-image', { repeat: -1, rotation: -360, duration: 10 }, 'runScene');
     } else {
-      var lrClouds = $('div[class*="t-cloud"]');
-      var sunClouds = $('.sun-cloud');
-
       tl.from(['.left-cloud', '.right-cloud', '.sun-cloud'], { opacity: 0, ease: 'power3.in', duration: 1 }, 'runScene')
-        .from(lrClouds, { y: (lrClouds.height() * 1.5), ease: 'power2.out', duration: 2 }, 'runScene')
+        .from(['.left-cloud', '.right-cloud'], { y: (lCloud.height() * 1.5), ease: 'power2.out', duration: 2 }, 'runScene')
         .from(sunClouds, { y: (sunClouds.height() * 1.5), ease: 'power2.out', duration: 2 }, 'runScene');
     };
   };
@@ -99,10 +99,11 @@ $(document).ready(function() {
   };
 
   function raiseClouds() {
-    var lrClouds = $('div[class*="t-cloud"]');
+    var lCloud = $('.left-cloud');
     var sunClouds = $('.sun-cloud');
-    gsap.from(lrClouds, {
-      y: (lrClouds.height() * 1.5),
+
+    gsap.from(['.left-cloud', '.right-cloud'], {
+      y: (lCloud.height() * 1.5),
       ease: 'power2.out',
       duration: 2
     });

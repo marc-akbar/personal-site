@@ -6,35 +6,35 @@
   stroke-dasharray: 2600;
   stroke-dashoffset: 2600;
   stroke-width: 22;
-  animation: letter-animation 4.5s linear forwards;
+  animation: letter-animation 4.5s linear forwards .4s;
 }
 
 .hello-path--el {
   stroke-dasharray: 2600;
   stroke-dashoffset: 2600;
   stroke-width: 36;
-  animation: letter-animation 4.5s linear forwards .8s;
+  animation: letter-animation 4.5s linear forwards 1.2s;
 }
 
 .hello-path--l {
   stroke-dasharray: 2600;
   stroke-dashoffset: 2600;
   stroke-width: 20;
-  animation: letter-animation 4.5s linear forwards 1.2s;
+  animation: letter-animation 4.5s linear forwards 1.6s;
 }
 
 .hello-path--o {
   stroke-dasharray: 2600;
   stroke-dashoffset: 2600;
   stroke-width: 25;
-  animation: letter-animation 4.5s linear forwards 1.6s;
+  animation: letter-animation 4.5s linear forwards 1.9s;
   }
 
 .hello-path--dot {
   stroke-dasharray: 2600;
   stroke-dashoffset: 2600;
   stroke-width: 30;
-  animation: letter-animation 4.5s linear forwards 2s;
+  animation: letter-animation 4.5s linear forwards 2.4s;
 }
 
 @keyframes letter-animation {
