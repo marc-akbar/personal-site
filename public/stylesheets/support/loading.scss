@@ -6,8 +6,9 @@
   width: 100%;
   top: 0;
   left: 0;
-  background: $night-scene-background;
   z-index: 99;
+  &.night { background: $night-scene-background; }
+  &.day { background: $day-scene-background; }
 
   // & .preloader-wrapper {
   //   position: absolute;

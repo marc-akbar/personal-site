@@ -48,13 +48,13 @@ p {
 
 .greeting-heading {
   position: relative;
-  margin-bottom: 5vw;
+  margin-bottom: 7vw;
   z-index: 2;
 }
 
 .greeting-title {
   position: relative;
-  margin-bottom: 3vw;
+  margin-bottom: 4vw;
   z-index: 2;
   & svg { max-width: 90%; }
 }
@@ -153,14 +153,14 @@ p {
   top: 65%;
 }
 .social {
-  padding: 1rem;
+  padding: 1rem 0 1rem 0;
   text-align: center;
 
   & ul > li {
     position: relative;
     display: inline-block;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 18px;
+    margin-right: 18px;
     & a {
       display: block;
       text-align: center;
