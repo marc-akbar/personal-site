@@ -3,12 +3,16 @@ $(document).ready(function() {
   $("#loading").remove();
   // Materialize initializations
   $('.sidenav').sidenav();
-  // Change nav color on mobile
-  $(window).width() <= 992 ? $('nav').removeClass('transparent') : $('nav').addClass('transparent');
-  // Set initial time of day
-  localStorage.setItem('mode', localStorage.getItem('mode') || 'night')
+  // Set initial time to day
+  localStorage.setItem('mode', localStorage.getItem('mode') || 'day')
   // Load appropriate scene
-  localStorage.getItem('mode') === 'night' ? swapToNight() : swapToDay();
+  if (localStorage.getItem('mode') === 'night') {
+    $('#dn').prop('checked', true);
+    swapToNight();
+  } else {
+    $('#dn').prop('checked', false);
+    swapToDay();
+  };
 
   if (window.location.pathname === "/") {
     titleAnimation();
@@ -34,7 +38,7 @@ $(document).ready(function() {
     var el = document.querySelectorAll('.night')
     el.forEach(function(value) {value.classList.add('day')})
     el.forEach(function(value) {value.classList.remove('night')})
-    $('div[class*="-star-"]').remove();
+    $('div[class*="-star"]').remove();
     populateClouds();
     easeInClouds();
   };
@@ -58,7 +62,7 @@ $(document).ready(function() {
     var greetingMountain = greetingScene.querySelector('.mountain-image');
 
     if (greetingScene.querySelectorAll('div[class*="-cloud"]').length === 0) {
-      var greetingGraphics = greetingScene.querySelectorAll('div[class*="-star-"]');
+      var greetingGraphics = greetingScene.querySelectorAll('div[class*="-star"]');
     } else {
       var greetingGraphics = greetingScene.querySelectorAll('div[class*="-cloud"]');
       anime({
@@ -91,7 +95,7 @@ $(document).ready(function() {
 
     // Ease in footer stars
     var footer = document.querySelector("#say-hi");
-    var starImages = footer.querySelectorAll('div[class*="-star-"]')
+    var starImages = footer.querySelectorAll('div[class*="-star"]')
     anime({
       targets: starImages,
       opacity: '100%',
@@ -202,7 +206,7 @@ $(document).ready(function() {
   };
 
   function easeInStars() {
-    var starImages = document.querySelectorAll('div[class*="-star-"]');
+    var starImages = document.querySelectorAll('div[class*="-star"]');
     anime({
       targets: starImages,
       opacity: '100%',
