@@ -51,7 +51,7 @@ $(document).ready(function() {
       strokeDashoffset: [anime.setDashoffset, 0],
       easing: 'easeInSine',
       duration: 600,
-      delay: (el, i) => { return i * 400 }
+      delay: function(el, i) { return i * 400 }
     });
   };
 
@@ -106,12 +106,12 @@ $(document).ready(function() {
 
   function populateClouds() {
     // Populate and ease in clouds
-    $(`<div class='left-cloud'></div>`).appendTo("#scene.day");
-    $(`<div class='right-cloud'></div>`).appendTo("#scene.day");
-    $(`<div class='sun-cloud'></div>`).appendTo("#scene.day");
-    $(`<div class='left-cloud'></div>`).appendTo("#say-hi");
-    $(`<div class='right-cloud'></div>`).appendTo("#say-hi");
-    $(`<div class='sun-cloud'></div>`).appendTo("#say-hi");
+    $("<div class='left-cloud'></div>").appendTo("#scene.day");
+    $("<div class='right-cloud'></div>").appendTo("#scene.day");
+    $("<div class='sun-cloud'></div>").appendTo("#scene.day");
+    $("<div class='left-cloud'></div>").appendTo("#say-hi");
+    $("<div class='right-cloud'></div>").appendTo("#say-hi");
+    $("<div class='sun-cloud'></div>").appendTo("#say-hi");
   };
 
   function easeInClouds() {
