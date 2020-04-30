@@ -1,15 +1,41 @@
-.anata-path--a-1, .anata-path--n-1 {
-    stroke-dasharray: 2600;
-    stroke-dashoffset: 2600;
-    stroke-width: 40;
-    animation: letter-animation 1.5s linear forwards;
+.hello-path {
+    stroke: $gold;
 }
 
-.anata-path--n-1 {
-    animation-delay: .8s;
+.hello-path--h {
+  stroke-dasharray: 2600;
+  stroke-dashoffset: 2600;
+  stroke-width: 22;
+  animation: letter-animation 4.5s linear forwards;
 }
 
-...
+.hello-path--el {
+  stroke-dasharray: 2600;
+  stroke-dashoffset: 2600;
+  stroke-width: 36;
+  animation: letter-animation 4.5s linear forwards .8s;
+}
+
+.hello-path--l {
+  stroke-dasharray: 2600;
+  stroke-dashoffset: 2600;
+  stroke-width: 20;
+  animation: letter-animation 4.5s linear forwards 1.2s;
+}
+
+.hello-path--o {
+  stroke-dasharray: 2600;
+  stroke-dashoffset: 2600;
+  stroke-width: 25;
+  animation: letter-animation 4.5s linear forwards 1.6s;
+  }
+
+.hello-path--dot {
+  stroke-dasharray: 2600;
+  stroke-dashoffset: 2600;
+  stroke-width: 30;
+  animation: letter-animation 4.5s linear forwards 2s;
+}
 
 @keyframes letter-animation {
     0% {
