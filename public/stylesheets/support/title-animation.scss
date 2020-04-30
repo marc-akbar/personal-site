@@ -1,0 +1,21 @@
+.anata-path--a-1, .anata-path--n-1 {
+    stroke-dasharray: 2600;
+    stroke-dashoffset: 2600;
+    stroke-width: 40;
+    animation: letter-animation 1.5s linear forwards;
+}
+
+.anata-path--n-1 {
+    animation-delay: .8s;
+}
+
+...
+
+@keyframes letter-animation {
+    0% {
+        stroke-dashoffset: 2600;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
