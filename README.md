@@ -5,7 +5,7 @@
   <a href="https://marcakbar.dev">marcakbar.dev</a>
 </h1>
 <br/>
-Personal site made in Sinatra using Materialize, Animejs and graphics in GIMP. Deployed to Heroku and managed using Cloudfare.
+Personal site made in Sinatra using Materialize, <del>Animejs</del> GSAP and graphics in GIMP. Deployed to Heroku and managed using Cloudfare.
 
 ##### Clone using:
 
@@ -18,8 +18,6 @@ Personal site made in Sinatra using Materialize, Animejs and graphics in GIMP. D
 ##### Ensure dependencies are installed:
 
 `$ bundle install`
-
-`$ npm install animejs --save`
 
 ##### Run local server using rack:
 
