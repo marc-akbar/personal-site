@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Mountain Logo" src="public/images/mountain_range.png" width="200" />
+  <img alt="Mountain Logo" src="public/images/scenes/mountain-range.png" width="200" />
 </p>
 <h1 align="center">
   <a href="https://marcakbar.dev">marcakbar.dev</a>
@@ -7,7 +7,7 @@
 <br/>
 Personal site made in Sinatra using Materialize, <del>Animejs</del> GSAP and graphics in GIMP. Deployed to Heroku and managed using Cloudfare.
 
-Design inspiration from [Sean Halpin](http://seanhalpin.io/) and [Josh Comeau](https://joshwcomeau.com/).
+Design inspiration from [Sean Halpin](http://seanhalpin.io/) and [Josh Comeau](https://joshwcomeau.com/) with help from [Angela Nguyen](https://www.linkedin.com/in/angelamaynguyen/).
 
 ##### Clone using:
 
