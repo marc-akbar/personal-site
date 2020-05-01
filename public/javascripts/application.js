@@ -1,6 +1,8 @@
 $(document).ready(function() {
-  // Remove loading
-  $("#loading").remove();
+  // Remove loading after scene swap
+  setTimeout(function() {
+    $("#loading").remove();
+  }, 500);
   // Materialize initializations
   $('.sidenav').sidenav();
   // Set initial time to day
@@ -57,8 +59,8 @@ $(document).ready(function() {
 
     if (localStorage.getItem('mode') === "night") {
       tl.from(['.white-star-image', '.gold-star-image', '.teal-star-image'], { opacity: 0, ease: 'power3.in', duration: 1 }, 'runScene')
-        .from('.gold-star-image', { repeat: -1, rotation: -360, duration: 5 }, 'runScene')
-        .from('.teal-star-image', { repeat: -1, rotation: -360, duration: 10 }, 'runScene');
+        .from('.gold-star-image', { repeat: -1, rotation: -360, duration: 5, ease: 'none' }, 'runScene')
+        .from('.teal-star-image', { repeat: -1, rotation: -360, duration: 10, ease: 'none' }, 'runScene');
     } else {
       tl.from(['.left-cloud', '.right-cloud', '.sun-cloud'], { opacity: 0, ease: 'power3.in', duration: 1 }, 'runScene')
         .from(['.left-cloud', '.right-cloud'], { y: (lCloud.height() * 1.5), ease: 'power2.out', duration: 2 }, 'runScene')
@@ -94,7 +96,8 @@ $(document).ready(function() {
     gsap.from(['.left-cloud', '.right-cloud', '.sun-cloud'], {
       opacity: 0,
       ease: 'power3.in',
-      duration: 1
+      duration: 1,
+      delay: .3
     });
   };
 
@@ -105,12 +108,14 @@ $(document).ready(function() {
     gsap.from(['.left-cloud', '.right-cloud'], {
       y: (lCloud.height() * 1.5),
       ease: 'power2.out',
-      duration: 2
+      duration: 2,
+      delay: .3
     });
     gsap.from(sunClouds, {
       y: (sunClouds.height() * 1.5),
       ease: 'power2.out',
-      duration: 2
+      duration: 2,
+      delay: .3
     });
   };
 
@@ -178,7 +183,8 @@ $(document).ready(function() {
     gsap.from(['.white-star-image', '.gold-star-image', '.teal-star-image'], {
       opacity: 0,
       ease: 'power3.in',
-      duration: 1
+      duration: 1,
+      delay: .3
     })
   };
 
@@ -187,17 +193,15 @@ $(document).ready(function() {
       repeat: -1,
       rotation: -360,
       duration: 5,
-      ease: 'none'
+      ease: 'none',
+      delay: .3
     });
     gsap.from('.teal-star-image', {
       repeat: -1,
       rotation: -360,
       duration: 10,
-      ease: 'none'
+      ease: 'none',
+      delay: .3
     });
-  };
-
-  function percentToPixel(_elem, _perc){
-    return (_elem.parent().outerWidth()/100)* parseFloat(_perc);
   };
 });
