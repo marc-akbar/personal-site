@@ -13,9 +13,7 @@
       right: 35px !important;
       left: auto !important;
 
-      & .toggle {
-        transform: scale(0.5);
-      }
+      & .toggle { transform: scale(0.5); }
     }
   }
 
@@ -52,14 +50,14 @@
         padding-top: 3rem;
       }
       & .photo-background { background-color: inherit !important; }
-      & .text-background { background-color: inherit !important; }
+      & .text-background  { background-color: inherit !important; }
     }
   }
 }
 
 @media screen and (max-width: 600px) {
   .home-title { margin-bottom: 0 !important; }
-  .title { font-size: 9rem !important; }
+  .title      { font-size: 9rem !important; }
 }
 
 @media screen and (max-width: 350px) {

@@ -11,8 +11,7 @@ $custom-teal:             #18ABA2;
 $shaded-teal:             #175E5A;
 $dark-teal:               #124d49;
 
-$dark-btn-color:  #DDBCEA;
-$light-btn-color:  #F2C94C;
+$btn-color:               #e2c557;
 
 @import '../support/media';
 @import '../support/loading';
@@ -34,7 +33,7 @@ body {
   }
 
   &.night { background-color: $dark-background; }
-  &.day { background-color: $light-background; }
+  &.day   { background-color: $light-background; }
 }
 
 p {
@@ -77,8 +76,10 @@ p {
   padding-bottom: 5vw;
   font-family: 'Satisfy', cursive, sans-serif;
   font-size: 10rem;
-  color: $gold;
   z-index: 2;
+
+  &.night { color: $gold; }
+  &.day { color: $shaded-teal; }
 }
 
 .mountain-image {
@@ -114,11 +115,7 @@ p {
 }
 
 @keyframes particleAnimation {
-  from {
-    left: -2000px;
-  } to {
-    left: calc( 100% + 500px );
-  }
+  from { left: -2000px; } to { left: calc( 100% + 500px ); }
 }
 
 .particle {
@@ -153,6 +150,7 @@ p {
   animation-duration:23s;
   top: 65%;
 }
+
 .social {
   padding: 1rem 0 1rem 0;
   text-align: center;
@@ -169,11 +167,24 @@ p {
       & img { height: 32px; }
     }
     & a:hover > img {
-      filter: hue-rotate(70deg);
-      -webkit-filter: hue-rotate(70deg);
+      filter:         contrast(2) hue-rotate(110deg) brightness(.6);
+      -webkit-filter: contrast(2) hue-rotate(110deg) brightness(.6);
+    }
+  }
+
+  &.day {
+    & ul > li {
+      a > img {
+        filter:         contrast(2) hue-rotate(110deg) brightness(.6);
+        -webkit-filter: contrast(2) hue-rotate(110deg) brightness(.6);
+      }
+      a:hover > img {
+        filter:         contrast(100%) hue-rotate(0) brightness(1);
+        -webkit-filter: contrast(100%) hue-rotate(0) brightness(1);
+      }
     }
   }
 }
 
-.social-scene.night  { background-color: $night-scene-background; }
-.social-scene.day    { background-color: $day-scene-background; }
+.social-scene.night { background-color: $night-scene-background; }
+.social-scene.day   { background-color: $day-scene-background; }

@@ -12,9 +12,7 @@
   }
   & p {
     font-size: 1.25rem;
-    & a {
-      color: $custom-teal;
-    }
+    & a { color: $custom-teal; }
   }
 
   & .fl-indent { padding-left: 100px; }

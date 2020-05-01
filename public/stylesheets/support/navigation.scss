@@ -29,15 +29,15 @@ nav {
 
   &.night {
     background-color: $night-scene-background;
-    & .nav-wrapper > a { color: $light-gold; }
-    & ul > li > a { color: $light-gold; }
+    & .nav-wrapper > a  { color: $light-gold; }
+    & ul > li > a       { color: $light-gold; }
   }
 
   &.day {
     background-color: $day-scene-background;
-    & a { color: $night-scene-background; }
-    & .nav-wrapper > a { color: $night-scene-background; }
-    & ul > li > a { color: $night-scene-background; }
+    & a                 { color: $night-scene-background; }
+    & .nav-wrapper > a  { color: $night-scene-background; }
+    & ul > li > a       { color: $night-scene-background; }
   }
 }
 

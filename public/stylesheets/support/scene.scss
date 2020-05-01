@@ -35,8 +35,5 @@
     // background: -o-radial-gradient(bottom, #3e4d4d 0%, $night-scene-background 75%);  // Opera11.10+
     background-color: $night-scene-background;  // old browsers
   }
-
-  &.day {
-    background: $day-scene-background;
-  }
+  &.day { background: $day-scene-background; }
 }
