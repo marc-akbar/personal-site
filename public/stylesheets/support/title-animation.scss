@@ -1,5 +1,6 @@
 .hello-path {
-    stroke: $gold;
+  &.day { stroke: $shaded-teal; }
+  &.night { stroke: $gold; }
 }
 
 .hello-path--h {
@@ -38,10 +39,5 @@
 }
 
 @keyframes letter-animation {
-    0% {
-        stroke-dashoffset: 2600;
-    }
-    100% {
-        stroke-dashoffset: 0;
-    }
+    0% { stroke-dashoffset: 2600; } 100% { stroke-dashoffset: 0; }
 }

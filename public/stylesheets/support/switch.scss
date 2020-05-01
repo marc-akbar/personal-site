@@ -139,13 +139,9 @@ input:checked {
   + .toggle {
     background-color: #749DD6;
 
-    &:before {
-      color: #749ED7;
-    }
+    &:before { color: #749ED7; }
 
-    &:after {
-      color: #ffffff;
-    }
+    &:after { color: #ffffff; }
 
     .toggle__handler {
       background-color: #FFE5B5;

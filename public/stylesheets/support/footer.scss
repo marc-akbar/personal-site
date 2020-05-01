@@ -38,7 +38,6 @@
       font-size: 6rem;
       font-family: 'Satisfy', cursive, sans-serif;
       padding-bottom: 1rem;
-      color: $gold;
     }
 
     & p {
@@ -54,15 +53,17 @@
 
   &.night {
     background-color: $night-scene-background;
-    & p { color: $light-gold; }
-    & .say-hi-text > .btn { background-color: $dark-btn-color; }
-    & .say-hi-text > .btn:hover { background-color: lighten($dark-btn-color, 5%); }
+    & h4  { color: $gold; }
+    & p   { color: $light-gold; }
+    & .say-hi-text > .btn       { background-color: $btn-color; }
+    & .say-hi-text > .btn:hover { background-color: lighten($btn-color, 10%); }
   }
 
   &.day {
     background-color: $day-scene-background;
-    & p { color: inherit; }
-    & .say-hi-text > .btn { background-color: $light-btn-color; }
-    & .say-hi-text > .btn:hover { background-color: lighten($light-btn-color, 10%); }
+    & h4  { color: $shaded-teal; }
+    & p   { color: inherit; }
+    & .say-hi-text > .btn       { background-color: $btn-color; }
+    & .say-hi-text > .btn:hover { background-color: lighten($btn-color, 10%); }
   }
 }
