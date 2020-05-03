@@ -13,13 +13,16 @@
     <link href="//cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet" >
     <!-- Greensock Animation -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
-    <link href="<%= url('/stylesheets/application.css') %>" rel="stylesheet" />
-  </head>
-  <body class="day">
-    <%= erb :preloader %>
-    <%= yield %>
     <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="/javascripts/materialize.min.js"></script>
     <script src="/javascripts/application.js"></script>
+    <link href="<%= url('/stylesheets/application.css') %>" rel="stylesheet" />
+  </head>
+  <body class="day">
+    <script>
+      localStorage.setItem('mode', localStorage.getItem('mode') || 'day');
+    </script>
+    <%= erb :preloader %>
+    <%= yield %>
   </body>
 </html>

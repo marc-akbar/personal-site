@@ -1,12 +1,8 @@
 $(document).ready(function() {
   // Remove loading after scene swap
-  setTimeout(function() {
-    $("#loading").remove();
-  }, 300);
+  $("#loading").remove();
   // Materialize initializations
   $('.sidenav').sidenav();
-  // Set initial time
-  localStorage.setItem('mode', localStorage.getItem('mode') || 'day');
   // Load appropriate scene
   pathcheck: if (localStorage.getItem('mode') === 'night') {
     $('#dn').prop('checked', true);
