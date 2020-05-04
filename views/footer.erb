@@ -1,4 +1,9 @@
-<section id="say-hi" class="day">
+<section id="say-hi" class="">
+  <script>
+    el = $('#say-hi')[0]
+    localStorage.setItem('mode', localStorage.getItem('mode') || 'day');
+    localStorage.getItem('mode') === 'night' ? el.classList.add('night') : el.classList.add('day');
+  </script>
   <div class="container">
     <div class="say-hi-text">
       <h4>Say hi.</h4>
