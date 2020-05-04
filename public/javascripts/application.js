@@ -6,12 +6,12 @@ $(document).ready(function() {
   // Load appropriate scene
   pathcheck: if (localStorage.getItem('mode') === 'night') {
     $('#dn').prop('checked', true);
-    swapToNight(); populateStars();
+    populateStars();
     if (window.location.pathname === "/") { greetingAnimation(); break pathcheck; };
     easeInStars(); rotateStars();
   } else {
     $('#dn').prop('checked', false);
-    swapToDay(); populateClouds();
+    populateClouds();
     if (window.location.pathname === "/") { greetingAnimation(); break pathcheck; };
     easeInClouds(); raiseClouds();
   };
