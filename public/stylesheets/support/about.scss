@@ -33,14 +33,7 @@
   }
 
   & #about-text {
-    &.night {
-      & h5  { color: $shaded-gold; }
-      & p   { color: $light-gold; }
-    }
-
-    &.day {
-      & h5  { color: $shaded-teal; }
-      & p   { color: inherit; }
-    }
+    & h5  { color: var(--about-title); }
+    & p   { color: var(--about-text); }
   }
 }
