@@ -47,23 +47,14 @@
 
     & .btn {
       font-weight: bold;
+      background-color: $btn-color;
       color: #293333;
+
+      &:hover { background-color: lighten($btn-color, 10%); }
     }
   }
 
-  &.night {
-    background-color: $night-scene-background;
-    & h4  { color: $gold; }
-    & p   { color: $light-gold; }
-    & .say-hi-text > .btn       { background-color: $btn-color; }
-    & .say-hi-text > .btn:hover { background-color: lighten($btn-color, 10%); }
-  }
-
-  &.day {
-    background-color: $day-scene-background;
-    & h4  { color: $shaded-teal; }
-    & p   { color: inherit; }
-    & .say-hi-text > .btn       { background-color: $btn-color; }
-    & .say-hi-text > .btn:hover { background-color: lighten($btn-color, 10%); }
-  }
+  background-color: var(--footer-background);
+  & h4  { color: var(--footer-title); }
+  & p   { color: var(--footer-text); }
 }

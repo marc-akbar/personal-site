@@ -7,7 +7,7 @@
 <br/>
 Personal site made in Sinatra using Materialize, <del>Animejs</del> GSAP and graphics in GIMP. Deployed to Heroku and managed using Cloudfare.
 
-Design inspiration from [Sean Halpin](http://seanhalpin.io/) with help from [Angela Nguyen](https://www.linkedin.com/in/angelamaynguyen/).
+Design inspiration from [Sean Halpin](http://seanhalpin.io/) and [Josh Comeau](https://joshwcomeau.com/) with help from [Angela Nguyen](https://www.linkedin.com/in/angelamaynguyen/).
 
 ##### Clone using:
 
