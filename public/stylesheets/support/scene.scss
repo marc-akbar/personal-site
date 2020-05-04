@@ -2,6 +2,7 @@
   position: relative;
   padding-top: 90px;
   z-index: 0;
+  background-color: var(--scene-background);
 
   & .left-cloud {
     content: url("../images/scenes/cloud.png");
@@ -26,14 +27,4 @@
     top: 17%;
     z-index: 1;
   }
-
-  &.night {
-    // background: -webkit-radial-gradient(bottom, #3e4d4d 0%, $night-scene-background 50%); // Chrome10+, Safari5.1+
-    // background: -webkit-gradient(radial, bottom, color-stop(0%, #3e4d4d), color-stop(50%, $night-scene-background));  // Chrome, Safari4+
-    // background: -moz-radial-gradient(bottom, #3e4d4d 0%, $night-scene-background 75%);  // Firefox3.6+
-    // background: -ms-radial-gradient(bottom, #3e4d4d 0%, $night-scene-background 75%); // IE10+
-    // background: -o-radial-gradient(bottom, #3e4d4d 0%, $night-scene-background 75%);  // Opera11.10+
-    background-color: $night-scene-background;  // old browsers
-  }
-  &.day { background: $day-scene-background; }
 }

@@ -1,6 +1,9 @@
 nav {
   position: absolute;
   z-index: 1;
+  background-color: var(--nav-background);
+
+  & a { color: var(--sidenav-trigger); }
 
   & .time-toggle {
     position: fixed;
@@ -18,6 +21,8 @@ nav {
       font-size: 20px;
       padding-left: 40px;
       padding-right: 40px;
+      color: var(--nav-btn);
+      
       & i { font-size: 50px; }
     }
 
@@ -26,23 +31,11 @@ nav {
       color: $custom-teal !important;
     }
   }
-
-  &.night {
-    background-color: $night-scene-background;
-    & .nav-wrapper > a  { color: $light-gold; }
-    & ul > li > a       { color: $light-gold; }
-  }
-
-  &.day {
-    background-color: $day-scene-background;
-    & a                 { color: $night-scene-background; }
-    & .nav-wrapper > a  { color: $night-scene-background; }
-    & ul > li > a       { color: $night-scene-background; }
-  }
 }
 
 .sidenav {
   padding-top: 20px;
+  background-color: var(--sidenav-background);
 
   li {
     padding-top: 15px;
@@ -51,14 +44,7 @@ nav {
       font-family: 'Baloo Tammudu 2', cursive, sans-serif;
       font-weight: 600;
       font-size: 16px;
+      color: var(--sidenav-btn);
     }
-  }
-
-  &.night {
-    background-color: $night-scene-background;
-    & li > a { color: $light-gold; }
-  }
-  &.day {
-    background-color: $day-scene-background;
   }
 }

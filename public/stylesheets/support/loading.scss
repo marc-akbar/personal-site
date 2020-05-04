@@ -7,8 +7,7 @@
   top: 0;
   left: 0;
   z-index: 99;
-  &.night { background-color: $night-scene-background; }
-  &.day { background-color: $day-scene-background; }
+  background-color: var(--loading);
 
   // & .preloader-wrapper {
   //   position: absolute;

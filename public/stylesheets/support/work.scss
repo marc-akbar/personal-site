@@ -5,6 +5,7 @@
     padding-bottom: 8rem;
   }
 
+  & .btn { font-weight: bold; }
   & .row {
     margin-top: 0;
     margin-bottom: 0;
@@ -25,144 +26,88 @@
     font-size: 1.1rem;
     & a { color: $custom-teal; }
   }
-  & .btn { font-weight: bold; }
 }
 
-#work {
+#recent-work {
+  background-color: var(--recent-work-background);
+
   & h2 {
     font-family: 'Satisfy', cursive, sans-serif;
     margin: 0;
     padding-bottom: 2rem;
+    color: var(--recent-work-title);
   }
 
-  & p { font-size: 1.5rem !important; }
-
-  &.night {
-    background-color: #3F4E4E;
-    & h2  { color: $gold; }
-    & p   { color: $light-gold; }
-  }
-
-  &.day {
-    & h2  { color: $shaded-teal; }
-    & p   { color: inherit; }
+  & p {
+    font-size: 1.5rem !important;
+    color: var(--recent-work-text);
   }
 }
 
 #earlybird {
-  &.night { background-color: none; }
-  &.day   { background-color: #e2c557; }
+  background-color: var(--eb-background);
+
+  .eb-text {
+    padding-top: 2vw;
+
+    & h4  { color: var(--eb-title); }
+    & h6  { color: var(--eb-subtitle); }
+    & p   { color: var(--eb-text); }
+    // & .btn:hover { background-color: lighten(var(--eb-btn), 10%); }
+    & .btn {
+      background-color: var(--eb-btn);
+      color: var(--eb-btn-text);
+    }
+  }
 }
+
 #trailbuddy {
-  &.night { background-color: none; }
-  &.day   { background-color: #eae6cb; }
+  background-color: var(--tb-background);
 
+  .tb-text {
+    padding-top: 5vw;
+
+    & h4  { color: var(--tb-title); }
+    & h6  { color: var(--tb-subtitle); }
+    & p   { color: var(--tb-text); }
+    // & .btn:hover { background-color: lighten(var(--tb-btn), 10%); }
+    & .btn {
+      background-color: var(--tb-btn);
+      color: var(--tb-btn-text);
+    }
+  }
 }
+
 #finance {
-  &.night { background-color: none; }
-  &.day   { background-color: #8396ff; }
+  background-color: var(--ft-background);
 
+  .ft-text {
+    padding-top: 5vw;
+
+    & h4  { color: var(--ft-title); }
+    & h6  { color: var(--ft-subtitle); }
+    & p   { color: var(--ft-text); }
+    // & .btn:hover { background-color: lighten(var(--ft-btn), 10%); }
+    & .btn {
+      background-color: var(--ft-btn);
+      color: var(--ft-btn-text);
+    }
+  }
 }
+
 #personal {
-  &.night { background-color: none; }
-  &.day   { background-color: $shaded-teal; }
+  background-color: var(--personal-background);
 
-}
-#slack-haxxor {
-  &.night { background-color: none; }
-  &.day   { background-color: none; }
+  .personal-text {
+    padding-top: 3vw;
 
-}
-
-$eb-btn-color: #4d789b;
-$tb-btn-color: #ff4237;
-$ft-btn-color: #5cb85c;
-
-.eb-text {
-  padding-top: 2vw;
-
-  &.night {
-    & h4  { color: $light-gold; }
-    & h6  { color: #BFEDEA; }
-    & p   { color: $light-gold; }
-    & .btn:hover { background-color: lighten($btn-color, 10%); }
+    & h4  { color: var(--personal-title); }
+    & h6  { color: var(--personal-subtitle); }
+    & p   { color: var(--personal-text); }
+    // & .btn:hover { background-color: lighten(var(--personal-btn), 10%); }
     & .btn {
-      background-color: $btn-color;
-      color: #293333;
+      background-color: var(--personal-btn);
+      color: var(--personal-btn-text);
     }
-  }
-
-  &.day {
-    & h4 { color: $dark-teal; }
-    & h6 { color: $shaded-teal; }
-    & .btn        { background-color: $eb-btn-color; }
-    & .btn:hover  { background-color: lighten($eb-btn-color, 10%); }
-  }
-}
-
-.tb-text {
-  padding-top: 5vw;
-
-  &.night {
-    & h4  { color: $light-gold; }
-    & h6  { color: #BFEDEA; }
-    & p   { color: $light-gold; }
-    & .btn:hover { background-color: lighten($btn-color, 10%); }
-    & .btn {
-      background-color: $btn-color;
-      color: #293333;
-    }
-  }
-
-  &.day {
-    & h4 { color: $dark-teal; }
-    & h6 { color: $shaded-teal; }
-    & .btn        { background-color: $tb-btn-color; }
-    & .btn:hover  { background-color: lighten($tb-btn-color, 10%); }
-  }
-}
-
-.ft-text {
-  padding-top: 5vw;
-
-  &.night {
-    & h4  { color: $light-gold; }
-    & h6  { color: #BFEDEA; }
-    & p   { color: $light-gold; }
-    & .btn:hover { background-color: lighten($btn-color, 10%); }
-    & .btn {
-      background-color: $btn-color;
-      color: #293333;
-    }
-  }
-
-  &.day {
-    & h4 { color: $dark-teal; }
-    & h6 { color: $dark-teal; }
-    & .btn        { background-color: $ft-btn-color; }
-    & .btn:hover  { background-color: lighten($ft-btn-color, 10%); }
-  }
-}
-
-.personal-text {
-  padding-top: 3vw;
-
-  &.night {
-    & h4  { color: $light-gold; }
-    & h6  { color: #BFEDEA; }
-    & p   { color: $light-gold; }
-    & .btn:hover { background-color: lighten($btn-color, 10%); }
-    & .btn {
-      background-color: $btn-color;
-      color: #293333;
-    }
-  }
-
-  &.day {
-    & h4  { color: $gold; }
-    & h6  { color: $shaded-gold; }
-    & p   { color: $light-gold; }
-    & .btn        { background-color: $dark-teal; }
-    & .btn:hover  { background-color: lighten($dark-teal, 10%); }
   }
 }

@@ -1,4 +1,4 @@
-<nav class="z-depth-0 day">
+<nav class="z-depth-0">
   <!-- Mobile -->
   <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
@@ -10,14 +10,14 @@
       <ul class="right hide-on-med-and-down">
         <li><%= link_to "HOME", "/" %></li>
         <li><%= link_to "ABOUT", '/about' %></li>
-        <li><%= link_to "WORK", '/#work' %></li>
+        <li><%= link_to "WORK", '/#recent-work' %></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<ul id="mobile-nav" class="sidenav day">
+<ul id="mobile-nav" class="sidenav">
   <li><%= link_to "HOME", "/" %></li>
   <li><%= link_to "ABOUT", '/about' %></li>
-  <li><%= link_to "WORK", '/#work', { class: "sidenav-close" } %></li>
+  <li><%= link_to "WORK", '/#recent-work', { class: "sidenav-close" } %></li>
 </ul>
