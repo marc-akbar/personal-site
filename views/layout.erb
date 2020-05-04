@@ -18,20 +18,12 @@
     <script src="/javascripts/application.js"></script>
     <link href="<%= url('/stylesheets/application.css') %>" rel="stylesheet" />
   </head>
-  <body class="day">
+  <body class="">
     <script>
+      el = $('body')[0]
       localStorage.setItem('mode', localStorage.getItem('mode') || 'day');
-      if (localStorage.getItem('mode') === 'night') {
-        var el = document.querySelectorAll('.day')
-        el.forEach(function(value) {value.classList.add('night')})
-        el.forEach(function(value) {value.classList.remove('day')})
-      } else {
-        var el = document.querySelectorAll('.night')
-        el.forEach(function(value) {value.classList.add('day')})
-        el.forEach(function(value) {value.classList.remove('night')})
-      };
+      localStorage.getItem('mode') === 'night' ? el.classList.add('night') : el.classList.add('day');
     </script>
-    <%= erb :preloader %>
     <%= yield %>
   </body>
 </html>

@@ -1,6 +1,4 @@
 $(document).ready(function() {
-  // Remove loading after scene swap
-  $("#loading").remove();
   // Materialize initializations
   $('.sidenav').sidenav();
   // Load appropriate scene
