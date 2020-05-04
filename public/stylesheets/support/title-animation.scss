@@ -1,6 +1,5 @@
 .hello-path {
-  &.day { stroke: $shaded-teal; }
-  &.night { stroke: $gold; }
+  stroke: var(--page-title);
 }
 
 .hello-path--h {

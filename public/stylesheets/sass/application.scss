@@ -1,52 +1,139 @@
-$dark-background:         #303C3C;
-$night-scene-background:  #293333;
-$day-scene-background:    #c9e9f2;
+$dark-background:             #303C3C;
+$night-scene-background:      #293333;
+$day-scene-background:        #c9e9f2;
 
-$light-gold:              #f5f5f0;
-$gold:                    #AB9120;
-$shaded-gold:             #91812C;
-$dark-gold:               #5E4F0D;
-$custom-teal:             #18ABA2;
-$shaded-teal:             #175E5A;
-$dark-teal:               #124d49;
+$light-gold:                  #f5f5f0;
+$gold:                        #AB9120;
+$shaded-gold:                 #91812C;
+$dark-gold:                   #5E4F0D;
+$custom-teal:                 #18ABA2;
+$shaded-teal:                 #175E5A;
+$dark-teal:                   #124d49;
 
-$btn-color:               #e2c557;
-$logo-green-shift:        contrast(2) hue-rotate(110deg) brightness(.6);
-$logo-gold-shift:         contrast(100%) hue-rotate(0) brightness(1);
+$eb-btn-color:                #4d789b;
+$tb-btn-color:                #ff4237;
+$ft-btn-color:                #5cb85c;
+$btn-color:                   #e2c557;
+
+$logo-green-shift:            contrast(2) hue-rotate(110deg) brightness(.6);
+$logo-gold-shift:             contrast(100%) hue-rotate(0) brightness(1);
 
 .night {
-  --background:           #303C3C;  // $dark-background
+  --background:               #303C3C;  // $dark-background
+  --loading:                  #293333;  // $night-scene-background
 
-  --title:                #AB9120;  // $gold
-  --greeting-text:        #f5f5f0;  // $light-gold
+  --nav-background:           #293333;  // $night-scene-background
+  --nav-btn:                  #f5f5f0;  // $light-gold
+  --sidenav-trigger:          inherit;
+  --sidenav-background:       #293333;  // $night-scene-background
+  --sidenav-btn:              #f5f5f0;  // $light-gold
 
-  --about-title:          #91812C;  // $shaded-gold
-  --about-text:           #f5f5f0;  // $light-gold
+  --scene-background:         #293333;  // $night-scene-background
 
-  --footer-background:    #293333;  // $night-scene-background
-  --footer-title:         #AB9120;  // $gold
-  --footer-text:          #f5f5f0;  // $light-gold
+  --greeting-text:            #f5f5f0;  // $light-gold
+  --page-title:               #AB9120;  // $gold
 
-  --social-background:    #293333;  // $night-scene-background
-  --logo-filter:          none;
-  --logo-hover-filter:    contrast(2) hue-rotate(110deg) brightness(.6);  //$logo-green-shift
+  --about-title:              #91812C;  // $shaded-gold
+  --about-text:               #f5f5f0;  // $light-gold
+
+  --recent-work-background:   #3F4E4E;
+  --recent-work-title:        #AB9120;  // $gold
+  --recent-work-text:         #f5f5f0;  // $light-gold
+
+  --eb-background:            none;
+  --eb-title:                 #f5f5f0;  // $light-gold
+  --eb-subtitle:              #BFEDEA;
+  --eb-text:                  #f5f5f0;  // $light-gold
+  --eb-btn:                   #e2c557;  // $btn-color
+  --eb-btn-text:              #293333;
+
+  --tb-background:            none;
+  --tb-title:                 #f5f5f0;  // $light-gold
+  --tb-subtitle:              #BFEDEA;
+  --tb-text:                  #f5f5f0;  // $light-gold
+  --tb-btn:                   #e2c557;  // $btn-color
+  --tb-btn-text:              #293333;
+
+  --ft-background:            none;
+  --ft-title:                 #f5f5f0;  // $light-gold
+  --ft-subtitle:              #BFEDEA;
+  --ft-text:                  #f5f5f0;  // $light-gold
+  --ft-btn:                   #e2c557;  // $btn-color
+  --ft-btn-text:              #293333;
+
+  --personal-background:      none;
+  --personal-title:           #f5f5f0;  // $light-gold
+  --personal-subtitle:        #BFEDEA;
+  --personal-text:            #f5f5f0;  // $light-gold
+  --personal-btn:             #e2c557;  // $btn-color
+  --personal-btn-text:        #293333;
+
+  --footer-background:        #293333;  // $night-scene-background
+  --footer-title:             #AB9120;  // $gold
+  --footer-text:              #f5f5f0;  // $light-gold
+
+  --social-background:        #293333;  // $night-scene-background
+  --logo-filter:              none;
+  --logo-hover-filter:        contrast(2) hue-rotate(110deg) brightness(.6);  //$logo-green-shift
 }
+
 .day {
-  --background:           #f5f5f0;  // $light-gold
+  --background:               #f5f5f0;  // $light-gold
+  --loading:                  #c9e9f2;  // $day-scene-background
 
-  --title:                #91812C;  // $shaded-gold
-  --greeting-text:        #293333;  // $night-scene-background
+  --nav-background:           #c9e9f2;  // $day-scene-background
+  --nav-btn:                  #293333;  // $night-scene-background
+  --sidenav-trigger:          #293333;  // $night-scene-background
+  --sidenav-background:       #c9e9f2;  // $day-scene-background
+  --sidenav-btn:              inherit;
 
-  --about-title:          #175E5A;  // $shaded-teal
-  --about-text:           inherit;
+  --scene-background:         #c9e9f2;  // $day-scene-background
 
-  --footer-background:    #c9e9f2;  // $day-scene-background
-  --footer-title:         #175E5A;  // $shaded-teal
-  --footer-text:          inherit;
+  --greeting-text:            #293333;  // $night-scene-background
+  --page-title:               #175E5A;  // $shaded-teal
 
-  --social-background:    #c9e9f2;  //$day-scene-background
-  --logo-filter:          contrast(2) hue-rotate(110deg) brightness(.6); // $logo-green-shift
-  --logo-hover-filter:    contrast(100%) hue-rotate(0) brightness(1);    // $logo-gold-shift
+  --about-title:              #175E5A;  // $shaded-teal
+  --about-text:               inherit;
+
+  --recent-work-background:   inherit;
+  --recent-work-title:        #175E5A;  // $shaded-teal
+  --recent-work-text:         inherit;
+
+  --eb-background:            #e2c557;  // $btn-color
+  --eb-title:                 #124d49;  // $dark-teal
+  --eb-subtitle:              #175E5A;  // $shaded-teal
+  --eb-text:                  inherit;
+  --eb-btn:                   #4d789b;  // $eb-btn-color
+  --eb-btn-text:              inherit;
+
+  --tb-background:            #eae6cb;
+  --tb-title:                 #124d49;  // $dark-teal
+  --tb-subtitle:              #175E5A;  // $shaded-teal
+  --tb-text:                  inherit;
+  --tb-btn:                   #ff4237;  // $tb-btn-color
+  --tb-btn-text:              inherit;
+
+  --ft-background:            #8396ff;
+  --ft-title:                 #124d49;  // $dark-teal
+  --ft-subtitle:              #124d49;  // $dark-teal
+  --ft-text:                  inherit;
+  --ft-btn:                   #5cb85c;  // $ft-btn-color
+  --ft-btn-text:              inherit;
+
+  --personal-background:      #175E5A;  // $shaded-teal
+  --personal-title:           #AB9120;  // $gold
+  --personal-subtitle:        #91812C;  // $shaded-gold
+  --personal-text:            #f5f5f0;  // $light-gold
+  --personal-btn:             #124d49;  // $dark-teal
+  --personal-btn-text:        inherit;
+
+  --footer-background:        #c9e9f2;  // $day-scene-background
+  --footer-title:             #175E5A;  // $shaded-teal
+  --footer-text:              inherit;
+
+  --social-background:        #c9e9f2;  //$day-scene-background
+  --logo-filter:              contrast(2) hue-rotate(110deg) brightness(.6); // $logo-green-shift
+  --logo-hover-filter:        contrast(100%) hue-rotate(0) brightness(1);    // $logo-gold-shift
 }
 
 @import '../support/media';
@@ -111,7 +198,7 @@ p {
   font-size: 10rem;
   z-index: 2;
 
-  color: var(--title);
+  color: var(--page-title);
 }
 
 .mountain-image {
