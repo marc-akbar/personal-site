@@ -3,11 +3,7 @@
 
   <div id="greeting-scene">
     <div id="scene" class="">
-      <script>
-        el = $('#scene')[0]
-        localStorage.setItem('mode', localStorage.getItem('mode') || 'day');
-        localStorage.getItem('mode') === 'night' ? el.classList.add('night') : el.classList.add('day');
-      </script>
+      <script>el = $('#scene')[0]; setTime(el);</script>
       <div class="particle particle-1"></div>
       <div class="particle particle-2"></div>
       <div class="container">
