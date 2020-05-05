@@ -16,14 +16,11 @@
     <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="/javascripts/materialize.min.js"></script>
     <script src="/javascripts/application.js"></script>
+    <script src="/javascripts/timescript.js"></script>
     <link href="<%= url('/stylesheets/application.css') %>" rel="stylesheet" />
   </head>
   <body class="">
-    <script>
-      el = $('body')[0]
-      localStorage.setItem('mode', localStorage.getItem('mode') || 'day');
-      localStorage.getItem('mode') === 'night' ? el.classList.add('night') : el.classList.add('day');
-    </script>
+    <script>el = $('body')[0]; setTime(el);</script>
     <%= yield %>
   </body>
 </html>
