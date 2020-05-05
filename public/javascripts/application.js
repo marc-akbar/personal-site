@@ -70,13 +70,13 @@ $(document).ready(function() {
     $("<div class='sun-cloud'></div>").appendTo("#say-hi");
   };
 
-  function easeInClouds() { gsap.from(['.left-cloud', '.right-cloud', '.sun-cloud'], { opacity: 0, ease: 'power3.in', duration: 1, delay: .2 }) };
+  function easeInClouds() { gsap.from(['.left-cloud', '.right-cloud', '.sun-cloud'], { opacity: 0, ease: 'power3.in', duration: 1 }) };
 
   function raiseClouds() {
     var lCloud = $('.left-cloud');
     var sunClouds = $('.sun-cloud');
-    gsap.from(['.left-cloud', '.right-cloud'], { y: (lCloud.height() * 1.5), ease: 'power2.out', duration: 2, delay: .2 });
-    gsap.from(sunClouds, { y: (sunClouds.height() * 1.5), ease: 'power2.out', duration: 2, delay: .2 });
+    gsap.from(['.left-cloud', '.right-cloud'], { y: (lCloud.height() * 1.5), ease: 'power2.out', duration: 2 });
+    gsap.from(sunClouds, { y: (sunClouds.height() * 1.5), ease: 'power2.out', duration: 2 });
   };
 
   function populateStars() {
@@ -127,10 +127,10 @@ $(document).ready(function() {
     };
   };
 
-  function easeInStars() { gsap.from(['.white-star-image', '.gold-star-image', '.teal-star-image'], { opacity: 0, ease: 'power3.in', duration: 1, delay: .2 }) };
+  function easeInStars() { gsap.from(['.white-star-image', '.gold-star-image', '.teal-star-image'], { opacity: 0, ease: 'power3.in', duration: 1 }) };
 
   function rotateStars() {
-    gsap.from('.gold-star-image', { repeat: -1, rotation: -360, duration: 5, ease: 'none', delay: .2 });
-    gsap.from('.teal-star-image', { repeat: -1, rotation: -360, duration: 10, ease: 'none', delay: .2 });
+    gsap.from('.gold-star-image', { repeat: -1, rotation: -360, duration: 5, ease: 'none' });
+    gsap.from('.teal-star-image', { repeat: -1, rotation: -360, duration: 10, ease: 'none' });
   };
 });
