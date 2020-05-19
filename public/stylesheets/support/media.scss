@@ -22,31 +22,16 @@
       padding-top: 4rem !important;
       padding-bottom: 4rem !important;
     }
+    & section > .container > .row {
+      display: flex;
+      flex-flow: column;
+      & div[id*="-description"] { order: 1; }
+      & div[id*="-image"] { order: 2; }
+    }
     & div[class*="-text"] {
       padding-top: 0;
       padding-bottom: 4rem;
     }
-  }
-
-  #earlybird > .container > .row {
-    display: flex;
-    flex-flow: column;
-    & #eb-description { order: 1; }
-    & #eb-image       { order: 2; }
-  }
-
-  #finance > .container > .row {
-    display: flex;
-    flex-flow: column;
-    & #ft-description { order: 1; }
-    & #ft-image       { order: 2; }
-  }
-
-  #personal > .container > .row {
-    display: flex;
-    flex-flow: column;
-    & #personal-description { order: 1; }
-    & #personal-image       { order: 2; }
   }
 
   #about-content  {
