@@ -13,6 +13,8 @@ $dark-teal:                   #124d49;
 $eb-btn-color:                #4d789b;
 $tb-btn-color:                #ff4237;
 $ft-btn-color:                #5cb85c;
+$wb-btn-color:                #c36322;
+$personal-btn-color:          #18ABA2;
 $btn-color:                   #e2c557;
 
 $logo-green-shift:            contrast(2) hue-rotate(110deg) brightness(.6);
@@ -60,6 +62,13 @@ $logo-gold-shift:             contrast(100%) hue-rotate(0) brightness(1);
   --ft-text:                  #f5f5f0;  // $light-gold
   --ft-btn:                   #e2c557;  // $btn-color
   --ft-btn-text:              #293333;
+
+  --wb-background:            none;
+  --wb-title:                 #f5f5f0;  // $light-gold
+  --wb-subtitle:              #BFEDEA;
+  --wb-text:                  #f5f5f0;  // $light-gold
+  --wb-btn:                   #e2c557;  // $btn-color
+  --wb-btn-text:              #293333;
 
   --personal-background:      none;
   --personal-title:           #f5f5f0;  // $light-gold
@@ -117,14 +126,21 @@ $logo-gold-shift:             contrast(100%) hue-rotate(0) brightness(1);
   --ft-title:                 #124d49;  // $dark-teal
   --ft-subtitle:              #124d49;  // $dark-teal
   --ft-text:                  inherit;
-  --ft-btn:                   #5cb85c;  // $ft-btn-color
+  --ft-btn:                   #5cb85c;  // $wb-btn-color
   --ft-btn-text:              inherit;
+
+  --wb-background:            #d6bb54;
+  --wb-title:                 #282327;
+  --wb-subtitle:              #3a3942;
+  --wb-text:                  inherit;
+  --wb-btn:                   #c36322;  // $wb-btn-color
+  --wb-btn-text:              inherit;
 
   --personal-background:      #175E5A;  // $shaded-teal
   --personal-title:           #AB9120;  // $gold
   --personal-subtitle:        #91812C;  // $shaded-gold
   --personal-text:            #f5f5f0;  // $light-gold
-  --personal-btn:             #124d49;  // $dark-teal
+  --personal-btn:             #18ABA2;  // personal-btn-color
   --personal-btn-text:        inherit;
 
   --footer-background:        #c9e9f2;  // $day-scene-background

@@ -18,6 +18,10 @@
   }
 
   #work-content {
+    & section:not(:first-child) {
+      padding-top: 4rem !important;
+      padding-bottom: 4rem !important;
+    }
     & div[class*="-text"] {
       padding-top: 0;
       padding-bottom: 4rem;
@@ -36,6 +40,13 @@
     flex-flow: column;
     & #ft-description { order: 1; }
     & #ft-image       { order: 2; }
+  }
+
+  #personal > .container > .row {
+    display: flex;
+    flex-flow: column;
+    & #personal-description { order: 1; }
+    & #personal-image       { order: 2; }
   }
 
   #about-content  {

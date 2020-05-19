@@ -2,7 +2,7 @@
   position: relative;
   z-index: 0;
   background-color: var(--footer-background);
-  
+
   & h4  { color: var(--footer-title); }
   & p   { color: var(--footer-text); }
 
@@ -54,7 +54,10 @@
       background-color: $btn-color;
       color: #293333;
 
-      &:hover { background-color: lighten($btn-color, 10%); }
+      &:hover {
+        filter: contrast(1.4);
+        transition: filter .4s ease;
+      }
     }
   }
 }

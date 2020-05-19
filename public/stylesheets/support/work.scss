@@ -6,6 +6,10 @@
   }
 
   & .btn { font-weight: bold; }
+  & .btn:hover {
+    filter: contrast(1.4);
+    transition: filter .4s ease;
+  }
   & .row {
     margin-top: 0;
     margin-bottom: 0;
@@ -53,7 +57,6 @@
     & h4  { color: var(--eb-title); }
     & h6  { color: var(--eb-subtitle); }
     & p   { color: var(--eb-text); }
-    // & .btn:hover { background-color: lighten(var(--eb-btn), 10%); }
     & .btn {
       background-color: var(--eb-btn);
       color: var(--eb-btn-text);
@@ -70,7 +73,6 @@
     & h4  { color: var(--tb-title); }
     & h6  { color: var(--tb-subtitle); }
     & p   { color: var(--tb-text); }
-    // & .btn:hover { background-color: lighten(var(--tb-btn), 10%); }
     & .btn {
       background-color: var(--tb-btn);
       color: var(--tb-btn-text);
@@ -87,10 +89,25 @@
     & h4  { color: var(--ft-title); }
     & h6  { color: var(--ft-subtitle); }
     & p   { color: var(--ft-text); }
-    // & .btn:hover { background-color: lighten(var(--ft-btn), 10%); }
     & .btn {
       background-color: var(--ft-btn);
       color: var(--ft-btn-text);
+    }
+  }
+}
+
+#weather {
+  background-color: var(--wb-background);
+
+  .wb-text {
+    padding-top: 2vw;
+
+    & h4  { color: var(--wb-title); }
+    & h6  { color: var(--wb-subtitle); }
+    & p   { color: var(--wb-text); }
+    & .btn {
+      background-color: var(--wb-btn);
+      color: var(--wb-btn-text);
     }
   }
 }
@@ -104,7 +121,6 @@
     & h4  { color: var(--personal-title); }
     & h6  { color: var(--personal-subtitle); }
     & p   { color: var(--personal-text); }
-    // & .btn:hover { background-color: lighten(var(--personal-btn), 10%); }
     & .btn {
       background-color: var(--personal-btn);
       color: var(--personal-btn-text);

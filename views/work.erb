@@ -96,22 +96,44 @@
         </div>
       </div>
     </section>
+    <section id="weather">
+      <div class="container">
+        <div class="row">
+          <div id="wb-description" class="col l4">
+            <div class="wb-text">
+              <h4>Weather Back</h4>
+              <h6>Rails | DarkSkyAPI | JQuery</h6>
+              <p>
+                A real-time weather app with moving background images corresponding
+                to current conditions. It uses ActiveJob and ActionCable to
+                update the weather information and background.
+              </p>
+              <%= link_to "GITHUB", "https://github.com/marc-akbar/weather-back", { target: '_blank', class: 'btn' } %>
+              <%= link_to "WEBSITE", "https://marc-weather-back.herokuapp.com/", { target: '_blank', class: 'btn' } %>
+            </div>
+          </div>
+          <div id="wb-image" class="col l7 push-l1">
+            <img src="images/wb-image.png" alt="weather back lookup screenshot">
+          </div>
+        </div>
+      </div>
+    </section>
     <section id="personal">
       <div class="container">
         <div class="row">
-          <div id="personal-description" class="col l4">
+          <div id="personal-image" class="col l7">
+            <img src="images/gimp-mountains.png" alt="mountain range gimp mockup">
+          </div>
+          <div id="personal-description" class="col l4 push-l1">
             <div class="personal-text">
               <h4>marcakbar.dev</h4>
-              <h6>Sinatra | Materialize | GSAP | GIMP</h6>
+              <h6>Sinatra | Materialize | GSAP | GIMP | JQuery</h6>
               <p>
                 A test in design. This site was an exploration into a lightweight
                 web framework, animations, and design tools.
               </p>
               <%= link_to "GITHUB", "https://github.com/marc-akbar/personal-site", { target: '_blank', class: 'btn' } %>
             </div>
-          </div>
-          <div id="personal-image" class="col l7 push-l1">
-            <img src="images/gimp-mountains.png" alt="mountain range gimp mockup">
           </div>
         </div>
       </div>
