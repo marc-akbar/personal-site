@@ -28,8 +28,15 @@
     }
   }
 
-  & #about-photo > .center-align > .btn {
-    font-weight: bold;
+  & #about-photo > .center-align {
+    & .btn {
+      background-color: $custom-teal;
+      font-weight: bold;
+    }
+    & .btn:hover {
+      filter: contrast(1.4);
+      transition: filter .4s ease;
+    }
   }
 
   & #about-text {
