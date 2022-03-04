@@ -1,169 +1,171 @@
-$dark-background:             #303C3C;
-$night-scene-background:      #293333;
-$day-scene-background:        #c9e9f2;
+$dark-background: #303c3c;
+$night-scene-background: #293333;
+$day-scene-background: #c9e9f2;
 
-$light-gold:                  #f5f5f0;
-$gold:                        #AB9120;
-$shaded-gold:                 #91812C;
-$dark-gold:                   #5E4F0D;
-$custom-teal:                 #18ABA2;
-$shaded-teal:                 #175E5A;
-$dark-teal:                   #124d49;
+$light-gold: #f5f5f0;
+$gold: #ab9120;
+$shaded-gold: #91812c;
+$dark-gold: #5e4f0d;
+$custom-teal: #18aba2;
+$shaded-teal: #175e5a;
+$dark-teal: #124d49;
 
-$eb-btn-color:                #4d789b;
-$tb-btn-color:                #ff4237;
-$ft-btn-color:                #5cb85c;
-$wb-btn-color:                #c36322;
-$personal-btn-color:          #18ABA2;
-$btn-color:                   #e2c557;
+$eb-btn-color: #4d789b;
+$tb-btn-color: #ff4237;
+$ft-btn-color: #5cb85c;
+$wb-btn-color: #c36322;
+$personal-btn-color: #18aba2;
+$btn-color: #e2c557;
 
-$logo-green-shift:            contrast(2) hue-rotate(110deg) brightness(.6);
-$logo-gold-shift:             contrast(100%) hue-rotate(0) brightness(1);
+$logo-green-shift: contrast(2) hue-rotate(110deg) brightness(0.6);
+$logo-gold-shift: contrast(100%) hue-rotate(0) brightness(1);
 
 .night {
-  --background:               #303C3C;  // $dark-background
-  --loading:                  #293333;  // $night-scene-background
+  --background: #303c3c; // $dark-background
+  --loading: #293333; // $night-scene-background
 
-  --nav-background:           #293333;  // $night-scene-background
-  --nav-btn:                  #f5f5f0;  // $light-gold
-  --sidenav-trigger:          inherit;
-  --sidenav-background:       #293333;  // $night-scene-background
-  --sidenav-btn:              #f5f5f0;  // $light-gold
+  --nav-background: #293333; // $night-scene-background
+  --nav-btn: #f5f5f0; // $light-gold
+  --sidenav-trigger: inherit;
+  --sidenav-background: #293333; // $night-scene-background
+  --sidenav-btn: #f5f5f0; // $light-gold
 
-  --scene-background:         #293333;  // $night-scene-background
+  --scene-background: #293333; // $night-scene-background
 
-  --greeting-text:            #f5f5f0;  // $light-gold
-  --page-title:               #AB9120;  // $gold
+  --greeting-text: #f5f5f0; // $light-gold
+  --page-title: #ab9120; // $gold
 
-  --about-title:              #91812C;  // $shaded-gold
-  --about-text:               #f5f5f0;  // $light-gold
+  --about-title: #91812c; // $shaded-gold
+  --about-text: #f5f5f0; // $light-gold
 
-  --recent-work-background:   #3F4E4E;
-  --recent-work-title:        #AB9120;  // $gold
-  --recent-work-text:         #f5f5f0;  // $light-gold
+  --recent-work-background: #3f4e4e;
+  --recent-work-title: #ab9120; // $gold
+  --recent-work-text: #f5f5f0; // $light-gold
 
-  --eb-background:            none;
-  --eb-title:                 #f5f5f0;  // $light-gold
-  --eb-subtitle:              #BFEDEA;
-  --eb-text:                  #f5f5f0;  // $light-gold
-  --eb-btn:                   #e2c557;  // $btn-color
-  --eb-btn-text:              #293333;
+  --eb-background: none;
+  --eb-title: #f5f5f0; // $light-gold
+  --eb-subtitle: #bfedea;
+  --eb-text: #f5f5f0; // $light-gold
+  --eb-btn: #e2c557; // $btn-color
+  --eb-btn-text: #293333;
 
-  --tb-background:            none;
-  --tb-title:                 #f5f5f0;  // $light-gold
-  --tb-subtitle:              #BFEDEA;
-  --tb-text:                  #f5f5f0;  // $light-gold
-  --tb-btn:                   #e2c557;  // $btn-color
-  --tb-btn-text:              #293333;
+  --tb-background: none;
+  --tb-title: #f5f5f0; // $light-gold
+  --tb-subtitle: #bfedea;
+  --tb-text: #f5f5f0; // $light-gold
+  --tb-btn: #e2c557; // $btn-color
+  --tb-btn-text: #293333;
 
-  --ft-background:            none;
-  --ft-title:                 #f5f5f0;  // $light-gold
-  --ft-subtitle:              #BFEDEA;
-  --ft-text:                  #f5f5f0;  // $light-gold
-  --ft-btn:                   #e2c557;  // $btn-color
-  --ft-btn-text:              #293333;
+  --ft-background: none;
+  --ft-title: #f5f5f0; // $light-gold
+  --ft-subtitle: #bfedea;
+  --ft-text: #f5f5f0; // $light-gold
+  --ft-btn: #e2c557; // $btn-color
+  --ft-btn-text: #293333;
 
-  --wb-background:            none;
-  --wb-title:                 #f5f5f0;  // $light-gold
-  --wb-subtitle:              #BFEDEA;
-  --wb-text:                  #f5f5f0;  // $light-gold
-  --wb-btn:                   #e2c557;  // $btn-color
-  --wb-btn-text:              #293333;
+  --wb-background: none;
+  --wb-title: #f5f5f0; // $light-gold
+  --wb-subtitle: #bfedea;
+  --wb-text: #f5f5f0; // $light-gold
+  --wb-btn: #e2c557; // $btn-color
+  --wb-btn-text: #293333;
 
-  --personal-background:      none;
-  --personal-title:           #f5f5f0;  // $light-gold
-  --personal-subtitle:        #BFEDEA;
-  --personal-text:            #f5f5f0;  // $light-gold
-  --personal-btn:             #e2c557;  // $btn-color
-  --personal-btn-text:        #293333;
+  --personal-background: none;
+  --personal-title: #f5f5f0; // $light-gold
+  --personal-subtitle: #bfedea;
+  --personal-text: #f5f5f0; // $light-gold
+  --personal-btn: #e2c557; // $btn-color
+  --personal-btn-text: #293333;
 
-  --footer-background:        #293333;  // $night-scene-background
-  --footer-title:             #AB9120;  // $gold
-  --footer-text:              #f5f5f0;  // $light-gold
+  --footer-background: #293333; // $night-scene-background
+  --footer-title: #ab9120; // $gold
+  --footer-text: #f5f5f0; // $light-gold
 
-  --social-background:        #293333;  // $night-scene-background
-  --logo-filter:              none;
-  --logo-hover-filter:        contrast(2) hue-rotate(110deg) brightness(.6);  //$logo-green-shift
+  --social-background: #293333; // $night-scene-background
+  --logo-filter: none;
+  --logo-hover-filter: contrast(2) hue-rotate(110deg) brightness(0.6); //$logo-green-shift
 }
 
 .day {
-  --background:               #f5f5f0;  // $light-gold
-  --loading:                  #c9e9f2;  // $day-scene-background
+  --background: #f5f5f0; // $light-gold
+  --loading: #c9e9f2; // $day-scene-background
 
-  --nav-background:           #c9e9f2;  // $day-scene-background
-  --nav-btn:                  #293333;  // $night-scene-background
-  --sidenav-trigger:          #293333;  // $night-scene-background
-  --sidenav-background:       #c9e9f2;  // $day-scene-background
-  --sidenav-btn:              inherit;
+  --nav-background: #c9e9f2; // $day-scene-background
+  --nav-btn: #293333; // $night-scene-background
+  --sidenav-trigger: #293333; // $night-scene-background
+  --sidenav-background: #c9e9f2; // $day-scene-background
+  --sidenav-btn: inherit;
 
-  --scene-background:         #c9e9f2;  // $day-scene-background
+  --scene-background: #c9e9f2; // $day-scene-background
 
-  --greeting-text:            #293333;  // $night-scene-background
-  --page-title:               #175E5A;  // $shaded-teal
+  --greeting-text: #293333; // $night-scene-background
+  --page-title: #175e5a; // $shaded-teal
 
-  --about-title:              #175E5A;  // $shaded-teal
-  --about-text:               inherit;
+  --about-title: #175e5a; // $shaded-teal
+  --about-text: inherit;
 
-  --recent-work-background:   inherit;
-  --recent-work-title:        #175E5A;  // $shaded-teal
-  --recent-work-text:         inherit;
+  --recent-work-background: inherit;
+  --recent-work-title: #175e5a; // $shaded-teal
+  --recent-work-text: inherit;
 
-  --eb-background:            #e2c557;  // $btn-color
-  --eb-title:                 #124d49;  // $dark-teal
-  --eb-subtitle:              #175E5A;  // $shaded-teal
-  --eb-text:                  inherit;
-  --eb-btn:                   #4d789b;  // $eb-btn-color
-  --eb-btn-text:              inherit;
+  --eb-background: #e2c557; // $btn-color
+  --eb-title: #124d49; // $dark-teal
+  --eb-subtitle: #175e5a; // $shaded-teal
+  --eb-text: inherit;
+  --eb-btn: #4d789b; // $eb-btn-color
+  --eb-btn-text: inherit;
 
-  --tb-background:            #eae6cb;
-  --tb-title:                 #124d49;  // $dark-teal
-  --tb-subtitle:              #175E5A;  // $shaded-teal
-  --tb-text:                  inherit;
-  --tb-btn:                   #ff4237;  // $tb-btn-color
-  --tb-btn-text:              inherit;
+  --tb-background: #eae6cb;
+  --tb-title: #124d49; // $dark-teal
+  --tb-subtitle: #175e5a; // $shaded-teal
+  --tb-text: inherit;
+  --tb-btn: #ff4237; // $tb-btn-color
+  --tb-btn-text: inherit;
 
-  --ft-background:            #8396ff;
-  --ft-title:                 #124d49;  // $dark-teal
-  --ft-subtitle:              #124d49;  // $dark-teal
-  --ft-text:                  inherit;
-  --ft-btn:                   #5cb85c;  // $wb-btn-color
-  --ft-btn-text:              inherit;
+  --ft-background: #8396ff;
+  --ft-title: #124d49; // $dark-teal
+  --ft-subtitle: #124d49; // $dark-teal
+  --ft-text: inherit;
+  --ft-btn: #5cb85c; // $wb-btn-color
+  --ft-btn-text: inherit;
 
-  --wb-background:            #d6bb54;
-  --wb-title:                 #282327;
-  --wb-subtitle:              #3a3942;
-  --wb-text:                  inherit;
-  --wb-btn:                   #c36322;  // $wb-btn-color
-  --wb-btn-text:              inherit;
+  --wb-background: #d6bb54;
+  --wb-title: #282327;
+  --wb-subtitle: #3a3942;
+  --wb-text: inherit;
+  --wb-btn: #c36322; // $wb-btn-color
+  --wb-btn-text: inherit;
 
-  --personal-background:      #175E5A;  // $shaded-teal
-  --personal-title:           #AB9120;  // $gold
-  --personal-subtitle:        #91812C;  // $shaded-gold
-  --personal-text:            #f5f5f0;  // $light-gold
-  --personal-btn:             #18ABA2;  // personal-btn-color
-  --personal-btn-text:        inherit;
+  --personal-background: #175e5a; // $shaded-teal
+  --personal-title: #ab9120; // $gold
+  --personal-subtitle: #91812c; // $shaded-gold
+  --personal-text: #f5f5f0; // $light-gold
+  --personal-btn: #18aba2; // personal-btn-color
+  --personal-btn-text: inherit;
 
-  --footer-background:        #c9e9f2;  // $day-scene-background
-  --footer-title:             #175E5A;  // $shaded-teal
-  --footer-text:              inherit;
+  --footer-background: #c9e9f2; // $day-scene-background
+  --footer-title: #175e5a; // $shaded-teal
+  --footer-text: inherit;
 
-  --social-background:        #c9e9f2;  //$day-scene-background
-  --logo-filter:              contrast(2) hue-rotate(110deg) brightness(.6); // $logo-green-shift
-  --logo-hover-filter:        contrast(100%) hue-rotate(0) brightness(1);    // $logo-gold-shift
+  --social-background: #c9e9f2; //$day-scene-background
+  --logo-filter: contrast(2) hue-rotate(110deg) brightness(0.6); // $logo-green-shift
+  --logo-hover-filter: contrast(100%) hue-rotate(0) brightness(1); // $logo-gold-shift
 }
 
-@import '../support/media';
-@import '../support/loading';
-@import '../support/title-animation';
-@import '../support/navigation';
-@import '../support/switch';
-@import '../support/scene';
-@import '../support/work';
-@import '../support/about';
-@import '../support/footer';
+@import "../support/media";
+@import "../support/loading";
+@import "../support/title-animation";
+@import "../support/navigation";
+@import "../support/switch";
+@import "../support/scene";
+@import "../support/work";
+@import "../support/about";
+@import "../support/footer";
 
 body {
-  & * { transition: color 0.5s ease, background-color 0.5s ease; }
+  & * {
+    transition: color 0.5s ease, background-color 0.5s ease;
+  }
   & .site-wrapper {
     position: relative;
     overflow-x: hidden;
@@ -193,12 +195,14 @@ p {
   position: relative;
   margin-bottom: 4vw;
   z-index: 2;
-  & svg { max-width: 90%; }
+  & svg {
+    max-width: 90%;
+  }
 }
 
 .greeting-text > p {
   position: relative;
-  font-family: 'Baloo Tammudu 2', cursive, sans-serif;
+  font-family: "Baloo Tammudu 2", cursive, sans-serif;
   font-size: 2.5rem;
   z-index: 2;
 
@@ -210,7 +214,7 @@ p {
   margin: 0;
   padding-top: 2.8rem;
   padding-bottom: 5vw;
-  font-family: 'Satisfy', cursive, sans-serif;
+  font-family: "Satisfy", cursive, sans-serif;
   font-size: 10rem;
   z-index: 2;
 
@@ -250,7 +254,12 @@ p {
 }
 
 @keyframes particleAnimation {
-  from { left: -2000px; } to { left: calc( 100% + 500px ); }
+  from {
+    left: -2000px;
+  }
+  to {
+    left: calc(100% + 500px);
+  }
 }
 
 .particle {
@@ -266,27 +275,33 @@ p {
 }
 
 .particle::before {
-  content:"";
+  content: "";
   position: absolute;
   display: block;
   width: 150px;
   right: 1px;
   top: 0px;
   height: 1px;
-  background: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(255,255,255,0.4) 100%);
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(255, 255, 255, 0.4) 100%
+  );
 }
 
 .particle-1 {
-  animation-duration:13s;
+  animation-duration: 13s;
   top: 30%;
 }
 
 .particle-2 {
-  animation-duration:23s;
+  animation-duration: 23s;
   top: 65%;
 }
 
-.social-scene { background-color: var(--social-background); }
+.social-scene {
+  background-color: var(--social-background);
+}
 
 .social {
   padding: 1rem 0 1rem 0;
@@ -302,12 +317,12 @@ p {
       text-decoration: none;
       & img {
         height: 32px;
-        filter:         var(--logo-filter);
+        filter: var(--logo-filter);
         -webkit-filter: var(--logo-filter);
       }
     }
     & a:hover > img {
-      filter:         var(--logo-hover-filter);
+      filter: var(--logo-hover-filter);
       -webkit-filter: var(--logo-hover-filter);
     }
   }
