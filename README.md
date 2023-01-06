@@ -9,13 +9,9 @@ Personal site made in Sinatra using Materialize, <del>Animejs</del> GSAP and gra
 
 Design inspiration from [Sean Halpin](http://seanhalpin.io/) and [Josh Comeau](https://joshwcomeau.com/) with help from [Angela Nguyen](https://www.linkedin.com/in/angelamaynguyen/).
 
-##### Clone using:
-
-`$ git clone git@github.com:marc-akbar/personal-site.git`
-
-##### Ensure ruby `2.7.0` is installed:
-- rvm: `$ rvm install ruby-2.7.0`
-- asdf: `$ asdf install ruby 2.7.0`
+##### Ensure ruby `2.7.6` is installed:
+- rvm: `$ rvm install ruby-2.7.6`
+- asdf: `$ asdf install ruby 2.7.6`
 
 ##### Ensure dependencies are installed:
 
@@ -24,3 +20,6 @@ Design inspiration from [Sean Halpin](http://seanhalpin.io/) and [Josh Comeau](h
 ##### Run local server using rack:
 
 `$ rackup`
+
+##### or
+`$ bundle exec rackup`
